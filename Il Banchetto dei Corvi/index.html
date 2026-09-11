@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Il Banchetto delle Ombre - Cronache e Dadi</title>
+    
+    <meta property="og:title" content="Il Banchetto delle Ombre - Cronache e Dadi">
+    <meta property="og:description" content="One-shot Dark Fantasy, investigativa e horror. 3 ore esatte, pronta all'uso.">
+    <meta property="og:image" content="Cronache e Dadi.png">
+    <meta property="og:type" content="website">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Special+Elite&display=swap');
+
+        body {
+            background-color: #060608;
+            color: #d1d1d6;
+            font-family: 'Special Elite', monospace;
+            font-size: 19px;
+            line-height: 1.6;
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 30px;
+            border-top: 5px solid #8b0000;
+            border-bottom: 5px solid #8b0000;
+            box-shadow: inset 0 0 80px rgba(0,0,0,0.95), 0 0 30px rgba(139, 0, 0, 0.2);
+        }
+
+        .top-social-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0f0f13;
+            border: 1px solid #2a2a35;
+            border-left: 4px solid #8b0000;
+            padding: 10px 15px;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+
+        .top-social-bar a {
+            color: #b3b3c2;
+            text-decoration: none;
+            transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-social-bar a:hover {
+            color: #ff4d4d;
+            text-decoration: underline;
+        }
+
+        .brand-header {
+            text-align: center;
+            background-color: #0c0d12;
+            border: 2px solid #2a2a35;
+            border-top: 4px solid #8b0000;
+            border-bottom: 4px solid #8b0000;
+            padding: 25px 15px;
+            margin-bottom: 35px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+        }
+
+        .brand-header h1 {
+            font-family: 'Cinzel', serif;
+            font-weight: 900;
+            font-size: 32px;
+            color: #e6e6e6;
+            margin: 0 0 10px 0;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(139, 0, 0, 0.5);
+        }
+
+        .brand-header p {
+            font-size: 16px;
+            color: #8b0000;
+            margin: 0;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-weight: 900;
+            font-size: 22px;
+            color: #ffffff;
+            background: linear-gradient(90deg, #380a0a 0%, #14141c 100%);
+            border-left: 8px solid #ff1a1a;
+            border-right: 8px solid #ff1a1a;
+            border-top: 1px solid #5a1212;
+            border-bottom: 1px solid #5a1212;
+            padding: 15px 20px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(139, 0, 0, 0.4);
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
+
+        h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            color: #c9b037;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #423812;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .scumm-box {
+            background-color: #0e0f14;
+            border: 1px solid #242430;
+            border-left: 3px solid  #ff4d4d;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+        }
+
+        .gm-dropdown {
+            background-color: #08080a;
+            border: 1px dashed #3a1115;
+            margin: 15px 0;
+            font-size: 16px;
+            box-shadow: none;
+        }
+
+        .gm-dropdown summary {
+            font-family: 'Cinzel', serif;
+            color: #8c4a4a;
+            font-size: 13px;
+            padding: 8px 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background-color: #0d0809;
+            border-bottom: 1px dashed #2a0d10;
+            transition: color 0.2s, background-color 0.2s;
+        }
+
+        .gm-dropdown summary:hover {
+            color: #ff4d4d;
+            background-color: #150a0c;
+        }
+
+        .gm-dropdown-content {
+            padding: 15px;
+            color: #a8a8b3;
+            font-size: 16px;
+            background-color: #0a0a0c;
+        }
+
+        .read-aloud {
+            background-color: #0a0b0f;
+            border-left: 6px solid #c9b037;
+            border-right: 1px solid #1a1b24;
+            border-top: 1px solid #1a1b24;
+            border-bottom: 1px solid #1a1b24;
+            padding: 20px 25px;
+            margin: 25px 0;
+            color: #ececf1;
+            font-style: italic;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.8);
+        }
+
+        .read-aloud img, .media-box img {
+            max-width: 70%; 
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border: 2px solid #2a2a35;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+        }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #0c0d12;
+            min-width: 600px;
+        }
+
+        th, td {
+            border: 1px solid #22232e;
+            padding: 12px 15px;
+            text-align: left;
+            font-size: 17px;
+        }
+
+        th {
+            background-color: #140505;
+            color: #d4af37;
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #8b0000;
+        }
+
+        td {
+            color: #b8b8c4;
+        }
+
+        ul, ol {
+            margin: 12px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .pixel-badge {
+            display: inline-block;
+            background-color: #1a0202;
+            color: #ff4d4d;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 6px 12px;
+            margin-bottom: 12px;
+            border: 1px solid #8b0000;
+            text-transform: uppercase;
+        }
+
+        .media-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .media-box .testo-affiancato {
+            flex: 1;
+        }
+
+        .img-caption {
+            font-family: 'Special Elite', monospace;
+            font-size: 14px;
+            color: #8c8f96;
+            margin-top: 10px;
+            font-style: italic;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: #555566;
+            margin-top: 60px;
+            border-top: 1px dashed #262633;
+            padding-top: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .disclaimer-text {
+            font-size: 12px;
+            color: #444452;
+            margin-top: 15px;
+            line-height: 1.4;
+            text-transform: none;
+            font-style: normal;
+        }
+
+        .conversion-box {
+            background-color: #0e0f14;
+            border: 1px solid #2a2a35;
+            border-top: 3px solid #c9b037;
+            padding: 25px;
+            margin: 35px 0;
+            text-align: center;
+        }
+
+        .conversion-btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .conversion-btn {
+            background-color: #140505;
+            color: #d4af37;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 1px solid #8b0000;
+            text-decoration: none;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .conversion-btn:hover {
+            background-color: #8b0000;
+            color: #ffffff;
+        }
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 1.5cm;
+            }
+
+            .top-social-bar, .conversion-box {
+                display: none !important;
+            }
+
+            body {
+                background-color: #ffffff !important;
+                color: #111111 !important;
+                box-shadow: none !important;
+                border: none !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+                font-size: 12px !important;
+                line-height: 1.35 !important;
+            }
+
+            .brand-header {
+                padding: 10px !important;
+                margin-bottom: 15px !important;
+                background-color: #f4f4f4 !important;
+                border: 2px solid #333 !important;
+            }
+
+            .brand-header h1 {
+                font-size: 22px !important;
+                color: #000 !important;
+                text-shadow: none !important;
+            }
+
+            .brand-header p {
+                font-size: 12px !important;
+                color: #8b0000 !important;
+            }
+
+            h2 {
+                font-size: 15px !important;
+                padding: 8px 12px !important;
+                margin-top: 25px !important;
+                margin-bottom: 12px !important;
+                background: #f0f0f0 !important;
+                color: #000 !important;
+                border: 1px solid #ccc !important;
+                border-left: 6px solid #8b0000 !important;
+                text-shadow: none !important;
+                box-shadow: none !important;
+                page-break-after: avoid;
+            }
+
+            h3 {
+                font-size: 13px !important;
+                margin-top: 15px !important;
+                margin-bottom: 6px !important;
+                color: #444 !important;
+                border-bottom: 1px solid #ccc !important;
+                page-break-after: avoid;
+            }
+
+            .scumm-box, .gm-dropdown, .read-aloud {
+                background-color: #fbfbfb !important;
+                border: 1px solid #bbb !important;
+                padding: 12px 15px !important;
+                margin: 12px 0 !important;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+
+            .gm-dropdown {
+                border: 1px solid #999 !important;
+            }
+
+            .gm-dropdown summary {
+                background: #eee !important;
+                color: #000 !important;
+            }
+
+            .gm-dropdown-content {
+                background: #fff !important;
+                color: #111 !important;
+            }
+
+            .read-aloud {
+                border-left: 6px solid #c9b037 !important;
+                color: #222 !important;
+            }
+
+            img, .media-box img, .read-aloud img {
+                max-width: 35% !important;
+                height: auto !important;
+                display: block !important;
+                margin: 6px auto !important;
+                page-break-inside: avoid;
+            }
+
+            .media-box {
+                gap: 10px !important;
+                margin: 12px 0 !important;
+                page-break-inside: avoid;
+            }
+
+            .img-caption {
+                font-size: 10px !important;
+                margin-top: 4px !important;
+                color: #555 !important;
+            }
+
+            table, th, td {
+                background-color: #ffffff !important;
+                color: #111111 !important;
+                border-color: #bbb !important;
+                font-size: 11px !important;
+                padding: 6px 8px !important;
+            }
+
+            th {
+                background-color: #e6e6e6 !important;
+                color: #000 !important;
+                border-bottom: 2px solid #333 !important;
+            }
+
+            .pixel-badge {
+                font-size: 10px !important;
+                padding: 3px 8px !important;
+                margin-bottom: 6px !important;
+                background-color: #eee !important;
+                color: #000 !important;
+                border: 1px solid #999 !important;
+            }
+
+            ul, ol {
+                margin: 6px 0 !important;
+                padding-left: 20px !important;
+            }
+
+            li {
+                margin-bottom: 4px !important;
+            }
+
+            .footer {
+                margin-top: 30px !important;
+                font-size: 9px !important;
+                border-top: 1px solid #ccc !important;
+                padding-top: 10px !important;
+            }
+
+            .disclaimer-text {
+                font-size: 8px !important;
+                margin-top: 5px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-social-bar">
+        <div>
+            <strong><i>CRONACHE & DADI</i></strong> 
+        </div>
+        <div>
+            <a href="https://discord.com/channels/1452691549312913460" target="_blank">
+                <img src="../Cronache e Dadi.png" alt="Discord" style="height: 28px; vertical-align: middle;"> Discord
+            </a>
+            <a href="https://ko-fi.com/cronacheedadi" target="_blank" style="margin-left: 15px;">
+                <img src="../Speech bubble.gif" alt="Ko-Fi" style="height: 26px; vertical-align: middle;"> Ko-Fi
+            </a> 
+            <a href="https://www.youtube.com/@CronacheeDadi" target="_blank" style="margin-left: 15px;">
+                <img src="../icona youtube.webp" alt="YouTube" style="height: 26px; vertical-align: middle;"> YouTube
+            </a>
+        </div>
+    </div>
+
+    <div class="brand-header">
+        <h1>IL BANCHETTO DELLE OMBRE</h1>
+        <p>[ONE-SHOT PLUG-AND-PLAY]</p>
+    </div>
+
+    <div class="scumm-box">
+        <span class="pixel-badge">SCHEDA TECNICA</span>
+        <h3>Informazioni Generali</h3>
+        <ul>
+            <li><strong>Genere:</strong> Dark Fantasy - Investigativo - Horror</li>
+            <li><strong>Compatibilità:</strong> Totalmente System-Agnostic (D&D 5e, OSR, Warhammer, Savage Worlds, ecc.)</li>
+            <li><strong>Durata Stimata:</strong> dalle 2 alle 4 ore</li>
+            <li><strong>Giocatori:</strong> 3 - 5 Avventurieri</li>
+        </ul>
+        
+        <h3>Atmosfera</h3>
+        <p>Il <i>Banchetto delle Ombre</i> è un incubo a occhi aperti intriso di tensione gotica, paranoia investigativa e survival horror. 
+            L'aria è densa di nebbia fredda, odora di terra bagnata, incenso stantio e pioggia imminente.</p>
+        
+        <h3>Ambientazione</h3>
+        <p>La regione di <i>Toldhestan</i> è una terra rurale e isolata, soffocata da superstizioni ataviche, boschi impenetrabili popolati da bestie feroci 
+            e una religiosità cieca e fanatica. Qui la legge non esiste: comandano la paura, il sospetto e l'odio viscerale verso l'ignoto. I personaggi 
+            formano una compagnia di mercenari che, negli ultimi mesi, ha condiviso la polvere delle strade, il sangue e la ricerca disperata di denaro. 
+            Forti di qualche recente successo, sono entrati in contatto con un intermediario nel villaggio di Oakhaven, a sud della regione, che ha 
+            promesso loro un incarico altamente redditizio. Le promesse di facili ricchezze valgono poco in queste lande, ma questa volta il committente 
+            ha fatto sul serio: ha inviato un anticipo, un piccolo sacchetto di pietre preziose dal valore stimato di venti monete d'oro. 
+            Accecati dal guadagno, i mercenari si sono messi in marcia verso <i>Oakhaven</i>. Non sanno ancora che quel denaro è solo la caparra 
+            per la loro condanna a morte.</p>
+    </div>
+
+    <div class="scumm-box">
+        <span class="pixel-badge">INTRODUZIONE ALLA SESSIONE</span>
+        <h2>L'Ombra sul Villaggio di Oakhaven</h2>
+        
+        <h3>Cosa è successo?</h3>
+        <p>I personaggi giungono nel villaggio di <i>Oakhaven</i> dopo tre giorni di viaggio estenuante tra intemperie e pericoli. 
+            La serata è umida e fredda; in lontananza, un temporale tipico di questa regione preannuncia una notte burrascosa. 
+            Cercano rifugio nella locanda "La Candela Tremolante", un locale affollato e caldo, punto di riferimento per viandanti e 
+            marinai grazie alla vicinanza del porto. Una barda dai lunghi capelli neri e ondulati allieta gli avventori con il liuto, 
+            cantando di eroi e creature leggendarie dell'estremo nord. I personaggi sono qui per un motivo ben preciso: incontrare 
+            il loro contatto, l'informatore noto come “Piè Veloce”. Quello che i personaggi ignorano è che "Piè Veloce" non è un semplice intermediario neutrale, ma il volto pubblico e insospettabile della setta di Otheos: sfruttando la loro passata affiliazione — poi cancellata dal rito dell'amnesia — li ha attirati in trappola con la scusa di un lavoro redditizio per condurli esattamente dove il dio della piaga esige il suo tributo.</p> 
+        <p>Mentre consumano una ciotola di fumante stufato di pesce offerto dalla casa — dal retrogusto stranamente amarognolo e metallico —, un individuo di mezza età si avvicina al loro tavolo. 
+            Una folta barba grigia gli copre il viso, mentre due occhi color ghiaccio, contornati da una vistosa cicatrice, li fissano con urgenza. 
+            Li saluta chiamandoli per nome, vantando vecchi legami di sangue e affari.</p>
+        <p><span style="color:#7a7878"><i>"Il passato non si dimentica, mercenari"</i></span></p>
+        <p>Sussurra appoggiandosi pesantemente al tavolo, facendo tintinnare un pesante sacchetto 
+        di monete che estrae dalla tasca per un solo istante prima di farlo sparire. </p>
+        <p><span style="color:#7a7878"><i>"Il debito va saldato, e il committente vuole il vostro ferro questa stessa notte, prima che la marea cancelli ogni prova. 
+            Lo stufato è offerto: finitelo, vi darà la forza per la strada. Fuori, oltre la porta sul retro delle scuderie, 
+            c'è il sentiero che conduce al luogo dell'incontro. Non fate aspettare chi vi ha ridato un nome"</i></span></p>
+        <p>Un sorso di troppo dopo quelle parole, un calore anomalo che brucia la gola e un sonno plumbeo che si insinua nelle palpebre mentre 
+            le voci della locanda sfumano nel nulla. È l'ultima cosa che la vostra mente riesce a mettere a fuoco.</p>
+        <p><strong><i>Il Banchetto è appena iniziato!</i></strong></p>
+    </div>
+
+    <h2>ATTO I &bull; LA FUGA DALLA STALLA (0 - 30 MINUTI)</h2>
+    
+    <p><i>Il risveglio sa di paglia marcia, sudore freddo e ferro arrugginito. Siete ammassati sul pavimento di una stalla diroccata, scossa dal 
+        ticchettio incessante della pioggia sul tetto e tagliata da deboli lame di luce lunare. Siete indolenziti; mentre vi sollevate lentamente, 
+        controllate i vostri averi: indossate ancora gli abiti della locanda, ma le tasche sono completamente vuote. Tutte le vostre armi, gli oggetti, 
+        le pozioni e le venti monete d'oro in pietre preziose sono svanite.</i></p>
+    <p><i>La vista si adatta all'oscurità. Il respiro pesante di quattro cavalli immobili rompe il silenzio. Ci sono alcuni strumenti da lavoro, resti di legna 
+        ormai andata a male, e delle finestrelle sbarrate da griglie di ferro. Quasi subito dopo l'ingresso principale — 
+        un grosso portone sbarrato — c'è una stanza secondaria con la porta socchiusa. Il pavimento scricchiola ad ogni vostro passo, ma nel punto in cui 
+        vi siete risvegliati è molto umido: lì, la zona è intrisa di sangue fresco. A terra giace il corpo di una giovane donna con la gola squarciata, 
+        gli occhi spalancati nel terrore e la lingua gonfia e violacea. Prima ancora che possiate elaborare la scena, un vociferare caotico e minaccioso 
+        squarcia la notte. È una folla inferocita, forse contadini armati di torce, che urla slogan deliranti mentre si avvicina di corsa alla stalla.</i></p>
+
+    <div class="read-aloud">
+        <img src="Mappa_Stalla.jfif" alt="Mappa Stalla di Oakhaven">
+        <p class="img-caption">Mappa tattica della Stalla di Oakhaven</p>
+    </div>
+
+    <!-- Nota Master -->
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione Ambientale & Indizi Atto I</summary>
+        <div class="gm-dropdown-content">
+            <p>La Stalla si divide in <strong>3 aree chiave</strong> e <strong>una minaccia a tempo:</strong></p>
+            <strong>INGRESSO</strong><br>
+            Porte pesantemente sbarrate dall'esterno.
+            <ul>
+                <li><em>Percezione:</em> Si sentono voci di contadini inferociti ma terrorizzati da una "maledizione". 
+                    Gridano di voler dare fuoco alla stalla per purificare il sangue versato.</li>
+            </ul>
+            <strong>RECINTO</strong><br>
+            4 cavalli immobili con sguardi sbarrati nel vuoto.
+            <ul>
+                <li><em>Arcano/Natura:</em> I cavalli sono sotto l'effetto di una stasi magica; sono completamente 
+                    ipnotizzati e non risponderanno ad alcun comando finché non viene interrotto l'incantesimo.</li>
+            </ul>
+            <strong>MAGAZZINO</strong><br>
+            Forte odore di letame e umidità. C'è una porta che conduce sul retro della stalla verso la foresta. 
+            Sparsi in giro ci sono sacchi di sementi e casse con attrezzi. In una cassa chiusa ci sono le loro armi. È
+            protetta da un semplice lucchetto (forzabile da un ladro o scassinabile con una prova di Forza CD 14). 
+            Al centro della stanza, c'è una botola con il lucchetto spaccato, che conduce ai cunicoli sotterranei.
+            
+            <p style="margin-top: 15px;"><span style="color: #ff9999;">INDIZIO SENSORIALE PRECOCE (MITIGARE L'AMNESIA):</span> 
+                Assegna in segreto a un PG un dettaglio: le sue mani sono sporche di un catrame nero e denso, 
+                identico a quello che si trova sugli abiti della vittima, oppure avverte un forte senso di familiarità 
+                con il profumo d'incenso nell'aria. Questo rompe l'amnesia passiva trasformandola in un indizio investigativo.</p>
+            <p style="margin-top: 15px;"><span style="color: #ff9999;">TIMER DELLA FOLLA:</span> Dopo 15-20 minuti di inazione o 
+                discussioni vuote, Barnaby (il capo dei contadini) appicca il fuoco alla paglia secca all'esterno della stalla. 
+                I PG devono trovare una via d'uscita immediata o rischiare di finire arrostiti vivi.</p>
+            <p style="margin-top: 15px;"><span style="color: #ff9999;">RECUPERO EQUIPAGGIAMENTO & ALTERNATIVE:</span> Se i giocatori 
+                restano bloccati o non trovano la botola, evita che la sessione si impantani. 
+                Il cadavere della donna sgozzata stringe in mano una chiave di ferro arrugginita 
+                (apre una cassetta degli attrezzi nel magazzino contenente strumenti improvvisati o un'arma bianca per ciascuno).</p>
+        </div>
+    </details>
+
+    <!-- TABELLA EVENTI CASUALI ATTO I -->
+    <div class="scumm-box">
+        <span class="pixel-badge">TABELLA IMPREVISTI &bull; ATTO I</span>
+        <h3 style="color: #d4af37;">Cosa succede nella stalla (Tira 1d6 se i PG perdono tempo)</h3>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>1d6</th>
+                        <th>Imprevisto</th>
+                        <th>Effetto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1-2</strong></td>
+                        <td>Scricchiolio strutturale</td>
+                        <td>Una trave crolla. Prova di Riflessi o 1d4 danni contundenti.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3-4</strong></td>
+                        <td>Gelo improvviso</td>
+                        <td>La temperatura crolla. Svantaggio alla prossima prova mentale.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5</strong></td>
+                        <td>Un cavallo si agita</td>
+                        <td>La bestia si libera e punta un giocatore prima di crollare morta.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6</strong></td>
+                        <td>Urlo dall'esterno</td>
+                        <td>Barnaby urla minacce di morte contro i "stregoni della locanda" e sentono i passi avvicinarsi.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <h2>ATTO II &bull; IL BIVIO E L'ESPLORAZIONE (30 - 120 MINUTI)</h2>
+    <p>I giocatori scelgono se e come fuggire dalla stalla. Le strade a disposizione offrono sbocchi geografici differenti e 
+        conseguenze tangibili distinte: l'<span style="color:#c9b037">Opzione A (i cunicoli sotterranei)</span> mette alla prova la prudenza del gruppo con trappole 
+        ed enigmi logici ma evita i pericoli della natura selvaggia; l'<span style="color:#c9b037">Opzione B (la Foresta Nera)</span> espone alle insidie della boscaglia 
+        e a un confronto diretto con l'eremita Sylva, garantendo però vantaggi strategici determinanti per il prosieguo. 
+        Entrambe le vie, pur con costi e sfide differenti, conducono infine alle soglie della cappella abbandonata.</p>
+    
+    <h3>Opzione A: Il Cunicolo Sotterraneo</h3>
+    <p><i>Spostando i sacchi pesanti nel magazzino, i PG rivelano una botola di legno marcio che sprofonda nel buio. 
+        Scendendola, ci si ritrova in un lungo cunicolo in forte pendenza, scavato nella nuda terra e risucchiato da un'oscurità totale. 
+        Avanzando alla cieca, il terreno si fa viscido.</i></p>
+ 
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione Cunicolo Sotterraneo</summary>
+        <div class="gm-dropdown-content">
+            <p>Tutti i personaggi devono superare una <strong>prova di Agilità (CD 12)</strong>: chi fallisce perde l'equilibrio, scivola rovinosamente per diversi metri nel buio e subisce 1d6 danni contundenti prima di arrivare in fondo alla discesa. Se non hanno una fonte di luce, applica un <em>malus di -2 alla prova</em>. La galleria termina in una vasta cavità sotterranea.</p>
+        </div>
+    </details>
+
+    <p><i>Di fronte a voi si erge una pesante porta di pietra grezza, sormontata dall'incisione di un corvo stilizzato. 
+        Sopra l'architrave, una frase è stata scalpellata nella roccia:</i></p>
+    <p><span style="color:#7a7878">&ldquo;Solo il sangue del patto apre la soglia.&rdquo;</span></p>
+    <p><i>Al centro della porta c'è una conca di pietra annerita, progettata per raccogliere offerte di sangue.</i></p>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione Apertura Porta & Rivelazione Amnesia</summary>
+        <div class="gm-dropdown-content">
+            <p>Per aprire la porta, la regola richiede che un personaggio versi il proprio sangue nella conca, subendo 1d6 danni taglienti. Se rifiutano:</p>
+            <ul>
+                <li><em>Opzione 1:</em> Usare il sangue fresco della ragazza morta nella stalla.</li>
+                <li><em>Opzione 2:</em> Prova di <strong>Intelligenza (Arcana) o (Investigazione) CD 14</strong> per manomettere il glifo con un ferro (fallendo, 1d4 danni da forza).</li>
+            </ul>
+            <p>Appena il sangue viene assorbito, un flashback travolge la mente del PG. Vede la propria mano impugnare un pugnale di ossidiana e affondarlo nella gola della vittima (se esecutore) o recitare formule corrotte in latino arcaico (se complice). I PG scoprono di essere i veri carnefici, non semplici ostaggi.</p>
+        </div>
+    </details>
+
+    <div class="read-aloud">
+        <img src="OPZIONE_A_Cunicoli.jfif" alt="Cunicoli sotterranei">
+        <p class="img-caption">Cunicolo Sotterraneo</p>
+    </div>
+    <p><i>Oltre la porta di pietra, il cunicolo si apre in un lungo corridoio umido che termina in una sala circolare. Al centro della stanza troneggiano tre grandi bracieri spenti, circondati da tre statue sfigurate: le Monete, le Catene e l'Eclissi. Sotto ogni statua c'è una scritta criptica.</i></p>
+    
+    <div class="read-aloud">    
+        <img src="Statue_Enigma.webp" alt="Statue enigma">
+        <p class="img-caption">Le tre Statue</p>
+    </div>
+
+    <p><strong>Statua 1 (Le Monete):</strong> <i>&ldquo;Nutro i re e corrompo i giudici, ma non ho peso né forma. Chi sono?&rdquo;</i><br>
+    <strong>Statua 2 (Le Catene):</strong> <i>&ldquo;Stringo senza mani, lego senza corde, eppure chi mi indossa si crede libero. Cosa sono?&rdquo;</i><br>
+    <strong>Statua 3 (L'Eclissi):</strong> <i>&ldquo;Spengo il giorno, porto la corona nera e divoro la luce del mondo. Chi sono?&rdquo;</i></p>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Soluzione e Tranelli Enigma Bracieri</summary>
+        <div class="gm-dropdown-content">
+            <p>L'ordine corretto e le parole chiave da pronunciare per accendere i bracieri sono:</p>
+            <ol>
+                <li>Statua 1 (Monete): <strong>"ricchezza"</strong></li>
+                <li>Statua 2 (Catene): <strong>"giuramento"</strong></li>
+                <li>Statua 3 (Eclissi): <strong>"buio"</strong></li>
+            </ol>
+            <p>Se sbagliano l'ordine o la risposta, tirare 1d4 per la trappola punitiva:</p>
+            <ul>
+                <li><strong>[1] Dardi avvelenati:</strong> 1d8 perforanti + 1d4 veleno.</li>
+                <li><strong>[2] Liquido acido:</strong> 2d6 acido e -1 CA sull'elmo.</li>
+                <li><strong>[3] Catena pesante:</strong> 2d8 contundenti e prone (se fallisce Destrezza).</li>
+                <li><strong>[4] Fumo asfissiante:</strong> 2d6 necrotici e spaventato per 3 turni.</li>
+            </ul>
+        </div>
+    </details>
+
+    <p><i>Non appena l'ultimo braciere divampa in una sinistra fiamma bluastra, la parete di pietra si spacca con un rantolo sordo, 
+        disperdendo polvere antica. Oltre la breccia, un cunicolo umido e in salita si inerpica nel buio viscido, sbucando infine all'interno 
+        di un pozzo secco e dimenticato, le cui pareti di pietra inghiottono la nebbia della Foresta Nera, proprio dinnazi alle soglie 
+        della Cappella abbandonata.</i></p>
+        
+    <h3>Opzione B: Verso la Foresta Nera</h3>
+
+    <p><i>La pesante anta di legno è bloccata. Con una prova di Forza (CD 13) i PG fanno scivolare via un grosso scaffale di attrezzi. 
+        Fuori, la pioggia batte implacabile mentre fuggono verso la Foresta Nera, un polmone malato di rovi acuminati e nebbie innaturali.</i></p>
+    <div class="read-aloud">    
+        <img src="La_Foresta_Nera.jfif" alt="La Foresta Nera">
+        <p class="img-caption">La Foresta Nera</p>
+    </div>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione Esplorazione Foresta & Pacing</summary>
+        <div class="gm-dropdown-content">
+            <p>Il capogruppo effettua una <strong>prova di Saggezza (Sopravvivenza) o Intelligenza (Investigazione) CD 13</strong>:</p>
+            <ul>
+                <li><em>Successo:</em> Riconoscono i vecchi sentieri ed evitano le insidie.</li>
+                <li><em>Fallimento:</em> Girano in tondo. Le radici degli alberi si animano come tentacoli: <strong>1d6 danni contundenti</strong> e condizione di <strong>Trattenuto</strong> finché non superano una prova di Forza o Destrezza CD 13.</li>
+            </ul>
+        </div>
+    </details>
+    <p><i>Proseguendo oltre la zona delle radici, guidati da un filo di fumo, 
+    i personaggi scorgono una capanna di fango e rami. All'interno siede un'anziana donna con 
+    un occhio cieco e lattiginoso intenta a pulire un coltello da scuoiatore: 
+    è Sylva l'Eremita.</i></p>
+    <div class="read-aloud">
+        <img src="Capanna_foresta_nera.jfif" alt="Capanna">
+        <p class="img-caption">La capanna</p>
+    </div>
+    <p><i>Mentre vi avvicinate alla capanna di fango e corteccia, il profilo della 
+        vecchia donna si delinea chiaramente accanto al fuoco fumoso. Non appena avverte il fruscio dei 
+        vostri passi tra i rovi, la donna alza lentamente il capo, piantando su di voi il suo unico 
+        occhio sano e tagliente come una spina. Fa scivolare con gesti lenti il coltello da scuoiatore 
+        lungo la coscia, poi si alza in piedi con una rapidità innaturale per la sua età. 
+        Un sorriso sdentato e amaro le increspa le labbra raggrinzite mentre vi viene incontro, 
+        zoppicando leggermente ma senza mai distogliere lo sguardo.</i></p>
+
+    <div class="read-aloud">
+        <img src="Sylva.jfif" alt="Sylva l'Eremita">
+        <p class="img-caption">Sylva "L'Eremita"</p>
+    </div>
+    <p><span style="color: #7a7878"><i>&ldquo;E così la Foresta Nera ha deciso di sputare 
+        carne viva fino alla mia porta... ditemi, vi siete persi tra le nebbie o c'è qualcos'altro 
+        che vi spinge a correre a perdifiato? Sbaglio o state fuggendo da quei fanatici 
+        assetati di sangue del villaggio di Oakhaven? Da quel branco di lupi travestiti 
+        da agnelli che chiamano preti?&rdquo;</i></span></p>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Relazione positiva</summary>
+        <div class="gm-dropdown-content">
+            <p>Se i personaggi si dimostrano rispettosi, offrono un dono 
+            o scelgono la via della diplomazia, l'espressione di Sylva si ammorbidisce in un ghigno cinico.</p>
+            <p><i><span style="color:#7a7878">&ldquo;Sedetevi vicino al fuoco prima che il gelo vi iberni il cervello&rdquo;</span></i> ringhia, 
+                invitandovi a stringervi attorno alle braci.
+                <i><span style="color:#7a7878">&ldquo;Volete sapere perché vivo in questo letame? 
+                Anni fa ero io la custode dei segreti di quella maledetta cappella in questa foresta.<br>
+                Conoscevo i veri nomi degli dèi che dormono sotto le radici. <strong>Ero la mentore originale di Piè Veloce, prima che lui mi tradisse per scalare i ranghi della setta.</strong><br>
+                Ma il popolo di Oakhaven ha la memoria corta e la paura facile. <br>
+                Quando la carestia ha bruciato i raccolti e la peste ha preso i loro figli, 
+                hanno cercato un capro espiatorio per non guardarsi allo specchio. Mi hanno accusato di 
+                stregoneria nera, di aver venduto il bestiame ai demoni, e mi hanno cacciata a pietrate 
+                nella foresta, lasciandomi a marcire. Ma loro pensavano che il culto fosse morto 
+                con me... Stolti. <br>
+                Quella setta che oggi vi dà la caccia è la stessa che ho servito, 
+                la stessa che ora ripete i riti di sangue sulla scorta di un nuovo patto. Siete i loro agnelli
+                sacrificali per il rituale. Sarà stesso questa foresta a portarvi alla cappella...<br> 
+                Nessuno può remare contro la pretesa del sangue di Otheos, il Dio della Piaga.<br> 
+                Il vostro cammino verso la morte è anche la vostra unica via di salvezza. 
+                Se riuscite a bloccare il rituale, salverete questa foresta e tutto il villaggio, 
+                libererete tutte le anime di cui si è cibato il dio della piaga.&rdquo;</span></i></p>
+            <p>Prima di scacciarvi, Sylva fruga tra le sue ceneri e vi lancia un piccolo sacchetto di tela ruvida:</p>    
+            <p><i><span style="color:#7a7878">&ldquo;Prendete questo, imbecilli. All'interno c'è della 
+                <strong>polvere di radice di gallian essiccata</strong> e <strong>un amuleto di ossidiana incrinato.</strong><br>
+                Grazie alla mia vecchia conoscenza dei rituali della setta, so esattamente come colpirli: 
+                se buttate la polvere sui bracieri sacrificali della cappella prima che il rituale 
+                sia completato, soffocherete la fiamma necrotica e accecherete temporaneamente gli 
+                adepti, spezzando la loro resistenza ai danni. <br> 
+                L'amuleto, invece, se spezzato sull'altare, spezzerà il legame mentale che vi tiene legati al dio. 
+                Ora sparite dalla mia vista, la foresta vi sta già chiamando.&rdquo;</span></i></p>
+            <p>Sylva vi volta le spalle tornando a sedersi accanto al fuoco fumoso, mentre la sua figura svanisce tra i fumi della capanna.
+                Uscendo di nuovo all'aperto, la Foresta Nera sembra mutare volto. Le intemperie non accennano a placarsi — la pioggia continua 
+                a sferzare i rami e il freddo morde la pelle — ma l'atmosfera ostile e claustrofobica di poco prima si dissolve improvvisamente. 
+                Ai vostri piedi, tra il muschio umido e le radici contorte, si apre uno strano sentiero di terra battuta e pietre annerite che 
+                sembra tracciato di fresco. Seguendo questa via misteriosa che la foresta stessa sembra 
+                aver aperto per voi, camminate rapidi e senza incontrare resistenza fino a giungere direttamente alle porte della cappella abbandonata.
+            </p>
+        </div> 
+    </details>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Relazione negativa</summary>
+        <div class="gm-dropdown-content">
+            <p>Se i personaggi dovessero trattarla con arroganza, insolenza o minacciarla brandendo le 
+            armi, la vecchia Sylva non tremerà. Un lampo di luce innaturale e accecante illumina 
+            d'improvviso l'interno della capanna. L'occhio lattiginoso della vecchia si accende di un 
+            fuoco azzurro e mefitico, e con un secco schiocco delle dita nodose sprigiona un'ondata di energia psichica 
+            e necrotica che investe il gruppo, scaraventandoli all'indietro nella fanghiglia 
+            della foresta, provocandogli <strong>1d8 danni necrotici + 1d4 danni psichici</strong>.</p>
+            <p>Storditi e contusi, vi rimettete in piedi. Nonostante le intemperie non diano tregua, la Foresta Nera sembra improvvisamente cambiare comportamento nei vostri confronti. 
+                Ai vostri piedi, tra il muschio umido, si apre uno strano sentiero di terra battuta e pietre annerite guidato da una debole fosforescenza azzurra. 
+                Il percorso è miracolosamente libero da ostacoli e vi conduce rapidamente al cospetto delle pareti di pietra grigia della cappella abbandonata.
+            </p>
+        </div>
+    </details>
+
+    <h2>ATTO III &bull; IL RITUALE NELLA CAPPELLA (120 - 180 MINUTI)</h2>
+    <div class="read-aloud">
+        <img src="Cappella.jfif" alt="La Cappella Sconsacrata">
+        <p class="img-caption">La Cappella Sconsacrata</p>
+    </div>
+    <p><i>Seguendo lo strano sentiero tracciato dalla foresta, oppure risalendo il cunicolo sotterraneo, vi ritrovate di fronte alla cappella abbandonata. 
+        Spingendo con cautela il pesante portone d'ingresso, un odore acre di polvere, umidità e muffa vi aggredisce le narici. All'interno, 
+        l'aspetto è quello di una tipica cappella rurale abbandonata e profanata dal tempo.</i></p>
+    <p><i>Le pareti in pietra grigia sono parzialmente divorate dall'edera, il tetto è crollato in più punti lasciando filtrare la pioggia e la luce 
+        fioca della notte, e i vecchi banchi di legno per i fedeli sono marciti e spezzati sul pavimento fangoso. Tra le rovine si muovono piccoli 
+        abitanti indesiderati: stormi di ratti si disperdono rapidamente tra le crepe, mentre un gufo sbatte le ali spaventato dalle travi pericolanti 
+        del soffitto.</i></p>
+    <p><i>Oltrepassando l'altare devastato e le nicchie laterali un tempo dedicate alle preghiere, i vostri occhi cadono su una grata di ferro pesante, 
+        incassata nella parete di fondo e serrata da un grosso lucchetto arrugginito. Oltre le sbarre, scale in pietra grezza sprofondano ripide verso il basso, 
+        inghiottite da un buio denso e innaturale da cui sale un debole e ritmico coro di canti sussurrati.</i></p> 
+    <p><i>Varcata la grata, scendete lungo una scala elicoidale viscida e ripida che si immerge nelle viscere della terra. L'aria diventa irrespirabile, 
+        densa di fumo d'incenso bruciato e di un persistente odore di rame e sangue coagulato. Al termine della discesa, la scala si apre direttamente 
+        nella cripta sotterranea.</i></p>
+    <p><i>La sala è un antro ciclopico scavato nella pietra viva, sorretto da archi gotici soffocati da radici mastodontiche che pulsano come vene scure. 
+        Ai lati, nicchie ricolme di teschi umani e resti mortali fanno da silenziosa guardia a una scena agghiacciante. Al centro della cripta troneggia 
+        un imponente altare di pietra verde, sollevato su gradini consumati e circondato da bracieri che vomitano fiamme di un verde malato e innaturale. 
+        Su quell'altare giace un corpo immobile, legato stretto da pesanti catene di ferro. Intorno alla struttura, incappucciati in tuniche lacere decorate 
+        con l'emblema di un corvo, figure immobili mormorano litanie oscure. Davanti all'altare, un adepto inginocchiato tiene sollevato un calice d'argento, 
+        mentre in cima, sovrastando il corpo incatenato, si erge la figura imponente di Piè Veloce: il cappuccio calato sul volto e un pugnale rituale 
+        d'ossidiana levato in alto, pronto a scendere.</i></p>
+    <p><i>Nel preciso istante in cui i vostri passi tradiscono la vostra presenza, le litanie si interrompono. 
+        Piè Veloce abbassa lentamente il pugnale, si volta verso di voi e solleva il cappuccio, lasciando intravedere un sorriso beffardo inciso 
+        tra le cicatrici del volto.</i></p>
+    <p><i><span style="color:#7a7878">&ldquo;Sciocchi... pensavate davvero di essere fuggiti? Siete arrivati esattamente dove il vostro destino 
+        vi ha sempre richiamato&ldquo;</span></i></p> tuona la sua voce rimbombando contro le volte di pietra. 
+    <p><i><span style="color:#7a7878">&ldquo;Quel sangue che avete sulle mani, quel corpo senza vita nella stalla... non è stata opera di sconosciuti. 
+        Siete stati voi a sgozzarla. Avete eseguito il primo atto del nostro patto volontariamente, barattando la vostra anima per la brama di potere che 
+        avete assaporato qualche ora fa. La vostra memoria è stata solo temporaneamente sigillata per impedirvi di cedere alla paura prima del momento opportuno.&ldquo;</span></i></p>
+    <p><i>Piè Veloce apre le braccia, pronuncia una formula arcana, la barriera psichica crolla e la vostra mente viene inondata da una cascata di 
+        fotogrammi spietati, dettagliati e profondamente disturbanti che colmano ogni vuoto di memoria dal momento in cui avete lasciato la locanda 
+        fino al vostro risveglio nella stalla.</i></p>
+    <p><i><span style="color:#7a7878">&ldquo;Il cerchio ora è completo. Potete scegliere chiudere la vostra esistenza da eroi ciechi, morendo qui tra 
+        i rifiuti, oppure accettare la vostra vera natura. Giurate fedeltà a Otheos, versate il vostro sangue nel calice e ricevete la benedizione 
+        del Dio della Piaga, ottenendo il potere di dominare su queste terre corrotte. 
+        In alternativa... preparatevi a diventare il prossimo sacrificio.&ldquo;</span></i></p>
+    
+    <div class="read-aloud">
+        <img src="Mappa_Cappella.jpg" alt="Mappa Tattica della Cappella">
+        <p class="img-caption">Mappa Tattica della Cappella</p>
+    </div>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione ATTO III</summary>
+        <div class="gm-dropdown-content">
+            <p style="margin-top: 15px;"><span style="color: #ff9999;">LA FALSA MEMORIA</span></p>
+            <p>I personaggi ricordano di aver consumato la zuppa di pesce nella sala comune come una normale cena lucida e vigorosa.
+                Ricordano di aver discusso dei piani della serata e della necessità di compiere "l'offerta" per entrare a far parte della setta, le promesse
+                di poteri e abilità innaturali.</p>
+            <p>Ricordano di essersi alzati dai tavoli con le proprie gambe, di aver camminato lungo le strade di Oakhaven a testa alta e con passo fermo, 
+                guidati da una determinazione fredda e calcolata, senza subire alcun torpore, sonnambulismo o costrizione fisica da parte degli adepti.
+                Rivivono l'ingresso nella stalla buia non come vittime risvegliatesi per caso, ma come carnefici consapevoli.
+                Si ricordano mentre uno di loro afferra il pugnale d'ossidiana con una presa salda e decisa, gli altri che vociferano parole arcane. 
+                Vedono il volto della donna terrorizzato, la lama nella gola della vittima, sentono il calore denso e scarlatto del sangue imbrattare 
+                le mani dell'esecutore e i visi dei restanti, senza avvertire alcuna manipolazione mentale o magia di controllo.</p>
+            <p>Ai loro occhi, anche il momento in cui si sono rifugiati nella stalla appare come una mossa calcolata per eludere i sospetti della folla imminente. 
+                Questa falsa ricostruzione è congegnata da Piè Veloce per convincerli di essere già dei mostri a tutti gli effetti, privi di innocenza, 
+                così da spezzare la loro morale e spingerli a cedere definitivamente al potere di Otheos.</p>
+            
+            <p style="margin-top: 15px;"><span style="color: #ff9999;">LA VERA REALTÀ</span></p>
+            <p>Un personaggio legato alla magia può effettuare una <strong>prova di Arcano</strong> (CD 20). Se superata, la sua percezione 
+                va oltre il semplice recupero dei ricordi, penetrando nella struttura stessa dell'incantesimo di modifica memoria.</p> 
+            <p>Il personaggio non vede semplicemente i ricordi riaffiorare, ma vede letteralmente gli stracci e le cuciture magiche con cui 
+                quelle immagini sono state impiantate a forza nella sua psiche.
+                La memoria ritorna lucida alla sera trascorsa nella sala comune della locanda "La Candela Tremolante". Ricorda di aver consumato 
+                la zuppa calda di pesce e verdure servita dall'oste, con gli altri compagni, avvertendo sulla lingua il sapore chimico e nauseabondo della zuppa avvelenata 
+                come se fosse un'interferenza sensoriale.</p>
+            <p>Ripercorre la sensazione fisica delle gambe tramutate improvvisamente in piombo, della vista che si offusca e del mondo che inizia a roteare 
+                mentre perdeva progressivamente il controllo del proprio corpo. Ricorda lo stato di sonnambulismo vigile e incosciente in cui venivano 
+                sorretti per le braccia e trascinati fuori dalla porta sul retro, lungo i sentieri fangosi e avvolti dalla nebbia, completamente incapaci di gridare 
+                o di opporre la benché minima resistenza fisica.</p>
+            <p>Rivede il momento esatto in cui sono stati fatti inginocchiare nella stalla buia e umida. Sotto l'effetto di una suggestione ipnotica totale e 
+                profonda, le mani di uno dei personaggi sono state guidate da una forza estranea e invisibile a impugnare il pugnale d'ossidiana. 
+                Ricorda nitidamente lo stato in cui erano, un'azione compiuta con il proprio corpo, ma con la volontà completamente azzerata dalla magia della setta.</p>
+            
+            <p style="margin-top: 15px;"><span style="color: #ff9999;">TIMER RITUALE</span></p>
+            Il rituale di Otheos avanza in base alle azioni dinamiche dei PG e dei loro avversari. Il timer utilizza un sistema a 3 tacche: 
+            ogni volta che il gruppo perde tempo in discussioni o fallisce prove cruciali, la tacca scala in avanti. 
+            Al contrario, se i giocatori attuano contromisure intelligenti (come l'utilizzo della *polvere di radice di gallian* fornita 
+            da Sylva per rilasciare un fumo acre che fa tossire violentemente gli adepti, azzerando i loro bonus ai tiri per colpire per 2 round, 
+            o la distruzione dell'*amuleto di ossidiana* sull'altare per far risuonare la voce spettrale di Sylva e spezzare il controllo mentale), 
+            il timer arretra di una tacca.
+            
+            <p style="margin-top: 15px;"><span style="color: #ff9999;">Adepti fanatici (3)</span></p>
+            <ul>    
+                <li><strong>Razza:</strong> umanoide medio</li>
+                <li><strong>Classe e Stile di Combattimento:</strong> Guerriero liv.2 (Duellare) <i>Bonus Competenza +2</i></li>
+                <li><strong>Caratteristiche:</strong> <i>Forza</i> 13 (+1) - <i>Destrezza</i> 12 (+1) - <i>Costituzione</i> 13 (+1) - <i>Intelligenza</i> 10 (+0) - 
+                    <i>Saggezza</i> 12 (+1) - <i>Carisma</i> 10 (+0)</li>
+                <li><strong>Classe Armatura:</strong> 13 (tunica imbottita rinforzata)</li>
+                <li><strong>Armi:</strong> Pugnale Sacrificale (portata: 1.5 m &bull; danno: 1d4+2 perforante + 1d6 necrotico)</li>
+                <li><strong>Punti ferita e Dadi vita:</strong> 22 (2d10)</li>
+                <li><strong>Velocità:</strong> 9 metri</li>
+                <li><strong>Tiri Salvezza:</strong> <i>Forza</i> +3 - <i>Costituzione</i> +3</li>
+                <li><strong>Abilità:</strong> <i>Intimidire</i> +3 - <i>Atletica</i> +3</li> 
+                <li><strong>Tratti speciali:</strong> 
+                    <ul>
+                        <li><i>Fanatismo Oscuro:</i> immunità alla condizione <i>Spaventato</i> finché Piè Veloce è vivo e combatte nella stessa stanza.</li>
+                        <li><i>Recuperare Energie:</i> Nel suo turno può usare un'azione bonus per recuperare un ammontare di punti ferita pari a 1d10 + il suo livello di guerriero (1 uso ogni Riposo Lungo o Breve).</li>
+                        <li><i>Azione Impetuosa:</i> Nel suo turno può usare un'azione aggiuntiva oltre alla sua azione regolare e a una possibile azione bonus (1 uso ogni Riposo Lungo o Breve).</li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <p style="margin-top: 15px;"><span style="color: #ff9999;">Il Capo (Piè Veloce)</span></p>
+            <ul>    
+                <li><strong>Razza:</strong> umanoide medio</li>
+                <li><strong>Classe e Tradizione Arcana:</strong> Mago (Scuola di Necromanzia) (liv.7) <i>Bonus Competenza +3</i></li>
+                <li><strong>Caratteristiche:</strong> <i>Forza</i> 10 (+0) - <i>Destrezza</i> 14 (+2) - <i>Costituzione</i> 14 (+2) - <i>Intelligenza</i> 17 (+3) - 
+                    <i>Saggezza</i> 16 (+3) - <i>Carisma</i> 12 (+1)</li>
+                <li><strong>Armatura:</strong> nessuna</li>
+                <li><strong>Armi:</strong> Pugnale in Ossidiana (portata: 1.5 m &bull; danno: 1d8+2 perforante + <i>Tiro Salvezza Costituzione</i> per non rimanere <i>Paralizzato</i>).</li>
+                <li><strong>Punti ferita e Dadi Vita:</strong> 58 (7d6)</li>
+                <li><strong>Velocità:</strong> 9 metri</li>
+                <li><strong>Tiri Salvezza:</strong> <i>Intelligenza</i> +6 - <i>Saggezza</i> +6</li>
+                <li><strong>Abilità:</strong> <i>Arcana</i> +6 - <i>Religione</i> +6 - <i>Inganno</i> +4 - <i>Percezione</i> +6</li>
+                <li><strong>Incantesimi:</strong> 
+                    <ul>
+                        <li><i>Trucchetti:</i> Colpo Accurato, Prestidigitazione, Raggio di Gelo, Spruzzo Velenoso</li>
+                        <li><i>1° Livello (4 slot):</i> Armatura Magica, Camuffare Se Stesso, Charme su persone, Raggio di infermità</li>
+                        <li><i>2° Livello (3 slot):</i> Allucinazione di Forza, Oscurità, Vedere Invisibilità</li> 
+                        <li><i>3° Livello (3 slot):</i> Animare Morti, Controincantesimo, Tocco del Vampiro</li> 
+                        <li><i>4° Livello (1 slot):</i> Segugio Fedele di Mordenkainen</li>
+                    </ul>
+                </li>
+                <li><strong>Tratti speciali:</strong> 
+                    <ul>
+                        <li><i>Raccolto Macabro:</i> Una volta per turno, quando uccide una creatura con un incantesimo di 1° livello o superiore, recupera punti ferita pari al doppio del livello dell'incantesimo, o il triplo del livello se l'incantesimo appartiene alla Scuola di Necromanzia (non funziona su costrutti o non morti).</li>
+                        <li><i>Servitori Non Morti:</i> Quando lancia <i>animare morti</i> può bersagliare un cadavere o un cumulo di ossa aggiuntivo per creare un altro scheletro o zombie, che ottiene punti ferita massimi extra pari al livello del mago e aggiunge il bonus di competenza del mago ai tiri per i danni con le armi.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </details>
+    
+    <h3>Il Grande Colpo di Scena e la Rivelazione del Traditore</h3>
+    <p>Nelle fasi finali dello scontro, mentre il capo della setta sta per sferrare il colpo finale, urla guardando uno specifico personaggio: <br>
+    <span style="color:#7a7878">&ldquo;Fratello! Hai rinnegato il sangue del nostro patto per questi miserabili?&rdquo;</span><br>
+        In quel preciso istante, il velo dell'amnesia si strappa definitivamente. Il giocatore designato come esecutore della vittima iniziale, 
+        ricorda lucidamente di non essere stato rapito: 
+        era lui il mandante del secondo sacrificio, colui che ha firmato il patto con la setta per ottenere ricchezza, salvo poi subire un blocco mentale 
+        protettivo per evitare ripensamenti. Si innesca un bivio morale immediato al tavolo: <strong>protegge il segreto o si volta contro i suoi alleati?</strong>
+    </p>
+    
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione Traditore & Cliffhanger Finale</summary>
+        <div class="gm-dropdown-content">
+            <p style="margin-top: 15px;"><span style="color: #ff9999;">Il Traditore</span></p>
+            <p>Gestisci l'amnesia come un'ombra che svanisce per gradi. Durante l'Atto II, semina indizi ambigui (un PG riconosce un simbolo, un altro avverte un legame con il capo setta). All'inizio dell'Atto III, esponi chiaramente al giocatore designato la sua natura di ex-affiliato offrendo un bivio di agenzia reale basato sulle sue scelte anziché su un'imposizione forzata:<br>
+            "Il tuo personaggio ricorda di aver fatto un patto con la setta per denaro o salvezza. Vuoi onorare quel patto pugnalando i tuoi compagni alle spalle in cambio di potere, o decidi di ribellarti al tuo passato e bruciare il contratto morale?"</p>
+            <p><em>(Nota: Se usi personaggi personalizzati, non i pregenerati, collega questo tradimento ai flashback emersi durante l'Atto II).</em></p>
+            <p style="margin-top: 15px;"><span style="color: #ff9999;">Il Cliffhanger</span></p>               
+            <p>Sconfitto il capo setta e liberata la novizia, i pesanti portoni della cripta si spalancano. Barnaby e la folla inferocita irrompono armati di torce e forconi, trovando i mercenari coperti del sangue della setta e della vittima. La sessione si chiude con la luce delle torce sui volti sbigottiti dei PG, lasciando in sospeso il loro destino.</p>
+        </div>
+    </details>
+
+    <div class="scumm-box">
+        <span class="pixel-badge">APPENDICE GM &bull; STATISTICHE</span>
+        <h3 style="color: #c9b037;">Tabella Incontri e Mostri</h3>
+        
+        <div class="table-responsive">
+            <table class="compact-table">
+                <thead>
+                    <tr>
+                        <th>Ruolo</th>
+                        <th>PV</th>
+                        <th>CA</th>
+                        <th>Attacco / Danno</th>
+                        <th>Note</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td><strong>Barnaby</strong></td><td>20</td><td>12</td><td>+4 / 1d6 (Forcone)</td><td>Incitamento (morale).</td></tr>
+                    <tr><td><strong>La Folla</strong></td><td>Gruppo (15)</td><td>10</td><td>+3 / 1d4 (Sassi)</td><td>Si ritira se vede sangue.</td></tr>
+                    <tr><td><strong>Sylva</strong></td><td>30</td><td>13</td><td>+5 / 1d8 (Bastone)</td><td>Guarisce o infligge danno psichico.</td></tr>
+                    <tr><td><strong>Adepti Fanatici</strong></td><td>15</td><td>12</td><td>+4 / 1d6 (Pugnale)</td><td>Immuni alla paura.</td></tr>
+                    <tr><td><strong>Piè Veloce (Capo)</strong></td><td>40</td><td>14</td><td>+6 / 1d8 + 2</td><td>Resistenza non magica.</td></tr>
+                    <tr><td><strong>Radici Animate</strong></td><td>25</td><td>11</td><td>+5 / 1d8</td><td>Trattengono il bersaglio.</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- APPENDICE: ASSET DI SUPPORTO PER IL MASTER (PREGENERATI E NOTE OPERATIVE) -->
+    <div class="scumm-box" style="border-left: 3px solid #c9b037;">
+        <span class="pixel-badge" style="background-color: #262002; color: #c9b037; border-color: #c9b037;">KIT MASTER &bull; ASSET PRONTI ALL'USO</span>
+        <h3 style="color: #ffffff;">1. Profili dei 4 Pregenerati</h3>
+        <p>Per azzerare i tempi morti iniziali, distribuisci queste brevi schede ai giocatori. <br>
+            <em>(Sistema adottato: D&D 5e)</em></p>
+    
+        <!-- STATISTICHE KAELEN -->
+        <h3>Kaelen &bull; Il Soldato di ventura</h3>
+        <span style="color:#746120"><i>Umano</i> - <strong>Guerriero, Liv. 3</strong></span>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> BACKGROUND <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <i>Ex milite mercenario abituato a vendere la spada al miglior offerente.</i>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> CARATTERISTICHE <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <ul>
+            <li><strong>Stile di Combattimento:</strong> <span style="color:#746120">[ <i>DIFESA</i> ]</span> Finché indossa un'armatura, il guerriero ottiene un bonus +1 alla CA.</li>
+            <li><strong>Bonus di Competenza:</strong> +2</li>
+            <li><strong>Archetipo Marziale:</strong> <span style="color:#746120">[ <i>CAMPIONE</i> ] <i>&bull; Critico Migliorato &bull;</i></span> I suoi attacchi con un'arma mettono a segno un colpo critico con un risultato di 19-20 al tiro.</li>
+            <li><strong>Caratteristiche:</strong> <i>Forza</i> 16 (+3) - <i>Destrezza</i> 14 (+2) - <i>Costituzione</i> 15 (+2) - <i>Intelligenza</i> 11 (+0) - 
+                <i>Saggezza</i> 9 (-1) - <i>Carisma</i> 13 (+1)</li>
+            <li><strong>Classe Armatura:</strong> 16 (cotta di maglia)</li>
+            <li><strong>Equipaggiamento:</strong> arco lungo + 20 frecce, scudo, 2 asce, dotazione da avventuriero.</li>
+            <li><strong>Punti ferita:</strong> 28 (Massimi standard: 10 al 1° livello + 6 per i due livelli successivi + 6 di Costituzione totale)</li>
+            <li><strong>Dadi vita:</strong> 3d10</li>
+            <li><strong>Velocità:</strong> 9 metri</li>
+            <li><strong>Tiri Salvezza:</strong> <i>Forza</i> +5 - <i>Costituzione</i> +4</li>
+            <li><strong>Abilità:</strong> <i>Percezione</i> +1 - <i>Atletica</i> +5</li> 
+            <li><strong>Tratti speciali:</strong> 
+                <ul>
+                    <li><span style="color:#746120"><i>Recuperare Energie:</i></span> Nel suo turno può usare un'azione bonus per recuperare un ammontare di punti ferita pari a 1d10 + il suo livello di guerriero <br><span style="color:#555566">[ 1 uso ogni <i>Riposo Lungo o Breve</i> ]</span></li>
+                    <li><span style="color:#746120"><i>Azione Impetuosa:</i></span> Nel suo turno può usare un'azione aggiuntiva oltre alla sua azione regolare e a una possibile azione bonus <br><span style="color:#555566">[ 1 uso ogni <i>Riposo Lungo o Breve</i> ]</span></li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- STATISTICHE LYRA -->
+        <h3>Lyra &bull; L'Eretica in Fuga</h3>
+        <span style="color:#746120"><i>Mezz'elfo</i> - <strong>Mago, Liv. 3</strong></span>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> BACKGROUND <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <i>Studiosa autodidatta braccata per aver infranto i sigilli di un grimorio proibito. Le sue dita odorano costantemente di catrame e 
+        incenso bruciato. Ha stretto il patto iniziale per proteggere la sorella minore, ma la sua mente è stata oscurata.</i>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> CARATTERISTICHE <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <ul>
+            <li><strong>Tradizione Arcana:</strong> <span style="color:#746120">Scuola di Abiurazione</span></li>
+            <li><strong>Bonus di Competenza:</strong> +2</li>            
+            <li><strong>Caratteristiche:</strong> <i>Forza</i> 12 (+1) - <i>Destrezza</i> 14 (+2) - <i>Costituzione</i> 12 (+1) - <i>Intelligenza</i> 16 (+3) - 
+                <i>Saggezza</i> 14 (+2) - <i>Carisma</i> 10 (+0)</li>
+            <li><strong>Armatura:</strong> nessuna</li>
+            <li><strong>Equipaggiamento:</strong> pugnale, borsa per componenti, dotazione da esploratore, libro degli incantesimi.</li>
+            <li><strong>Punti ferita:</strong> 17 (Massimi standard: 6 al 1° livello + 4 per i due livelli successivi + 3 di Costituzione totale)</li>
+            <li><strong>Dadi vita:</strong> 3d6</li>
+            <li><strong>Velocità:</strong> 9 metri</li>
+            <li><strong>Tiri Salvezza:</strong> <i>Intelligenza</i> +5 - <i>Saggezza</i> +4</li>
+            <li><strong>Abilità:</strong> <i>Arcana</i> +5 - <i>Medicina</i> +4</li>
+            <li><strong>Incantesimi:</strong> 
+                <ul>
+                    <li><i>Trucchetti:</i> Dardo di Fuoco, Mano Magica, Amicizia</li>
+                    <li><span style="color:#746120">1° Livello (4 slot):</span> <i>Individuazione del Magico, Onda Tonante, Protezione dal Bene e dal Male, Ritirata Rapida</i></li>
+                    <li><span style="color:#746120">2° Livello (2 slot):</span> <i>Blocca Persone, Sfocatura, Ragnatela</i></li> 
+                </ul>
+            </li>
+            <li><strong>Tratti speciali:</strong> 
+                <ul>
+                    <li><span style="color:#746120"><i>Scurovisone:</i></span> In condizioni di luce fioca può vedere fino a 18 metri come se si trovasse in condizioni di luce intensa e nell'oscurità come se si trovasse in luce fioca (solo tonalità di grigio).</li>
+                    <li><span style="color:#746120"><i>Retaggio Fatato:</i></span> Vantaggio ai <i>tiri salvezza</i> per non essere affascinato e immunità al sonno magico.</li>
+                    <li><span style="color:#746120"><i>Abiuratore Sapiente:</i></span> Tempo e denaro da spendere per copiare un incantesimo di abiurazione nel grimorio sono dimezzati.</li>
+                    <li><span style="color:#746120"><i>Interdizione Arcana:</i></span> Crea un'interdizione magica pari al doppio del livello da mago + mod. di <i>Intelligenza</i> che assorbe i danni subiti finché non si completa un Riposo Lungo.</li>
+                </ul>
+            </li>
+        </ul>     
+
+        <!-- STATISTICHE THORVALD -->
+        <h3>Thorvald &bull; La Canaglia</h3>
+        <span style="color:#746120"><i>Umano</i> - <strong>Ladro, Liv. 3</strong></span>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> BACKGROUND <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <i>Taccheggiatore e scassinatore da strada cinico e disincantato. È l'effettivo possessore (sotto amnesia) del sacchetto di pietre 
+        preziose rubato alla tesoreria prima del rito. Vede il pericolo ovunque ma non sa resistere a un luccichio di valore.</i>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> CARATTERISTICHE <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <ul>
+            <li><strong>Bonus di Competenza:</strong> +2</li>
+            <li><strong>Archetipo Ladresco:</strong> <span style="color:#746120">[ <i>FURFANTE</i> ] <i>&bull; Mani Veloci &bull;</i></span> Può usare l'azione bonus conferitagli da <i>Azione Scaltra</i> per effettuare Rapidità di Mano, usare arnesi da scasso, o Usare un Oggetto. <i>&bull; Lavoro al Secondo Piano &bull;</i> Scalare non richiede movimento extra.</li>
+            <li><strong>Caratteristiche:</strong> <i>Forza</i> 14 (+2) - <i>Destrezza</i> 16 (+3) - <i>Costituzione</i> 13 (+1) - <i>Intelligenza</i> 15 (+2) - 
+                <i>Saggezza</i> 11 (+0) - <i>Carisma</i> 9 (-1)</li>
+            <li><strong>Classe Armatura:</strong> 14 (armatura di cuoio) </li>
+            <li><strong>Equipaggiamento:</strong> stocco, arco corto + 20 frecce, 2 pugnali, dotazione scassinatore, dotazione avventurieri, arnesi da scasso.</li>
+            <li><strong>Punti ferita:</strong> 20 (Massimi standard: 8 al 1° livello + 4 per i due livelli successivi + 4 di Costituzione totale)</li>
+            <li><strong>Dadi vita:</strong> 3d8</li>
+            <li><strong>Velocità:</strong> 9 metri</li>
+            <li><strong>Tiri Salvezza:</strong> <i>Destrezza</i> +5 - <i>Intelligenza</i> +4</li>
+            <li><strong>Abilità:</strong> <i>Rapidità di Mano</i> +5 - <i>Furtività</i> +5 - <i>Percezione</i> +2 - <i>Acrobazia</i> +5</li> 
+            <li><strong>Tratti speciali:</strong> 
+                <ul>
+                    <li><span style="color:#746120"><i>Maestria:</i></span> Raddoppia il bonus di competenza per due abilità scelte.</li>
+                    <li><span style="color:#746120"><i>Attacco Furtivo:</i></span> Infligge 2d6 danni extra una volta per turno se ha vantaggio o se il bersaglio si trova entro 1,5 metri da un nemico del bersaglio (e non ha svantaggio).</li> 
+                    <li><span style="color:#746120"><i>Gergo Ladresco</i></span></li>
+                    <li><span style="color:#746120"><i>Azione Scaltra:</i></span> Può usare un'azione bonus in ogni suo turno per <i>Disimpegno, Nascondersi</i> o <i>Scatto</i>.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- STATISTICHE MALCOR -->
+        <h3>Malcor &bull; Il Penitente</h3>
+        <span style="color:#746120"><i>Nano</i> - <strong>Chierico, Liv. 3</strong></span>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> BACKGROUND <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <i>Ex sacerdote di un tempio dimenticato, viaggia portando pesanti fasce di lino sacro e un incensario che profuma di mirra e cenere.</i>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> CARATTERISTICHE <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <ul>
+            <li><strong>Classe e Sottorazza:</strong> Chierico liv. 3 (<i>Nano delle Colline</i>)</li>
+            <li><strong>Bonus di Competenza:</strong> +2</li>
+            <li><strong>Dominio Divino:</strong> <span style="color:#746120">[ <i>VITA</i> ] <i>&bull; Discepolo della Vita &bull;</i></span> I suoi incantesimi di cura curano punti ferita extra pari a 2 + il livello dell'incantesimo.</li>
+            <li><strong>Caratteristiche:</strong> <i>Forza</i> 14 (+2) - <i>Destrezza</i> 8 (-1) - <i>Costituzione</i> 15 (+2) - <i>Intelligenza</i> 10 (+0) - 
+                <i>Saggezza</i> 16 (+3) - <i>Carisma</i> 12 (+1)</li>
+            <li><strong>Classe Armatura:</strong> 18 (corazza a scaglie + scudo)</li>
+            <li><strong>Equipaggiamento:</strong> martello da guerra, balestra leggera + 20 quadrelli, dotazione da sacerdote, scudo.</li>
+            <li><strong>Punti ferita:</strong> 26 (Massimi standard: 8 al 1° livello + 5 per i due livelli successivi + 6 di Costituzione + 3 extra da Nano delle Colline)</li>
+            <li><strong>Dadi vita:</strong> 3d8</li>
+            <li><strong>Velocità:</strong> 7,5 metri</li>
+            <li><strong>Tiri Salvezza:</strong> <i>Saggezza</i> +5 - <i>Carisma</i> +3</li>
+            <li><strong>Abilità:</strong> <i>Intuizione</i> +5 - <i>Religione</i> +2</li> 
+            <li><strong>Incantesimi:</strong> 
+                <ul>
+                    <li><i>Trucchetti:</i> Guida, Resistenza, Salvare i Morenti</li> 
+                    <li><span style="color:#746120">1° Livello (4 slot):</span> <i>Benedizione, Cura Ferite, Parola Guaritrice, Scudo della Fede</i></li>
+                    <li><span style="color:#746120">2° Livello (2 slot):</span> <i>Arma Spirituale, Preghiera di Guarigione</i></li> 
+                </ul>
+            </li>
+            <li><strong>Tratti speciali:</strong>
+                <ul>
+                    <li><span style="color:#746120"><i>Scurovisone:</i></span> Vede fino a 18 metri al buio come in luce fioca (solo tonalità di grigio).</li>
+                    <li><span style="color:#746120"><i>Resistenza Nanica:</i></span> Vantaggio ai <i>tiri salvezza</i> contro il veleno e resistenza ai danni da veleno.</li>
+                    <li><span style="color:#746120"><i>Addestramento da Combattimento Nanico:</i></span> Competenza con ascia bipenne, ascia da guerra, martello leggero e martello da guerra.</li>
+                    <li><span style="color:#746120"><i>Esperto Minatore:</i></span> Raddoppia il bonus di competenza nelle prove di <i>Storia</i> relative a strutture in pietra.</li> 
+                    <li><span style="color:#746120"><i>Incanalare Divinità:</i></span> 
+                        <ul>
+                            <li><i>Scacciare i Non Morti:</i> I non morti che lo vedono o sentono entro 9 metri fanno un TS su Saggezza o fuggono per 1 minuto.</li>
+                            <li><i>Preservare Vita:</i> Ripristina un ammontare totale di PF pari a cinque volte il livello da chierico suddiviso tra le creature entro 9 metri.</li>
+                        </ul>
+                        <span style="color:#555566">[ 1 uso ogni <i>Riposo Lungo o Breve</i> ]</span>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>   
+
+    <div class="conversion-box">
+        <h3>Entra nella Community di Cronache e Dadi</h3>
+        <p style="text-align: center; color: #d1d1d6; margin-bottom: 15px;">Hai completato la lettura di questa one-shot. Vuoi ricevere altre avventure pronte all'uso, risorse esclusive per Master e unirti a un tavolo attivo di creatori e giocatori?</p>
+        <div class="conversion-btn-container">
+            <a href="https://discord.com/channels/1452691549312913460" target="_blank" class="conversion-btn">Unisciti al Discord</a>
+            <a href="https://ko-fi.com/cronacheedadi" target="_blank" class="conversion-btn">Supporta su Ko-Fi</a>
+        </div>
+    </div>
+
+    <div class="footer">
+        CRONACHE E DADI &bull; CREATO PER I MASTER DI GDR &bull; FORMATO PRONTO ALL'USO
+        <div class="disclaimer-text">
+            <i>"Il Banchetto delle Ombre" è un'avventura autoprodotta per giochi di ruolo da tavolo. Testi, layout e concept visivo © 2026 Cronache e Dadi. Tutti i diritti riservati. Vietata la riproduzione commerciale senza consenso.</i>
+        </div>
+    </div>
+</body>
+</html>

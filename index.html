@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Cronache e Dadi - Hub One-Shot e Campagne GDR</title>
+    
+    <meta property="og:title" content="Cronache e Dadi - Hub One-Shot e Campagne GDR">
+    <meta property="og:description" content="Magazzino clandestino di storie: one-shot taglienti, campagne brevi e scenari pronti all'uso per Master di GDR.">
+    <meta property="og:image" content="Cronache e Dadi.png">
+    <meta property="og:type" content="website">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+        body {
+            background-color: #0b0c10;
+            color: #e2e8f0;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 1.6;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 35px;
+            box-shadow: inset 0 0 60px rgba(0,0,0,0.95);
+            position: relative;
+        }
+
+        body::before {
+            content: " ";
+            display: block;
+            position: fixed;
+            top: 0; left: 0; bottom: 0; right: 0;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.25) 50%);
+            background-size: 100% 4px;
+            z-index: 999;
+            pointer-events: none;
+            opacity: 0.4;
+        }
+
+        .dos-loader-container {
+            background: #12101e;
+            border: 2px solid #4a3b5c;
+            padding: 12px;
+            margin-bottom: 25px;
+            box-shadow: 4px 4px 0px #000;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 9px;
+            color: #66fcf1;
+        }
+
+        .dos-loader-bar {
+            background-color: #1f1b36;
+            border: 1px solid #66fcf1;
+            height: 16px;
+            margin-top: 8px;
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dos-loader-fill {
+            background-color: #ffcc00;
+            height: 100%;
+            width: 0%;
+            animation: load-progress 1.8s forwards cubic-bezier(0.1, 0.9, 0.2, 1);
+        }
+
+        @keyframes load-progress {
+            0% { width: 0%; }
+            30% { width: 45%; }
+            70% { width: 80%; }
+            100% { width: 100%; }
+        }
+
+        .top-social-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(135deg, #151324 0%, #1f1b36 100%);
+            border: 3px solid #4a3b5c;
+            padding: 12px 20px;
+            margin-bottom: 30px;
+            box-shadow: 4px 4px 0px #000;
+        }
+
+        /* Box musicale/legale in alto a sinistra */
+        .brand-logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            transition: transform 0.15s, filter 0.15s;
+            padding: 8px 12px;
+            border: 2px solid #ffcc00;
+            background-color: rgba(255, 204, 0, 0.05);
+            max-width: 480px;
+            box-shadow: 3px 3px 0px #000;
+        }
+
+        .brand-logo-container:hover {
+            transform: scale(1.01);
+            background-color: rgba(255, 204, 0, 0.12);
+        }
+
+        .brand-logo-container.playing {
+            border-color: #66fcf1;
+            background-color: rgba(102, 252, 241, 0.08);
+        }
+
+        .brand-logo-container img {
+            width: 55px;
+            height: 55px;
+            object-fit: contain;
+            flex-shrink: 0;
+        }
+
+        .music-info-text {
+            display: flex;
+            flex-direction: column;
+            gap: 3px;
+        }
+
+        .brand-logo-container span.main-title {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 11px;
+            color: #ffcc00;
+            text-shadow: 2px 2px #000;
+        }
+
+        .brand-logo-container.playing span.main-title {
+            color: #66fcf1;
+        }
+
+        /* Note legali e crediti ridotti in piccolo */
+        .music-legal-credits {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 11px;
+            color: #94a3b8;
+            font-weight: normal;
+            line-height: 1.3;
+        }
+
+        .music-legal-credits a {
+            color: #66fcf1;
+            text-decoration: underline;
+        }
+
+        .social-icons-group {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .social-icons-group a img {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+            transition: transform 0.2s, filter 0.2s;
+            image-rendering: pixelated;
+            filter: drop-shadow(2px 2px 0px #000);
+        }
+
+        .social-icons-group a img:hover {
+            transform: scale(1.15) translateY(-2px);
+            filter: drop-shadow(3px 4px 0px #ffcc00);
+        }
+
+        .brand-header {
+            text-align: center;
+            background: linear-gradient(180deg, #1b162b 0%, #120e1f 100%);
+            padding: 40px 20px;
+            margin-bottom: 35px;
+            box-shadow: 6px 6px 0px #000;
+        }
+
+        .brand-header h1 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 19px;
+            color: #ffcc00;
+            margin: 0 0 18px 0;
+            text-shadow: 3px 3px #000;
+            line-height: 1.4;
+        }
+
+        .brand-header p {
+            font-size: 18px;
+            color: #66fcf1;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-shadow: 2px 2px #000;
+        }
+
+        .terminal-cursor {
+            display: inline-block;
+            background-color: #ffcc00;
+            width: 10px;
+            height: 18px;
+            vertical-align: middle;
+            margin-left: 4px;
+            animation: blink-cursor 1s infinite;
+        }
+
+        @keyframes blink-cursor {
+            0%, 49% { opacity: 1; }
+            50%, 100% { opacity: 0; }
+        }
+
+        h2 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 13px;
+            color: #0b0c10;
+            background: linear-gradient(90deg, #66fcf1 0%, #45a29e 100%);
+            border: 3px solid #1f2833;
+            padding: 14px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            box-shadow: 4px 4px 0px #000;
+            letter-spacing: 1px;
+            line-height: 1.5;
+            text-shadow: 1px 1px rgba(255,255,255,0.4);
+        }
+
+        h3 {
+            font-size: 22px;
+            color: #ff9900;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            border-bottom: 2px dashed #ff9900;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px #000;
+        }
+
+        .scumm-box {
+            background: linear-gradient(135deg, #151324 0%, #1a162b 100%);
+            padding: 25px;
+            margin: 30px 0;
+            box-shadow: 6px 6px 0px #000;
+            position: relative;
+        }
+
+        .scumm-box strong {
+            color: #ffcc00;
+        }
+
+        .crt-monitor {
+            background-color: #08090d;
+            border: 8px solid #2d2640;
+            border-radius: 4px;
+            box-shadow: inset 0 0 30px rgba(0,0,0,0.9), 5px 5px 0px #000;
+            padding: 25px;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .crt-header-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #1f1b36;
+            border: 2px solid #4a3b5c;
+            padding: 8px 12px;
+            margin-bottom: 20px;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 10px;
+            color: #66fcf1;
+        }
+
+        .crt-controls span {
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #ff5555;
+            border: 1px solid #000;
+            margin-left: 5px;
+            box-shadow: 1px 1px 0px #000;
+        }
+        .crt-controls span:nth-child(2) { background-color: #ffcc00; }
+        .crt-controls span:nth-child(3) { background-color: #55ff55; }
+
+        .desktop-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 25px;
+            padding: 10px;
+        }
+
+        .desktop-icon-card {
+            background: #12101e;
+            border: 2px solid #4a3b5c;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            box-shadow: 4px 4px 0px #000;
+            transition: all 0.15s ease;
+        }
+
+        .desktop-icon-card:hover {
+            border-color: #ffcc00;
+            background-color: #1c182d;
+            transform: translate(-3px, -3px);
+            box-shadow: 7px 7px 0px #000;
+        }
+
+        .icon-graphic {
+            width: 48px;
+            height: 48px;
+            background-color: #1f1b36;
+            border: 2px solid #ffcc00;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            box-shadow: 2px 2px 0px #000;
+        }
+        
+
+        .desktop-icon-title {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 10px;
+            color: #ffcc00;
+            line-height: 1.4;
+            word-break: break-word;
+        }
+
+        .desktop-icon-desc {
+            font-size: 14px;
+            color: #94a3b8;
+            margin: 0;
+        }
+
+        .crt-footer-status {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 8px;
+            margin-top: 15px;
+            font-family: 'Press Start 2P', monospace;
+            font-size: 8px;
+            color: #55ff55;
+        }
+
+        .power-led {
+            width: 8px;
+            height: 8px;
+            background-color: #55ff55;
+            border-radius: 50%;
+            box-shadow: 0 0 6px #55ff55;
+            animation: pulse-led 2s infinite;
+        }
+
+        @keyframes pulse-led {
+            0% { opacity: 0.4; }
+            50% { opacity: 1; }
+            100% { opacity: 0.4; }
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 15px;
+            color: #8b7ca3;
+            margin-top: 70px;
+            border-top: 3px dashed #3a2e4c;
+            padding-top: 25px;
+            font-weight: normal;
+        }
+
+        .disclaimer-text {
+            font-size: 13px;
+            color: #6c5d84;
+            margin-top: 15px;
+            line-height: 1.4;
+            text-transform: none;
+        }
+
+        @media (max-width: 768px) {
+            .top-social-bar {
+                flex-direction: column;
+                gap: 15px;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bg-music" loop preload="auto">
+        <source src="Neon_Drive_Ghostrifter.mp3" type="audio/mpeg">
+        Il tuo browser non supporta l'elemento audio.
+    </audio>
+
+    <div class="top-social-bar">
+        <!-- Riquadro unificato con logo, titolo brano e note legali in piccolo -->
+        <div class="brand-logo-container" id="music-toggle" title="Clicca per attivare/disattivare la musica">
+            <img src="Cronache e Dadi.png" alt="Stemma Cronache e Dadi">
+            <div class="music-info-text">
+                <span class="main-title" id="music-label">"Neon Drive" - Ghostrifter ♫</span>
+                <span class="music-legal-credits">
+                    Licenza <a href="http://creativecommons.org/licenses/by-nd/3.0/" target="_blank" onclick="event.stopPropagation()">CC BY-ND 3.0</a> |
+                    Distribuito da <a href="https://breakingcopyright.com" target="_blank" onclick="event.stopPropagation()">BreakingCopyright</a> | 
+                     <a href="https://www.youtube.com/watch?v=kQj5HUhTXcc" target="_blank" ;>Ascolta il brano originale su YouTube</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="social-icons-group">
+            <a href="https://discord.com/channels/1452691549312913460" target="_blank" title="Discord">
+                <img src="discord_icona.png" alt="Discord">
+            </a>
+            <a href="https://www.youtube.com/@CronacheeDadi" target="_blank" title="YouTube">
+                <img src="icona youtube.webp" alt="YouTube">
+            </a>
+            <a href="https://ko-fi.com/cronacheedadi" target="_blank" title="Ko-Fi">
+                <img src="Speech bubble.gif" alt="Ko-Fi">
+            </a>
+        </div>
+    </div>
+
+    <div class="dos-loader-container">
+        <div>> MOUNT C:\CRONACHE_E_DADI\...</div>
+        <div class="dos-loader-bar">
+            <div class="dos-loader-fill"></div>
+        </div>
+    </div>
+
+    <div class="brand-header">
+        <h1>&diams; CRONACHE E DADI &diams;<br><br>Archivio Multiverso<span class="terminal-cursor"></span></h1>
+        <p>ARCHIVIO DI CAMPAGNE E ONE-SHOT PRONTE ALL'USO</p>
+    </div>
+
+    <div class="scumm-box">
+        <p>Stanco di passare le serate a inventare indizi che i tuoi giocatori ignoreranno bellamente per rincorrere
+            un gatto randagio? Ottimo, hai trovato il covo giusto. 
+            Questo non è un negozio: è un magazzino clandestino di storie! </p>
+        <p>Se stasera hai solo poche ore libere e vuoi evitare che la sessione si trasformi nell'ennesima buca nell'acqua, 
+            qui trovi la salvezza. One-shot taglienti, campagne brevi e scenari pronti all'uso pensati esattamente per chi 
+            ha le ore contate ma non vuole rinunciare al brivido dei dadi.</p>
+        <p>Tutto quello che ti serve per chiudere la sessione in una sola serata senza 
+            trascinare storie per mesi: mappe pronte, misteri solidi, brividi e colpi di scena che arrivano dritti al sodo.</p>
+        <p>Mettiti comodo, il caricamento sta per finire...</p>
+    </div>
+
+    <h2>ARCHIVIO PRINCIPALE &bull; DESKTOP DI SISTEMA</h2>
+
+    <div class="crt-monitor">
+        <div class="crt-header-bar">
+            <span>C:\CRONACHE_E_DADI\DIR_AVVENTURE.EXE</span>
+            <div class="crt-controls">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+
+        <div class="desktop-grid">
+            
+            <a href="Il Banchetto dei Corvi/index.html" class="desktop-icon-card" style="border-color: #55ff55; background: linear-gradient(135deg, #1f1012 0%, #12101e 100%);">
+                <div class="icon-graphic">📜</div>
+                <div class="desktop-icon-title"> Banchetto Corvi.exe</div>
+                <p class="desktop-icon-desc">Dark Fantasy</p>
+            </a>
+
+            <a href="notfound.html" class="desktop-icon-card" style="border-color: #ff5555; background: linear-gradient(135deg, #1f1012 0%, #12101e 100%);">
+                <div class="icon-graphic">💀</div>
+                <div class="desktop-icon-title">Ossa Bianche.exe</div>
+                <p class="desktop-icon-desc">Dungeon Crawl<br> &bull; IN LAVORAZIONE &bull;</p>
+            </a>
+
+            <a href="notfound.html" class="desktop-icon-card" style="border-color: #ff5555; background: linear-gradient(135deg, #1f1012 0%, #12101e 100%);">
+                <div class="icon-graphic">🕯️</div>
+                <div class="desktop-icon-title">Vecchioforte.exe</div>
+                <p class="desktop-icon-desc">Folk Horror<br> &bull; IN LAVORAZIONE &bull;</p>
+            </a>
+
+            <a href="notfound.html" class="desktop-icon-card" style="border-color: #ff5555; background: linear-gradient(135deg, #1f1012 0%, #12101e 100%);">
+                <div class="icon-graphic">🧪</div>
+                <div class="desktop-icon-title">Dr. Caligari.exe</div>
+                <p class="desktop-icon-desc">Horror Psicologico<br> &bull; IN LAVORAZIONE &bull;</p>
+            </a>
+
+            <a href="notfound.html" class="desktop-icon-card" style="border-color: #ff5555; background: linear-gradient(135deg, #1f1012 0%, #12101e 100%);">
+                <div class="icon-graphic">🎷</div>
+                <div class="desktop-icon-title">Chicago.exe</div>
+                <p class="desktop-icon-desc">Noir / Gangster<br> &bull; IN LAVORAZIONE &bull;</p>
+            </a>
+
+        </div>
+
+        <div class="crt-footer-status">
+            <span>SYS_READY</span>
+            <div class="power-led" title="Sistema Acceso"></div>
+        </div>
+    </div>
+
+    <div class="scumm-box" style="text-align: center;">
+        <h3 style="color: #66fcf1; border-bottom: none;">SOSTIENI IL PROGETTO</h3>
+        <p style="font-size: 19px; margin-bottom: 20px;">Ti piacciono questi moduli? Sostienici su Ko-Fi per aiutarci a produrre nuove mappe e avventure gratuite per la community dei Master.</p>
+        <a href="https://ko-fi.com/cronacheedadi" target="_blank" style="background-color: #66fcf1; color: #0b0c10; font-family: 'Press Start 2P', monospace; font-size: 11px; padding: 14px 20px; border: 3px solid #000; text-decoration: none; text-transform: uppercase; display: inline-block; box-shadow: 4px 4px 0px #000;">Sostieni su Ko-Fi</a>
+    </div>
+
+    <div class="footer">
+        CRONACHE & DADI &bull; TUTTI I DIRITTI RISERVATI
+        <div class="disclaimer-text">
+            <i>I contenuti pubblicati su questo sito sono opere di fantasia destinate ai giochi di ruolo da tavolo. Tutti i marchi registrati citati appartengono ai rispettivi proprietari. Testi, layout e concept visivo © 2026 Cronache e Dadi. È vietata la riproduzione non autorizzata per scopi commerciali.</i>
+        </div>
+    </div>
+
+    <script>
+        const musicToggle = document.getElementById('music-toggle');
+        const bgMusic = document.getElementById('bg-music');
+        const musicLabel = document.getElementById('music-label');
+        let isPlaying = false;
+
+        bgMusic.volume = 0.5;
+
+        musicToggle.addEventListener('click', (e) => {
+            // Evita conflitti se l'utente clicca direttamente sui link legali interni
+            if (e.target.tagName === 'A') return;
+
+            if (isPlaying) {
+                bgMusic.pause();
+                isPlaying = false;
+                musicToggle.classList.remove('playing');
+                musicLabel.textContent = '"Neon Drive" - Ghostrifter ♫ (MUTED)';
+            } else {
+                bgMusic.play().then(() => {
+                    isPlaying = true;
+                    musicToggle.classList.add('playing');
+                    musicLabel.textContent = '"Neon Drive" - Ghostrifter ♫ (PLAYING)';
+                }).catch(error => {
+                    console.log("Errore di riproduzione audio.");
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
