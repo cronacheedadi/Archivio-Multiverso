@@ -93,7 +93,7 @@
             box-shadow: 4px 4px 0px #000;
         }
 
-        /* Box musicale/legale in alto a sinistra */
+
         .brand-logo-container {
             display: flex;
             align-items: center;
@@ -141,7 +141,7 @@
             color: #66fcf1;
         }
 
-        /* Note legali e crediti ridotti in piccolo */
+
         .music-legal-credits {
             font-family: 'Courier New', Courier, monospace;
             font-size: 11px;
@@ -406,7 +406,6 @@
     </audio>
 
     <div class="top-social-bar">
-        <!-- Riquadro unificato con logo, titolo brano e note legali in piccolo -->
         <div class="brand-logo-container" id="music-toggle" title="Clicca per attivare/disattivare la musica">
             <img src="Cronache e Dadi.png" alt="Stemma Cronache e Dadi">
             <div class="music-info-text">
@@ -474,7 +473,7 @@
                 <p class="desktop-icon-desc">Dark Fantasy</p>
             </a>
 
-            <a href="notfound.html" class="desktop-icon-card" style="border-color: #ff5555; background: linear-gradient(135deg, #1f1012 0%, #12101e 100%);">
+            <a href="Il Santuario delle Ossa Bianche/index.html" class="desktop-icon-card" style="border-color: #55ff55; background: linear-gradient(135deg, #1f1012 0%, #12101e 100%);">
                 <div class="icon-graphic">💀</div>
                 <div class="desktop-icon-title">Ossa Bianche.exe</div>
                 <p class="desktop-icon-desc">Dungeon Crawl<br> &bull; IN LAVORAZIONE &bull;</p>
@@ -528,7 +527,6 @@
         bgMusic.volume = 0.5;
 
         musicToggle.addEventListener('click', (e) => {
-            // Evita conflitti se l'utente clicca direttamente sui link legali interni
             if (e.target.tagName === 'A') return;
 
             if (isPlaying) {
