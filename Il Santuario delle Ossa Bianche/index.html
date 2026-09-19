@@ -1,0 +1,1469 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Il Santuario delle Ossa Bianche - Cronache e Dadi</title>
+    
+    <meta property="og:title" content="Il Santuario delle Ossa Bianche - Cronache e Dadi">
+    <meta property="og:description" content="One-shot OSR e Dungeon Crawling claustrofobico. 3 ore esatte, pronta all'uso.">
+    <meta property="og:image" content="Cronache e Dadi.png">
+    <meta property="og:type" content="website">
+
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Special+Elite&display=swap');
+
+body {
+    background-color: #060608;
+    color: #d1d1d6;
+    font-family: 'Special Elite', monospace;
+    font-size: 19px;
+    line-height: 1.6;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 30px;
+    border-top: 5px solid #00258b;
+    border-bottom: 5px solid #00258b;
+    box-shadow: inset 0 0 80px rgba(0, 0, 0, 0.95), 0 0 30px rgba(14, 0, 139, 0.2);
+}
+
+.top-social-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f0f13;
+    border: 1px solid #2a2a35;
+    border-left: 4px solid #00258b;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.top-social-bar a {
+    color: #b3b3c2;
+    text-decoration: none;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top-social-bar a:hover {
+    color: #504dff;
+    text-decoration: underline;
+}
+
+.brand-logo-container {
+    display: flex;
+    align-items: center;
+    background-color: #0c0d12;
+    border: 1px solid #2a2a35;
+    border-left: 4px solid #504dff;
+    padding: 10px;
+    margin-bottom: 25px;
+    gap: 20px;
+    transition: background-color 0.2s, border-color 0.2s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.95);
+}
+
+.brand-logo-container img {
+    height: 15px;
+    width: auto;
+    border: 1px solid #2a2a35;
+}
+
+.music-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.main-title {
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #e6e6e6;
+}
+
+.music-legal-credits {
+    font-size: 15px;
+    color: #c9b037;
+    text-align: center;
+}
+
+.music-legal-credits a {
+    color: #c9b037;
+    text-decoration: none;
+}
+
+.music-legal-credits a:hover {
+    text-decoration: underline;
+}
+
+.hidden-player {
+    display: none;
+}
+
+.brand-header {
+    text-align: center;
+    background-color: #0c0d12;
+    border: 2px solid #2a2a35;
+    border-top: 4px solid #00258b;
+    border-bottom: 4px solid #00258b;
+    padding: 25px 15px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.95);
+}
+
+.brand-header h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 32px;
+    color: #e6e6e6;
+    margin: 0 0 10px 0;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(0, 2, 139, 0.5);
+}
+
+.brand-header p {
+    font-size: 16px;
+    color: #00258b;
+    margin: 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: #ffffff;
+    background: linear-gradient(90deg, #0a0f38 0%, #14141c 100%);
+    border-left: 8px solid #291aff;;
+    border-right: 8px solid #291aff;
+    border-top: 1px solid #13125a;
+    border-bottom: 1px solid #13125a;
+    padding: 15px 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(14, 0, 139, 0.2);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: #c9b037;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #122342;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.scumm-box {
+    background-color: #0e0f14;
+    border: 1px solid #242430;
+    border-left: 3px solid #504dff;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+}
+
+.gm-dropdown {
+    background-color: #08080a;
+    border: 1px dashed #11123a;
+    margin: 15px 0;
+    font-size: 16px;
+    box-shadow: none;
+}
+
+.gm-dropdown summary {
+    font-family: 'Cinzel', serif;
+    color: #4a618c;
+    font-size: 13px;
+    padding: 8px 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #08090d;
+    border-bottom: 1px dashed #0d102a;
+    transition: color 0.2s, background-color 0.2s;
+}
+
+.gm-dropdown summary:hover {
+    color: #504dff;
+    background-color: #0a0a15;
+}
+
+.gm-dropdown-content {
+    padding: 15px;
+    color: #a8a8b3;
+    font-size: 16px;
+    background-color: #0a0a0c;
+}
+
+.read-aloud {
+    background-color: #0a0b0f;
+    border: 1px solid #1a1b24;
+    padding: 20px 25px;
+    margin: 25px 0;
+    color: #ececf1;
+    font-style: italic;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.95);
+}
+
+.read-aloud img, .media-box img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border: 2px solid #2a2a35;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.95);
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin: 25px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0c0d12;
+    min-width: 600px;
+}
+
+th, td {
+    border: 1px solid #22232e;
+    padding: 12px 15px;
+    text-align: left;
+    font-size: 17px;
+}
+
+th {
+    background-color: #060514;
+    color: #d4af37;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #00258b;
+}
+
+td {
+    color: #b8b8c4;
+}
+
+ul, ol {
+    margin: 12px 0;
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.pixel-badge {
+    display: inline-block;
+    background-color: #02081a;
+    color: #504dff;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    border: 1px solid #00258b;
+    text-transform: uppercase;
+}
+
+.media-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.media-box .testo-affiancato {
+    flex: 1;
+}
+
+.img-caption {
+    font-family: 'Special Elite', monospace;
+    font-size: 14px;
+    color: #8c8f96;
+    margin-top: 10px;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    font-size: 13px;
+    color: #555566;
+    margin-top: 60px;
+    border-top: 1px dashed #262633;
+    padding-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.disclaimer-text {
+    font-size: 12px;
+    color: #444452;
+    margin-top: 15px;
+    line-height: 1.4;
+    text-transform: none;
+    font-style: normal;
+}
+
+.conversion-box {
+    background-color: #0e0f14;
+    border: 1px solid #2a2a35;
+    border-top: 3px solid #c9b037;
+    padding: 25px;
+    margin: 35px 0;
+    text-align: center;
+}
+
+.conversion-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.conversion-btn {
+    background-color: #050514;
+    color: #d4af37;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #00258b;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.conversion-btn:hover {
+    background-color: #00258b;
+    color: #ffffff;
+}
+
+.conversion-btn-2 {
+    display: inline-block;
+    background-color: #423812;
+    color: #d4af37;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #d4af37;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.conversion-btn-2:hover {
+    background-color: #d4af37;
+    color: #ffffff;
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 1.5cm;
+    }
+
+    .top-social-bar, .conversion-box, .brand-logo-container {
+        display: none !important;
+    }
+
+    body {
+        background-color: #ffffff !important;
+        color: #111111 !important;
+        box-shadow: none !important;
+        border: none !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        font-size: 12px !important;
+        line-height: 1.35 !important;
+    }
+
+    .brand-header {
+        padding: 10px !important;
+        margin-bottom: 15px !important;
+        background-color: #f4f4f4 !important;
+        border: 2px solid #333 !important;
+    }
+
+    .brand-header h1 {
+        font-size: 22px !important;
+        color: #000 !important;
+        text-shadow: none !important;
+    }
+
+    .brand-header p {
+        font-size: 12px !important;
+        color: #00258b !important;
+    }
+
+    h2 {
+        font-size: 15px !important;
+        padding: 8px 12px !important;
+        margin-top: 25px !important;
+        margin-bottom: 12px !important;
+        background: #f0f0f0 !important;
+        color: #000 !important;
+        border: 1px solid #ccc !important;
+        border-left: 6px solid #00258b !important;
+        text-shadow: none !important;
+        box-shadow: none !important;
+        page-break-after: avoid;
+    }
+
+    h3 {
+        font-size: 13px !important;
+        margin-top: 15px !important;
+        margin-bottom: 6px !important;
+        color: #444 !important;
+        border-bottom: 1px solid #ccc !important;
+        page-break-after: avoid;
+    }
+
+    .scumm-box, .gm-dropdown, .read-aloud {
+        background-color: #fbfbfb !important;
+        border: 1px solid #bbb !important;
+        padding: 12px 15px !important;
+        margin: 12px 0 !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+    }
+
+    .gm-dropdown {
+        border: 1px solid #999 !important;
+    }
+
+    .gm-dropdown summary {
+        background: #eee !important;
+        color: #000 !important;
+    }
+
+    .gm-dropdown-content {
+        background: #fff !important;
+        color: #111 !important;
+    }
+
+    .read-aloud {
+        border-left: 6px solid #c9b037 !important;
+        color: #222 !important;
+    }
+
+    img, .media-box img, .read-aloud img {
+        max-width: 35% !important;
+        height: auto !important;
+        display: block !important;
+        margin: 6px auto !important;
+        page-break-inside: avoid;
+    }
+
+    .media-box {
+        gap: 10px !important;
+        margin: 12px 0 !important;
+        page-break-inside: avoid;
+    }
+
+    .img-caption {
+        font-size: 10px !important;
+        margin-top: 4px !important;
+        color: #555 !important;
+    }
+
+    table, th, td {
+        background-color: #ffffff !important;
+        color: #111111 !important;
+        border-color: #bbb !important;
+        font-size: 11px !important;
+        padding: 6px 8px !important;
+    }
+
+    th {
+        background-color: #e6e6e6 !important;
+        color: #000 !important;
+        border-bottom: 2px solid #333 !important;
+    }
+
+    .pixel-badge {
+        font-size: 10px !important;
+        padding: 3px 8px !important;
+        margin-bottom: 6px !important;
+        background-color: #eee !important;
+        color: #000 !important;
+        border: 1px solid #999 !important;
+    }
+
+    ul, ol {
+        margin: 6px 0 !important;
+        padding-left: 20px !important;
+    }
+
+    li {
+        margin-bottom: 4px !important;
+    }
+
+    .footer {
+        margin-top: 30px !important;
+        font-size: 9px !important;
+        border-top: 1px solid #ccc !important;
+        padding-top: 10px !important;
+    }
+
+    .disclaimer-text {
+        font-size: 8px !important;
+        margin-top: 5px !important;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="top-social-bar">
+        <div>
+            <img src="../Cronache e Dadi.png" alt="cronacheedadi" style="height: 45px; vertical-align: middle;"> 
+            <strong><i>CRONACHE & DADI</i></strong> 
+        </div>
+        <div>
+            <a href="https://discord.com/channels/1452691549312913460" target="_blank">
+                <img src="../discord_icona.png" alt="Discord" style="height: 28px; vertical-align: middle;"> Discord
+            </a>
+            <a href="https://ko-fi.com/cronacheedadi" target="_blank" style="margin-left: 15px;">
+                <img src="../Speech bubble.gif" alt="Ko-Fi" style="height: 26px; vertical-align: middle;"> Ko-Fi
+            </a> 
+            <a href="https://www.youtube.com/@CronacheeDadi" target="_blank" style="margin-left: 15px;">
+                <img src="../icona youtube.webp" alt="YouTube" style="height: 26px; vertical-align: middle;"> YouTube
+            </a>
+        </div>
+    </div>
+    <div class="brand-header">
+        <h1>IL SANTUARIO DELLE OSSA BIANCHE</h1>
+        <p>[ONE-SHOT OSR & DUNGEON CRAWLING]</p>
+    </div>
+    <div class="brand-logo-container" id="music-toggle" title="Colonna sonora della sessione">
+        <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3844554143/size=small/bgcol=333333/linkcol=0f91ff/transparent=true/" seamless>
+        <a href="https://cryocrypt.bandcamp.com/album/the-deep-calls"> ♫ The Deep Calls by Mountain Realm ♫</a></iframe>
+       <p class="music-legal-credits">🎧 Accendi l'atmosfera...</p>
+    </div>
+    <div class="scumm-box">
+        <span class="pixel-badge">SCHEDA TECNICA</span>
+        <h3>Informazioni Generali</h3>
+        <ul>
+            <li><strong>Genere:</strong> OSR - Dungeon Crawling  - Survival</li>
+            <li><strong>Compatibilità:</strong> Totalmente System-Agnostic (D&D OSR, OSE, MÖRK BORG, ecc.)</li>
+            <li><strong>Durata Stimata:</strong> dalle 3 alle 5 ore</li>
+            <li><strong>Giocatori:</strong> 2 - 4 Avventurieri</li>
+        </ul>
+        
+        <h3>Atmosfera</h3>
+        <p>L'avventura si muove in un cupo territorio di frontiera dove il gelo morde la carne e il 
+            silenzio è rotto solo dal vento che sibila tra le rocce aguzze. Dominata da isolamento rurale, 
+            paranoia e un gelo innaturale che non intorpidisce solo i muscoli, ma offusca i ricordi.</p>
+        
+        <h3>Ambientazione</h3>
+        <p>Nei meandri della <i>Valle dei Sussurri</i>, un altopiano spazzato da bufere perenni, la terra ha 
+            iniziato a rigettare i resti di un antico culto dimenticato, noto come <i>"l'Ordine delle Ossa 
+            Bianche"</i>. Secoli fa, i sacerdoti di questa setta furono murati vivi nei loro templi 
+            sotterranei, dai loro stessi seguaci per aver stretto un patto con un'entità primordiale 
+            capace di controllare i ricordi dei defunti.</p>
+    </div>
+
+    <div class="scumm-box">
+        <span class="pixel-badge">INTRODUZIONE ALLA SESSIONE</span>
+        <h2>Memorie Sepolte nel Ghiaccio</h2>
+        
+        <h3>Cosa è successo?</h3>
+        <p>Di recente, nel cuore della notte, alcuni abitanti del villaggio di <i>"Pietra Storta"</i> cadono in uno stato di 
+            trance catatonica, sospesi tra sonno e veglia. Abbandonano le proprie case per incamminarsi 
+            meccanicamente verso la montagna, inghiottiti da una nebbia innaturale che non si dirada mai. 
+            Nessuno di coloro che si sono addentrati nella nebbia ha fatto ritorno. 
+            Chi ha provato a seguirli racconta di un'atmosfera opprimente, fatta di pause innaturali e 
+            suoni anomali, avvertendo la presenza di creature invisibili che celano il loro passaggio. 
+            Tentare di fermarli con la forza si è rivelato fatale: i <i>"Mandriani"</i>, chiamati in questo modo
+            dalla comunità locale, reagiscono con una forza 
+            disumana e feroce, pronti a difendersi o ad attaccare a morte pur di non interrompere il loro 
+            pellegrinaggio. L'episodio che ha spezzato il fragile equilibrio della comunità ha visto 
+            protagonista un bambino, spintosi a seguire il padre durante la sua marcia notturna verso 
+            le pendici: il suo corpicino è stato ritrovato all'alba a ridosso di un masso, con il cranio 
+            fracassato.</p>
+        <p>Di fronte a tale orrore, il <i>Barone Valdeno</i> ha preferito 
+            mantenere il silenzio per non allarmare la guarnigione, ma <i>Don Alise</i>, l'anziano parroco 
+            del villaggio, ha deciso di agire scavalcando l'autorità locale. Sapeva che un'indagine 
+            ufficiale avrebbe attirato solo insabbiamenti, così ha scritto una supplica disperata 
+            indirizzata a <i>fra' Vittore</i>, l'archivista e confessore personale dell'<i>Alto Cancelliere 
+            della Contea</i>. <i>Fra' Vittore</i>, uomo di fede ma aperto alle discipline occulte, ha intercettato 
+            la lettera e, comprendendo la gravità della minaccia che rischiava di espandersi oltre i 
+            confini della valle, ha sfruttato la sua influenza per ingaggiare sottobanco la compagnia 
+            di personaggi, presentandola come una semplice missione di recupero di beni 
+            ecclesiastici trafugati.</p>
+    </div>
+                        
+    <h2>ATTO I &bull; Il Barone Valdeno di Pietra Storta</h2>
+    <p><i>Il fumo denso e dolciastro della pipa si solleva pigramente nell'aria pesante dello studio, 
+        mescolandosi all'odore acre della torcia e al gelo che filtra dagli stipiti delle 
+        finestre sbarrate. Il Barone Valdeno siede dietro una massiccia scrivania in legno di 
+        quercia nera, coperto da scartoffie, mappe geografiche ingiallite e tazzine 
+        di ceramica scheggiata. È un uomo tarchiato, con le spalle gravate da una pesante casacca di 
+        pelliccia di lupo che non riesce a scaldare il suo pallore; ha guance rubiconde solcate da fitte 
+        ragnatele di capillari, occhi piccoli e diffidenti incassati sotto sopracciglia cespugliose e 
+        dita tozze e unte che stringono il cannello d'avorio della sua lunga pipa. Lo studio è angusto, 
+        dominato da scaffali colmi di registri dei tributi e da una grande vetrata a losanghe da cui si 
+        scorge solo il bianco lattiginoso della tormenta che flagella lo 
+        sperone roccioso di Pietra Storta.</i></p>
+    <p><span style="color:#7a7878"><i>&ldquo;Chi sano di mente oserebbe credere di possedere 
+        un potere del genere?&ldquo;</i></span></p>
+    <p><i>... ripete il Barone Valdeno, piantando lo sguardo su Don Alise dopo aver 
+        soffiato una densa voluta di fumo grigio.</i></p>
+    <p><i>Il sacerdote non si scompone, stringendo tra le mani nodose il bastone da viaggio. Fa un passo 
+        avanti, superando la nuvola di fumo, e posa sul pesante tavolo di legno 
+        una mappa consumata dai viaggi e un sacchetto contente delle monete (20 oro).</i></p>
+    <p><span style="color:#7a7878"><i>&ldquo;La follia non è credere che esista quel potere, 
+        Barone, ma fingere che non stia svuotando le nostre case&ldquo;</i></span></p>
+    <p><i>Risponde Don Alise con voce ferma, guardando verso di voi.</i></p>
+    <p><span style="color:#7a7878"><i>&ldquo;Signori, non vi abbiamo chiamati per una semplice scorta 
+        o per questioni di fede. La verità è che il villaggio di Pietra Storta sta morendo nel sonno. 
+        Quasi ogni notte, allo scoccare del gelo, brava gente del posto cade in catatonia e cammina dritta 
+        verso le pendici della montagna, inghiottita da una nebbia innaturale da cui nessuno fa ritorno. 
+        Chi ha provato a fermarli con le buone o con la forza ha trovato solo la morte, come il povero 
+        figlio di Berto, Ceseo, i cui resti sono stati trovati l'altra notte. E se il Barone preferisce 
+        proteggere il proprio orgoglio e la quiete della guarnigione, io ho scelto di spendere quel 
+        poco che ci resta per voi&ldquo;</i></span></p>
+    <p>Don Alise sfiora la mappa e indica tre punti precisi, delineando le coordinate esatte 
+        per iniziare l'indagine senza brancolare nel buio:</p>
+
+    <div class="read-aloud">
+        <img src="mappa_valle_dei_sussurri.png" alt="Mappa Valle dei Sussurri">
+        <p class="img-caption">Mappa Valle dei Sussurri</p>
+    </div>
+
+    <p><span style="color:#7a7878"><i>&ldquo;Mentre risalite il corso d'acqua verso i pascoli alti, 
+        farete attenzione ai "Mandriani", i cittadini locali già caduti in trance che vagano come automi 
+        armati di una forza disumana; affrontarli o aggirarli silenziosamente vi dirà cosa affrontate.
+        Sulla montagna, prima del tempio sepolto, cercate Bodo, un eremita mezzuomo burbero 
+        ma saggio. È l'unico a conoscere i dettagli sul culto dimenticato dell'Ordine delle Ossa 
+        Bianche e custodisce ciò che vi serve per aprire la via.<br>
+        Vi servirà un oggetto che custodisce Bodo per varcare la soglia del tempio 
+        sotterraneo, dove i sacerdoti furono murati vivi secoli fa, e scoprire cosa si cela dietro 
+        la mente collettiva che sta richiamando i nostri morti.&ldquo;</i></span>
+    </p>
+
+    <!-- Nota Master -->
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione Atto I</summary>
+        <div class="gm-dropdown-content">
+            <p>Concedi ai personaggi un breve spazio per fare domande al <i>Barone Valdeno</i> o a <i>Don Alise</i> nello studio. 
+                Se i personaggi provocano il Barone, questi minaccerà di cacciarli o di arrestarli per insolenza, 
+                costringendoli a fare affidamento unicamente sulla protezione di Don Alise.</p>
+            
+            <p style="margin-top: 15px;"><span style="color: #99b1ff;"><i>Barone Valdeno</i></span><br>
+                Scettico, orgoglioso, protettivo verso lo status quo della guarnigione. 
+                Fuma costantemente la sua pipa per mascherare l'ansia. Vuole insabbiare il fenomeno per evitare 
+                disordini politici.</p>
+            <p style="margin-top: 15px;"><span style="color: #99b1ff;"><i>Don Alise</i></span><br>
+                Esasperato, coraggioso e disperato. Ha agito alle spalle del Barone ingaggiando 
+                la compagnia tramite fra' Vittore. Usa toni fermi e protettivi verso la comunità.</p>
+            <p style="margin-top: 15px;"><span style="color: #99b1ff;">La pipa del Barone:</span>
+                Se un personaggio esamina la pipa o i residui sul tavolo con una <strong>prova di Intelligenza o Percezione (CD 15)</strong>, 
+                riconosce l'odore acre di una sostanza che altera la percezione, suggerendo che 
+                il Barone stesso potrebbe essere assuefatto o stia cercando di anestetizzare i propri nervi.</p>
+            <p style="margin-top: 15px;"><span style="color: #99b1ff;">Scrivania:</span>
+                Rovistando tra i registri dei tributi (se riescono a distrarre il Barone o Don Alise), 
+                i personaggi scoprono che il numero delle famiglie a Pietra Storta è calato drasticamente negli ultimi mesi, smentendo la facciata 
+                di normalità e provando che le sparizioni vanno avanti da molto più tempo di quanto ammesso.</p>
+        </div>
+    </details>
+
+    <h2>ATTO II &bull; Le piste delle Indagini</h2>
+    <p>I giocatori valutano la rotta da intraprendere per lasciare le retrovie del villaggio e salire verso le pendici. Le strade a disposizione 
+        offrono sbocchi geografici differenti e conseguenze distinte: l'<span style="color:#c9b037">Opzione A (la capanna di Bodo)</span> 
+        mette alla prova la pazienza del gruppo con l'incontro dell'eremita e la ricerca della lamina d'argento, sbloccando la chiave d'accesso al tempio; 
+        l'<span style="color:#c9b037">Opzione B (l'indagine interna nel villaggio)</span>
+        ribalta le priorità, spingendo a scavare tra le case e gli archivi di <i>Pietra Storta</i> alla ricerca di segreti dimenticati prima di 
+        affrontare il gelo; oppure, scegliendo di ignorare ogni sosta o preparazione, i personaggi possono 
+        tentare l'Assalto Diretto, sfidando la tormenta ed accedendo direttamente all'<strong>Atto III</strong> per affrontare i pericoli delle catacombe 
+        senza alcuna protezione o indizio.</p>
+    
+    <h3>Opzione A: La Capanna di Bodo</h3>
+    <p>Seguendo il corso del torrente pietrificato oltre il mulino diroccato, i personaggi avanzano nella morsa della tormenta. Mentre risalgono 
+        il corso del fiume ghiacciato, i personaggi si imbattono in due sagome che sembrano quasi barcollare sulla neve. Avvicinandosi, scoprono che 
+        si tratta di due <i>Mandriani</i>, i cittadini locali ormai svuotati nell'anima, con gli occhi spalancati e fissi nel vuoto, che arrancano 
+        meccanicamente verso la montagna.</p>
+
+    <div class="read-aloud">    
+        <img src="mandriani.png" alt="Gli ostacoli lungo il sentiero...">
+        <p class="img-caption">Mandriani</p>
+    </div>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione incontro "Mandriani"</summary>
+        <div class="gm-dropdown-content">
+            <p>I personaggi possono decidere se evitare lo scontro aggirandoli silenziosamente <strong>(prova di Furtività - CD 16)</strong>
+            oppure se affrontarli.</p>
+            <p><strong>Se decidono di combatterli:</strong> I due mandriani non parlano e non provano dolore. Sono guidati dall'impulso del 
+            culto e reagiscono con una forza innaturale se ostacolati. Potranno notare subito che i loro corpi sono rigidi, 
+            freddi come il ghiaccio e che dalle loro bocche semiaperte fuoriesce un debole alito di vapore grigiastro.</p>
+
+            <p style="margin-top: 15px;"><span style="color: #99b1ff;">SCHEDA PNG: Mandriano</span></p>
+            <p>Abitanti della valle catturati dal culto. Il loro cervello non riceve più impulsi, ma è 
+               guidato da una frequenza fredda generata dall'altare primordiale del Santuario. 
+               Fisicamente sono automi di carne: la temperatura corporea è pari a quella dell'ambiente circostante, 
+               non sanguinano se feriti (al loro posto perdono una melma grigiastra e densa) e non avvertono alcun 
+               istinto di autoconservazione.<br> 
+               Muovono passi pesanti e inesorabili, ignorando il dolore, le ferite mutilanti 
+               o la perdita di arti. Non urlano, non parlano e non minacciano; l'unica spia della loro presenza è il 
+               debole sibilo di vapore grigio che esce dalle labbra socchiuse ad ogni respiro meccanico. 
+               Se un personaggio tenta di parlarci o di fermarli con la diplomazia, i Mandriani rispondono unicamente 
+               con gesti rigidi e tentativi di afferrare il malcapitato per svuotargli i sensi.<br>
+               La vera pericolosità dei Mandriani non risiede nei danni fisici che infliggono, ma nel 
+               contraccolpo psichico alla loro distruzione. Quando il legame energetico che li tiene in piedi 
+               si spezza bruscamente, l'energia accumulata rimbalza sul bersaglio più vicino.</p>
+            <ul>    
+                <li><strong>Caratteristiche:</strong> <i>Forza</i> 14 (+2) - <i>Destrezza</i> 8 (-1) - <i>Costituzione</i> 14 (+2) - <i>Intelligenza</i> 4 (+3) - 
+                    <i>Saggezza</i> 6 (-1) - <i>Carisma</i> 6 (-3)</li>
+                <li><strong>Classe Armatura:</strong> 11 (tunica imbottita rinforzata)</li>
+                <li><strong>Armi:</strong> Mani Ghiacciate e Unghie (portata: 1.5 m &bull; danno: 1d6+2 contundenti + 1d4 freddo)</li>
+                <li><strong>Punti ferita e Dadi vita:</strong> 14 (2d8+4)</li>
+                <li><strong>Velocità:</strong> 9 metri</li>
+                <li><strong>Tiri Salvezza:</strong> <i>Forza</i> +4 - <i>Costituzione</i> +4</li>
+                <li><strong>Abilità:</strong> nessuna (mente azzerata)</li> 
+                <li><strong>Tratti speciali:</strong></li> 
+                    <ul>
+                        <li><i>Resistenza Permafrost:</i> immunità ai danni da freddo e alle condizioni mentali</li>
+                        <li><i>Guscio Vuoto:</i> Quando un mandriano viene ridotto a 0 punti ferita, il corpo crolla a terra immobile, 
+                            ma l'energia grigia all'interno evapora con un sibilo, infliggendo un temporaneo disturbo di memoria 
+                            <strong>(prova di Saggezza - CD 15</strong>, per non perdere un ricordo &bull; vedi TABELLA MALUS COGNITIVI &bull;) 
+                            ai personaggi che si trovano almeno a 1,5 metri di distanza.</li>
+                    </ul>
+            </ul>
+
+        <!-- TABELLA MALUS -->
+        <span class="pixel-badge">TABELLA MALUS COGNITIVI</span>
+        <p>Quando un <i>Mandriano</i> viene distrutto, i personaggi entro 1,5 metri devono effettuare una <strong>prova di Saggezza (CD 12)</strong>, per non subire
+        una <strong>Faglia Cognitiva</strong>: Perde temporaneamente quel ricordo e subisce lo svantaggio per tutta la durata dell'avventura, a meno che non trovi 
+        il modo di spezzare la maledizione. <strong>Tira 1d10</strong> su questa tabella.</p>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th>1d10</th>
+                        <th>Ricordo svanito</th>
+                        <th>Faglia Cognitiva</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>1</strong></td>
+                        <td>Il nome del tuo cavallo o dell'animale domestico d'infanzia</td>
+                        <td>Svantaggio nelle prove di Saggezza (Addestrare/Gestire Animali) e svantaggio alle prove di iniziativa (la tua reazione istintiva è rallentata).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>2</strong></td>
+                        <td>Il sapore o la memoria del cibo e del ristoro</td>
+                        <td>Svantaggio nei tiri salvezza contro la Fatica o gli effetti ambientali del freddo (il corpo non riconosce più il calore o il nutrimento).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>3</strong></td>
+                        <td>La fisionomia della persona che ami o di un familiare</td>
+                        <td>Svantaggio nelle prove di Carisma (Persuasione o Inganno) e incapacità di trovare conforto nei legami emotivi</td>
+                    </tr>
+                    <tr>
+                        <td><strong>4</strong></td>
+                        <td>Il motivo o il contratto per cui ti sei unito alla compagnia</td>
+                        <td>Svantaggio nei tiri salvezza contro il Morale, la Paura o gli effetti di Charme/Influenza mentale.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>5</strong></td>
+                        <td>Il nome del tuo paese natale o i punti cardinali di casa</td>
+                        <td>Svantaggio nelle prove di Intelligenza (Sopravvivenza o Orientamento); se il gruppo si muove, rischiate di perdere tempo prezioso.</td>
+                    </tr>
+                    <tr>
+                        <td><strong>6</strong></td>
+                        <td>L'insegnamento o i trucchi del tuo primo maestro d'armi</td>
+                        <td>Svantaggio temporaneo sul prossimo tiro per colpire effettuato con la tua arma principale (il gesto tecnico ti sfugge per un istante).</td>
+                    </tr>                
+                    <tr>
+                        <td><strong>7</strong></td>
+                        <td>La sensazione del calore o del riposo fisico</td>
+                        <td>Svantaggio nei tiri salvezza di Costituzione per mantenere la concentrazione o resistere alla stanchezza fisica.</td>
+                    </tr>                
+                    <tr>
+                        <td><strong>8</strong></td>
+                        <td>La dinamica o la memoria della tua prima cicatrice/ferita</td>
+                        <td>Subisci 1d4 danni necrotici immediati e il tuo punto ferita massimo si riduce temporaneamente di pari valore (il corpo dimentica come rigenerarsi).</td>
+                    </tr>
+                    <tr>
+                        <td><strong>9</strong></td>
+                        <td>Il giorno o la ricorrenza di una promessa importante</td>
+                        <td>Svantaggio nelle prove di Saggezza (Percezione): lo sguardo si fa assente e perdi i dettagli periferici dell'ambiente.</td>
+                    </tr>                
+                    <tr>
+                        <td><strong>10</strong></td>
+                        <td>L'ultima preghiera o il Credo della tua infanzia</td>
+                        <td>Svantaggio su qualsiasi prova che richieda concentrazione mentale o arcana (se lanci incantesimi, c'è il 25% di probabilità che la magia fallisca sprecando lo slot).</td>
+                    </tr>                
+                </tbody>
+            </table>
+        </div>           
+        </div>
+    </details>
+    <p><i>Raggiungete una capanna bassa e tozza, costruita con tronchi anneriti e mezza sepolta da cumuli di neve mista a 
+        fango. Intorno all'abitazione, il fumo denso di una stufa a legna si mescola a un odore acre di pellicce bagnate e 
+        radici essiccate. Sulla soglia, protetto da pesanti cortine di pelle di animale, vedete un halfling 
+        anziano dalla corporatura tarchiata, avvolto in strati di lana grezza e coperte consunte. Ha 
+        il volto solcato da rughe profonde, un occhio cieco e lattiginoso che punta il vuoto 
+        e mani nodose che stringono un bastone di ginepro intagliato con simboli arcaici.</i></p>
+
+    <div class="read-aloud">    
+        <img src="bodo.png" alt="La Capanna di Bodo">
+        <p class="img-caption">La Capanna di Bodo</p>
+    </div>
+
+    <p><span style="color: #7a7878"><i>&ldquo;Che cazzo ci fate qui fuori con questo tempo? Siete venuti 
+        a cercar rogna o avete solo fretta di crepare congelati sulla mia porta?&rdquo;</i></span></p>
+    <p><i>Bodo resta immobile sulla soglia, la corporatura tarchiata e avvolta in pelli scure che blocca l'accesso. Stringe tra le mani il suo bastone, 
+        osservandovi con occhio clinico, soppesando i vostri volti irrigiditi dal gelo prima di sputare nella neve.</i></p>
+    <p><span style="color: #7a7878"><i>&ldquo;Qui non c'è tè caldo per voi, e la montagna non fa sconti a nessuno. Se cercate un tetto, 
+        dovete avere un motivo migliore di una brutta faccia e una tasca vuota. Avanti, sputate il rospo: chi vi manda a crepare quassù? 
+        E, soprattutto, cosa vi fa credere che io abbia voglia di ascoltarvi?&rdquo;</i></span></p>
+    <p>I personaggi devono rompere il ghiaccio, giustificare la loro presenza per superare il suo scetticismo.<br>
+        Quando il gruppo pronuncia il nome del <i>Barone Valdeno</i>, di <i>Don Alise</i> o accenna al Santuario, l'halfling non mostra stupore;
+        si limita a sorridere amaramente, rivelando gengive sdentate, prima di invitarli all'interno, dove
+        il calore della stufa stenta a vincere l'umidità delle pareti.</p>
+    <p><span style="color: #7a7878"><i>&ldquo;Voi pensate che la terra sia viva, vero? Che d'estate respiri e d'inverno dorma.  
+        Quassù no. Quassù la terra è morta e marcia, e si è messa una corazza di ghiaccio che non molla la presa neanche quando batte il sole a picco.
+        Il permafrost non è neve fresca. È fango, roccia e carne impastati insieme e congelati duri come l'acciaio da diecimila inverni. Non si scava con 
+        la vanga qui: ci vuole il piccone, e ogni colpo ti risuona nei denti come una martellata su un'incudine. Ma la cosa peggiore non è che non ci puoi piantare una fossa... 
+        è che il permafrost conserva. Quello che ci metti dentro non marcisce, non sparisce. Resta lì, ibernato. Bestie, attrezzi, soldati caduti secoli fa... se li tiri fuori interi, 
+        dopo cinque minuti all'aria aperta si sciolgono e puzzano come il primo giorno che sono morti.</i></span></p>
+    <p><span style="color: #7a7878"><i>E se cercate i responsabili di questo schifo, cercate nei libri di storia che nessuno legge più. C'era un certo Malkor, un alto sacerdote fuori di testa che si era fatto i mesi là sotto, 
+        nella Valle dei Sussurri. S'era convinto che avere un'identità fosse il cancro del mondo, che l'io fosse il muro che ci divideva dagli dei. La sua combriccola 
+        di fanatici pensava che la morte fosse solo un errore di trascrizione della memoria: volevano svuotare tutti, vivi e morti, per fare un unico grande alveare 
+        di menti senza nome, tutte sottomesse a quell'entità di ghiaccio.</i></span></p>
+    <p><span style="color: #7a7878"><i>Perciò vi avverto: se lassù, in fondo alla gola, rompete la crosta sbagliata... beh, quello che il ghiaccio ha tenuto al fresco per secoli potrebbe decidere 
+        di venire a fare due passi insieme a voi.&rdquo;</i></span></p>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] L'incontro con Bodo</summary>
+        <div class="gm-dropdown-content">
+            <p style="margin-top: 15px;"><span style="color: #99b1ff;">Chi è <i>Bodo</i>?</span><br>
+            Bodo non è un eroe, né un semplice eremita scontroso: è un sopravvissuto logorato dal tempo e dal rimorso. L'ultimo discendente di una linea di custodi locali dimenticata, 
+            Bodo si è stabilito in questa baracca isolata ai piedi della montagna per una ragione precisa: fare da <i>sentinella involontaria</i>. Non è lì per proteggere il mondo per bontà d'animo, 
+            ma perché sa che se qualcuno dovesse riaprire le porte del <i>Sancta Sanctorum</i>, la maledizione del permafrost si riverserebbe a valle, travolgendo quel poco di vita che ancora resiste. 
+            Vive di stenti, mangiando radici marce, carne secca e bevendo acquavite scadente che si produce da solo per dimenticare il freddo che gli è entrato nelle ossa.</p>
+            <p>La sua conoscenza dell'antico Ordine di Malkor il Cavo e dei meccanismi del permafrost non deriva da studi accademici, ma da esperienza diretta e dolorosa. 
+            Anni fa, durante una tempesta disperata, Bodo e i suoi compagni di ventura si rifugiarono proprio nei cunicoli inferiori del complesso. Lì videro ciò che il ghiaccio custodiva: i corpi intatti, 
+            i rituali di estrazione della memoria e il liquido grigio. La maggior parte dei suoi compagni impazzì o fu assimilata dall'alveare di ghiaccio; Bodo riuscì a fuggire a fatica, 
+            portandosi dietro un terrore viscerale che maschera con la sua proverbiale ruvidezza.
+            La <i>lamina</i> non è finita per caso nelle sue mani. Durante la sua fuga disperata dal complesso sotterraneo, Bodo strappò la lamina dalle grinfie di un sacerdote catatonico dell'Ordine.</p>
+        </div>
+    </details>
+
+    <p>Una volta che i personaggi hanno ottenuto la fiducia di Bodo, dimostrandogli che vogliono fare sul serio e vogliono
+        liberare la <i>Valle dei Sussurri</i> da questo male, l'halfling compirà i suoi ultimi gesti prima di congedarli.</p>
+    <p><i>L'eremita estrae da sotto una panca di legno tarlato una vecchia scatola di piombo. All'interno non ci sono oggetti preziosi, 
+        ma una lamina d'argento incisa con le frequenze armoniche per interagire con l'altare situato alla fine del "Cammino della Penitenza", 
+        e una mappa di esso.</i></p>
+    <p><i>Bodo stringe la lamina tra le sue dita callose, la superficie di ghiaccio opaco che emana un freddo innaturale, 
+        prima di passarla nelle mani dei personaggi con uno sguardo cupo e pesante come la roccia:</i></p>
+    <p><span style="color: #7a7878"><i>&ldquo;Questa non vi scalderà le ossa, ma quando arriverete laggiù, nella sala dove il respiro 
+        si fa pietra e il passato vi scivola via dalle dita come sabbia bagnata... 
+        beh, lì troverete l'altare. Quello è il cuore che tiene in piedi l'incubo di Malkor. Su questa lastra ci sono le parole che i vecchi 
+        della montagna ripudiavano persino di pensare. Leggetele ad alta voce quando sarete a un passo dal gelo definitivo, 
+        e pregate che la pietra vi ascolti prima che si spenga l'ultimo ricordo.&rdquo;</i></span></p>
+
+    <div class="read-aloud">    
+        <img src="lamina.png" alt="Lamina">
+        <p class="img-caption">Lamina d'argento</p>
+    </div>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Lamina d'argento</summary>
+        <div class="gm-dropdown-content">
+            <p><strong>&bull; Oggetto magico, strumento rituale</strong> &bull;</p>
+            <p>Una spessa lastra rettangolare di ferro scuro e opaco, bordata d'argento brunito. 
+            La superficie è fittamente incisa con glifi geometrici spigolosi e rigidi che sembrano quasi intagliare la materia 
+            anziché decorarla. Chiunque la stringa a mani nude avverte subito una sgradevole sensazione di freddo paralizzante, 
+            come se il metallo stesse rubando il calore delle dita.</p>
+            <p>Le parole incise sopra richiamano un antico e severo rituale in una lingua oscura, antica, in grado di spezzare
+            il legame con l'altare e spogliare <i>Malkor</i> della sua invulnerabilità.</p>  
+            <p><span style="color:#7a7878"><i>&ldquo;Snaga i gulg, burzum ash. Golug i thrak, ghaash bagronk; i malkor 
+            gimbatul, ash nazg krimp, ghâsh-ishi krimpatul. Urok durak agh burzum ghaash!&ldquo;</i></span></p>
+            <p>I personaggi che comprendono il <i>Linguaggio Oscuro</i> riescono a comprenderne il significato:</p>
+            <p><span style="color:#7a7878"><i>&ldquo;Scollega la mente, spezza l'alveare. Ritorna al silenzio, 
+            o freddo che divori i ricordi; la carne si disperde, il nome si cancella, 
+            l'ombra svanisce nel vento. Che il gelo muoia e l'io ritorni!&ldquo;</i></span></p>
+            <p><strong>Effetto meccanico:</strong> Rimuove istantaneamente l'invulnerabilità o lo scudo protettivo del boss, spezzando il legame 
+            con l'altare sacrificale e infliggendogli un tremendo shock energetico (o bloccandone le capacità rigenerative per i turni successivi).</p>
+        </div>
+    </details>
+
+    <div class="read-aloud">    
+        <img src="mappa_labirinto_montagna.png" alt="Mappa percorso Santuario delle Ossa bianche">
+        <p class="img-caption">Mappa percorso Santuario delle Ossa bianche</p>
+    </div>
+
+    <p><i>Prima che il gruppo esca nella tormenta, Bodo li afferra per un polso con la sua mano gelida e 
+        nodosa, ammonendoli con un sussurro strozzato:</i></p>
+    <p><span style="color: #7a7878"><i>&ldquo;Ricordate chi siete adesso. Quando il freddo vi entrerà 
+        nelle ossa e comincerete a dimenticare il nome dei vostri cari o il motivo per cui impugnate le 
+        vostre lame, non guardate mai le pareti di ghiaccio: vi restituiranno volti che non vi appartengono. 
+        Se vi fermate a pensare a chi eravate prima di arrivare qui, siete già morti.&ldquo;</i></span></p>
+    <p><i>Con la mappa aggiornata, la lamina d'argento in tasca e il peso del patto sulle spalle, 
+        lasciate la capanna e vi mettete in cammino lungo il sentiero. La tormenta si intensifica, ma le impronte dei mandriani scomparsi 
+        si fanno più nitide sulla neve fresca.</i></p>
+
+    <h3>Opzione B: L'indagine interna nel villaggio</h3>
+    <p><i>Pietra Storta si stringe attorno al costone roccioso come una carcassa aggrappata a una parete di lavagna. 
+        Il villaggio non accoglie i viaggiatori con la quiete rustica delle comunità di montagna, ma con un silenzio denso, 
+        quasi artificiale, in cui ogni rumore — il calpestio degli stivali sul fango gelato, il cigolio di un'insegna 
+        arrugginita — rimbomba come una nota fuori tempo. Le case sono torri tozze di 
+        pietra locale, con i muri anneriti dal fumo dei vecchi focolari e le finestre sbarrate da assi di legno massiccio. 
+        Non ci sono bambini che giocano per le strade, né botteghe aperte: le poche sagome che si intravvedono dietro i 
+        vetri appannati spariscono non appena avvertono l'ombra di estranei. L'aria odora di legna umida, 
+        stalle abbandonate e di quel caratteristico, acre profumo di ozono e ghiaccio stagnante che scende dai canaloni 
+        superiori.</i></p>
+    <p><i>Ogni vicolo sembra condurre inevitabilmente verso l'alto, con lo sguardo che cozza sempre contro la mole imponente 
+        e minacciosa della montagna, avvolta da una nebbia perenne che sembra respirare insieme alla valle.</i></p>
+
+    <div class="read-aloud">    
+        <img src="mappa_pietra_storta.png" alt="Pietra Storta">
+        <p class="img-caption">Pietra Storta</p>
+    </div>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione dell'Indagine a Pietra Storta</summary>
+        <div class="gm-dropdown-content">
+            <p>Il villaggio è ostile e terrorizzato. La gente ha paura del <i>Barone Valdeno</i> e non si fida degli stranieri. 
+            Per ottenere informazioni utili, i personaggi devono muoversi con cautela, corrompere i testimoni o superare
+            prove sociali <strong>Carisma, Persuasione o Intimidazione (CD 13)</strong>. Ogni passo falso o indagine 
+            troppo rumorosa allarma le spie del Barone o spinge i residenti a barricarsi in casa.</p>
+            <p>L'investigazione si snoda attraverso tre piste principali che i personaggi possono approfondire:</p>
+            <ul>
+                <li><span style="color: #99b1ff;">La Chiesa (Don Alise)</span><br> Cercare rifugio o risposte dall'anziano parroco. Don Alise accoglie i 
+                personaggi in segreto, consegnando loro appunti riservati sulle scomparse e confermando che i Mandriani 
+                non sono nati da maledizioni contadine, ma dall'antica influenza di Malkor il Cavo. Offre
+                una mappa sommaria dei vecchi sentieri minerari (riduce di 2 la CD della prova di 
+                sopravvivenza per scalare la montagna).</li>
+                <li><span style="color: #99b1ff;">La madre vedova</span><br> Recarsi nella <i>Casa di Berto</i> e indagare sulle condizioni recenti dell'uomo,
+                sul cosa lo abbia portato a togliere la vita al proprio figlio. Troveranno la moglie in uno stato confusionale a causa del trauma. 
+                L'unica frase che ripeterà spesso sarà:<br> 
+                <span style="color:#7a7878"><i>&ldquo;Il sangue gli solcava le sue dolci guance, ormai fredde... 
+                Un freddo che fa male... lo sento dentro...&ldquo;</i></span></li>
+                <li><span style="color: #99b1ff;">Taverna del Cinghiale</span><br> Interrogare i pochi avventori rimasti. 
+                Un taglialegna locale, in cambio di monete o da bere, racconta di aver visto il fabbro del paese — sparito un mese fa
+                — battere il ferro in piena notte con un martello di ghiaccio, mormorando preghiere a un occhio sbarrato. 
+                Nella fucina abbandonata del fabbro, i personaggi possono rinvenire vecchi attrezzi, sporchi di una strana melma grigia
+                che al tocco si scioglie in acqua.</li>
+                <li><strong>Incursioni in altre case</strong><br> Se i personaggi decidono di bussare a porte casuali o di frugare nelle altre 
+                abitazioni del villaggio, sentiti liberamente di improvvisare. Ricorda che il villaggio vive sotto una cappa di 
+                terrore e povertà. Ecco qualche spunto rapido da usare al volo se i giocatori si spingono oltre le tre piste principali:
+                    <ul>
+                        <li>Nelle case deserte o semi-abbandonate puoi trovare dettagli di atmosfera coerenti con l'orrore del modulo: scorte di 
+                        cibo marce o completamente congelate nonostante il fuoco acceso, finestre sigillate con cera d'api per bloccare 
+                        "i sussulti del vento", oppure piccoli altari domestici improvvisati con pietre gelide e offerte di sangue secco, 
+                        segno disperato che qualcuno in paese ha iniziato a pregare la montagna per salvarsi.</li>
+                        <li>Una casa in disordine con segni di trascinamento sulla neve fresca che portano verso i sentieri della montagna, 
+                        o vestiti lasciati a metà di una riparazione, a indicare che chi abitava lì è fuggito o è stato preso nel cuore della 
+                        notte senza il tempo di prendere nulla.</li>                
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </details>
+
+    <h2>ATTO III &bull; Il Cammino della Penitenza</h2>
+    <p><i>Il sentiero per le pendici abbandona ben presto ogni parvenza di via battuta, trasformandosi in una cicatrice 
+        di pietra e fango gelato che si arrampica lungo il costone della montagna. La vegetazione scompare, sostituita da 
+        arbusti scheletrici vetrificati dalla brina. Più salite, più l'aria si assottiglia e si raffredda, 
+        caricandosi di un ronzio sordo e innaturale che sembra vibrare direttamente all'interno delle tempie. Una nebbia densa, 
+        color ardesia, cala dai canaloni superiori, cancellando ogni punto di riferimento e trasformando la marcia in un 
+        esercizio di pura sopravvivenza.</i></p>
+
+    <div class="read-aloud">    
+        <img src="sentiero_montagna.png" alt="Il sentiero">
+        <p class="img-caption">Il sentiero</p>
+    </div>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] La scalata della montagna</summary>
+        <div class="gm-dropdown-content">
+            <p>Per avanzare lungo il sentiero e raggiungere il complesso nascosto, i personaggi devono affrontare una 
+            <strong>prova di Sopravvivenza</strong> (o Atletica/Resistenza a seconda del sistema di gioco).</p>
+            <ul>
+                <li><strong>Gestione della CD:</strong> La difficoltà base per non perdersi nella nebbia, evitare scivoloni letali e gestire 
+                il freddo pungente è <strong>CD 15.</strong></li>
+                <li><strong>Il Vantaggio della Mappa:</strong> Se i personaggi hanno indagato in città e si sono recati da Don Alise, 
+                ottenendo la mappa sommaria dei vecchi sentieri minerari, beneficiano di un bonus di +2 (o di un vantaggio alla prova), 
+                riducendo la CD effettiva a 13.</li>
+                <li><strong>Fallimento della prova:</strong> Chi fallisce subisce la perdita di risorse e accumula una penalità di stanchezza o 
+                danni da freddo prima ancora di arrivare alle porte del Santuario, logorando il gruppo prima dello scontro decisivo.</li>
+            </ul>
+        </div>
+    </details>
+
+    <p><i>Barcollanti e con il respiro che si spezza in nuvole di vapore gelido, emergete infine dalla nebbia opprimente. 
+        Di fronte a voi si spalanca la ciclopica fenditura nella roccia viva che segna l'ingresso del Santuario: 
+        stipiti di pietra annerita su cui sono scolpiti volti urlanti privi di occhi, e una soglia che profuma di morte, 
+        pronta a risucchiarvi nell'oscurità terminale delle catacombe.</i></p>
+
+    <div class="read-aloud">    
+        <img src="fenditura.png" alt="Ingresso montagna">
+        <p class="img-caption">La Fenditura</p>
+    </div>
+
+    <p><i>Oltrepassata la soglia ciclopica, un'ondata di aria gelida e viziata si riversa all'esterno, 
+    recando l'odore stantio di pietra tombale e polvere millenaria. <br>
+    Più scendete in profondità, più la roccia cede il passo al permafrost vivo. 
+    Le pareti di ghiaccio riflettente non sono trasparenti: imprigionano frammenti di luce e 
+    sagome sfocate. Chi si ferma a fissare i riflessi vede scorrere frammenti di vite dimenticate, 
+    volti di sconosciuti o scene del proprio passato che svaniscono lentamente nella foschia interna 
+    del ghiaccio, logorando la psiche.</i></p>
+
+    <p><span style="color:#d4af37">Ingresso Montagna</span><br>
+    <i>Vi ritrovate confinati in un corridoio di roccia grezza e scura, stretto e opprimente. 
+    Le pareti sono basse e irregolari, ricoperte da una patina di umidità gelida che rende le pietre scivolose 
+    al tatto, mentre il pavimento in terra battuta e roccia si insinua in discesa verso 
+    il cuore della montagna. L'aria è immobile, spessa e fredda, priva di qualsiasi ricambio.
+    Da questo primo tratto angusto, il sentiero sotterraneo avanza dritto per pochi metri prima di aprirsi leggermente davanti a 
+    voi: sulla sinistra, una breve rampa di gradini intagliati sale verso un'area isolata dominata da monoliti di pietra, 
+    mentre la via principale prosegue inoltrandosi nell'ombra dei cunicoli. 
+    Le vostre torce faticano a fendere l'oscurità, proiettando bagliori tremolanti sulle pareti strette che sembrano 
+    stringersi a ogni passo... poi una voce, che risuona nelle vostre teste: non ha nulla di umano, sorda, cavernosa e immensa.</i></p>
+    <p><i><span style="color:#7a7878">&ldquo;Ogni passo vi porta più a fondo nella mia tomba... e ciò che avete portato con voi, presto apparterrà al gelo.&ldquo;</span></i></p>
+
+    <p><span style="color:#d4af37">Vicolo cieco</span><br>
+    <i>Il tunnel si restringe improvvisamente, soffocato da lastre di ghiaccio azzurrognolo che sporgono dalle pareti 
+    come fauci socchiuse. Qui l'aria è immobile, densa di un silenzio innaturale che azzera ogni eco. 
+    Il passaggio termina bruscamente contro una parete di roccia viva e permafrost puro. Osservando il ghiaccio che vi 
+    circonda, notate i resti congelati di un vecchio esploratore.</i></p>
+    
+    <p><span style="color:#d4af37">Burrone di ghiaccio</span><br>
+    <i>Una voragine profonda e tagliente taglia in due la galleria. L'unico modo per superarla è un vecchio ponte di pietra crollato 
+    per metà, ora sostituito da una lastra di ghiaccio lucida e fortemente inclinata che scivola nel buio totale.
+    Dal fondo della voragine sale un ronzio sordo e vibrante, accompagnato da un odore ferroso di sangue vecchio.</i></p>
+
+    <p><span style="color:#d4af37">Pareti dritte e innaturali</span><br>
+    <i>La roccia naturale cede improvvisamente il passo a superfici geometriche impossibili: pareti di pietra scura, 
+    levigata a specchio con una precisione millimetrica che nessuna mano umana o scavo minerario potrebbe giustificare. 
+    I blocchi combaciano senza una goccia di malta, freddi e innaturali al tatto. Su di essi corrono solchi verticali 
+    riempiti di una brina nerastra... ogni sussurro rimbalza amplificato, come se le pareti stesse stessero ascoltando.</i></p>
+    
+    <p><span style="color:#d4af37">"Stazione del Sangue e della Fede"</span><br>
+    <i>Vi trovate davanti a un altare di pietra nera e brina, sulla cui superficie è incisa una cavità a forma 
+    di palmo umano, circondata da canalicoli di scolo colmi di ghiaccio antico. Quando vi avvicinate, 
+    la voce nella vostra testa sussurra:</i></p>
+    <p><i><span style="color:#7a7878">&ldquo;Il vostro sangue o spezzate il vostro ferro per incidere il gelo&ldquo;</span></i></p>
+    
+    <p><span style="color:#d4af37">"Stazione della Memoria e della Visione"</span><br>
+    <i>Procedendo nell'oscurità, l'antro si apre davanti a una grande lastra di ghiaccio specchiante che riflette 
+    non il vostro aspetto attuale, ma i volti di cari perduti o rimpianti rimasti in sospeso. La voce torna a 
+    vibrare nelle tempie, gelida e imperiosa:</i></p>
+    <p><i><span style="color:#7a7878">&ldquo;Il passato è un peso inutile; cedetemi ciò che eravate per vedere 
+    ciò che vi circonda.&ldquo;</span></i></p>
+    
+    <p><span style="color:#d4af37">"Stazione del Peso e della Carne"</span><br>
+    <i>L'ultimo sbarramento si svela come un cunicolo di ghiaccio vivo, stretto e costonato di lame taglienti 
+    cristallizzate, attraverso cui l'unica via d'uscita obbliga a strusciarsi direttamente contro le pareti specchianti. 
+    Il sussurro nella montagna vi avverte:</i></p>
+    <p><i><span style="color:#7a7878">&ldquo;La carne morbida non può calpestare il santuario; strofinatevi 
+    contro il freddo e lasciate che vi marchi&ldquo;</span></i></p>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] ATTO III</summary>
+        <div class="gm-dropdown-content">
+            <p>Prima di raggiungere il Santuario, i personaggi sono costretti a 
+            percorrere <i>Il Cammino della Penitenza</i>: non esistono enigmi con risposte giuste o sbagliate, 
+            né trappole da disinnescare con l'ingegno: ogni prova è un baratto morale e fisico. 
+            Il dungeon esige un tributo per procedere, costringendo i PG a scambiare una parte di sé stessi 
+            per ottenere un vantaggio disperato in vista dello scontro finale.</p>
+            <p>Le prove si presentano come nicchie o altari incassati nel ghiaccio riflettente, 
+            dove un'iscrizione bagnata di brina pone un dilemma spietato. Ogni scelta comporta una 
+            perdita permanente o temporanea (un fardello) ma garantisce in cambio un potere, una resistenza 
+            o una risorsa cruciale per affrontare i cultisti.</p>
+            <ul>
+                <li><span style="color:#99b1ff">"Stazione del Sangue e della Fede"</span><br> 
+                L'altare richiede una donazione vitale da un personaggio a scelta:
+                    <ul>
+                        <li>Il personaggio subisce una riduzione permanente ai Punti Ferita Massimi (o perde 
+                        definitivamente un dado vita) oppure accetta che il suo scudo protettivo o la sua arma 
+                        principale si incrini per il gelo.</li>
+                        <li><i>Ricompensa:</i> In cambio, l'arma o il sangue del personaggio si infondono di una fredda 
+                        furia necrotica, raddoppiando i danni contro i cultisti protetti dal permafrost.</li>
+                    </ul>
+                </li>
+                <li><span style="color:#99b1ff">"Stazione della Memoria e della Visione"</span><br> 
+                Una lastra di ghiaccio che mostra il volto di un caro o un rimpianto irrisolto del personaggio che vi si specchia.
+                    <ul>
+                        <li>Il personaggio deve cedere un ricordo fondamentale (tira due volte sulla <strong>Tabella
+                        della Faglia Cognitiva</strong> subendo i malus in modo permanente fino alla fine dell'avventura).</li>
+                        <li><i>Ricompensa:</i> La mente si svuota di ogni dubbio, conferendo totale immunità a ogni condizione mentale, 
+                        e la capacità di vedere attraverso le illusioni.</li>
+                    </ul>
+                </li>
+                <li><span style="color:#99b1ff">"Stazione del Peso e della Carne"</span><br> 
+                Un tunnel di ghiaccio così stretto e tagliente che per attraversarlo bisogna strusciarsi contro le pareti specchianti.
+                Una volta che un personaggio attraversa il tunnel, questo si allarga permettendo un passaggio senza problemi.
+                    <ul>
+                        <li>Il personaggio subisce danni ingenti da taglio e freddo (es. 3d8 inevitabili) e 
+                        subisce svantaggio permanente alle prove di Destrezza.</li>
+                        <li><i>Ricompensa:</i> Il corpo si adatta al permafrost, azzerando i rallentamenti 
+                        ambientali e donando la resistenza ai danni da freddo per tutto il resto dell'incursione.</li>
+                    </ul>
+                </li>
+            </ul>
+            <p>Negli altri ambienti, puoi decidere di affidarti a questa tabella degli imprevisti:</p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>1d6</th>
+                            <th>Imprevisto</th>
+                            <th>Effetto</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>1-2</strong></td>
+                            <td>Teschio trappola</td>
+                            <td>Un teschio cade dalla parete, frantumandosi e attivando una dardi-trappola.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>3-4</strong></td>
+                            <td>Corrente fredda</td>
+                            <td>La torcia principale di un personaggio si spegne improvvisamente.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>5</strong></td>
+                            <td>Pipistrelli</td>
+                            <td>Un branco di pipistrelli giganti sbuca dal nulla disturbando i personaggi.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>6</strong></td>
+                            <td>Crollo parziale</td>
+                            <td>Una scossa di terremoto fa crollare scaffali pieni di urne cinerarie.</td>
+                        </tr>                
+                    </tbody>
+                </table>
+            </div>           
+        </div>
+    </details>
+
+    <h3>Il Santuario delle Ossa Bianche</h3>
+    <p><i>Una volta affrontata l'ultima prova del soffocante "Cammino della Penitenza", le catacombe si aprono in una vasta sala 
+        dove il tempo e la pietra sembrano essersi congelati per sempre. 
+        Al centro della caverna sorge un imponente altare di ghiaccio puro e traslucido, all'interno del quale si agitano piccole e 
+        frenetiche ombre grigie, imprigionate come anime dolenti nel cristallo...</i></p>
+
+    <div class="read-aloud">    
+        <img src="santuario.png" alt="santuario">
+        <p class="img-caption">Il Santuario delle Ossa Bianche</p>
+    </div>
+
+    <p><i>... dietro l'altare, immobile su un trono scavato direttamente nel permafrost vivo, una figura titanica e spettrale
+        si erge, unendo la propria massa imponente direttamente alle stalagmiti di ghiaccio. Il suo volto è del tutto celato da una visiera
+        di ferro e brina da cui fuoriescono densi sbuffi di vapore gelido. Sul torace e lungo i lembi del mantello affiorano
+        macabri teschi umani incastonati nel ghiaccio, come reliquie di anime assorbite nell'alveare.
+        Intorno a lui, il gelo sembra obbedire a ogni suo minimo comando, pronto a spegnere il calore di chiunque osi sfidare l'oblio.</i></p>
+
+    <div class="read-aloud">    
+        <img src="malkor.png" alt="malkor">
+        <p class="img-caption">Malkor</p>
+    </div>
+    
+    <p><i><span style="color:#7a7878">&ldquo;Avete scalato la montagna e offerto il vostro tributo solo per finire qui, nel mio palmo. Credete di essere eroi in cerca di giustizia, 
+        o forse pensate che il Barone vi abbia mandato a liberare queste terre? Illusi. Con il nobile abbiamo stretto un patto semplice: lui guarda altrove, finge 
+        di ignorare i nostri riti, e noi lasciamo che il suo dominio continui a marcire indisturbato nella valle.&rdquo;</span></i></p>
+    <p><i>Malkor si sporge in avanti, le dita affusolate e gelide che sfiorano la superficie dell'altare, mentre le ombre grigie all'interno fremono affamate:</i></p>
+    <p><i><span style="color:#7a7878">&ldquo;Non vi offrirò alcuna via d'uscita, né patti di convenienza. Non mi interessa la vostra alleanza, e i vostri titoli o 
+        le vostre spade valgono meno della brina sotto i vostri stivali. Voglio ciò che avete di più prezioso, ciò che avete accumulato in ogni vostro trionfo e 
+        in ogni vostra cicatrice: i vostri ricordi. Freschi, intatti, intrisi del calore di avventurieri forti. 
+        Voi mi consegnerete le vostre memorie, pezzo per pezzo, e la montagna si accenderà della vostra vita mentre voi svanirete nel nulla.&rdquo;</span></i></p>
+
+    <div class="read-aloud">    
+        <img src="mappa_tattica_santuario.png" alt="mappa santuario">
+        <p class="img-caption">Mappa Tattica Santuario delle Ossa Bianche</p>
+    </div>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Lo Scontro finale</summary>
+        <div class="gm-dropdown-content">
+            <p>Malkor non darà molta scelta ai personaggi, il suo obiettivo è quello di risucchiare i loro ricordi, quindi li attaccherà subito.</p>
+            <p><span style="color:#99b1ff">SCHEDA PNG: Malkor</span></p>
+            <ul>
+                <li><strong>Natura:</strong> Non-morto / Entità primordiale di ghiaccio e memoria.</li>
+                <li><strong>Grado di minaccia:</strong> Letale</li>
+                <li><strong>Iniziativa:</strong> Agisce per ultimo nel round.</li>
+                <li><strong>Armatura:</strong> Invulnerabile grazie al legame diretto con l'altare di ghiaccio.
+                    <ul>
+                        <li>Qualsiasi attacco fisico o magico normale infligge danni ridotti a zero, a meno che i personaggi non leggano la formula
+                        della <i>lamina</i> per spezzare il vincolo. In questo caso, lo scudo di invulnerabilità si infrange con un boato cristallino, 
+                        Malkor subisce un contraccolpo devastante (subendo uno stordimento per un turno) e i suoi poteri rigenerativi si spengono. 
+                        Da quel momento in poi, il boss può essere affrontato e sconfitto con le armi tradizionali.</li>
+                    </ul>
+                </li>
+                <li><strong>Mobilità:</strong> È radicato sull'altare, fuso con la roccia e le stalagmiti, ma il suo raggio d'azione copre 
+                interamente la stanza.</li>
+                <li><strong>Tratti e Abilità speciali:</strong>
+                    <ul>
+                        <li><i>Aura di Oblio</i>: I personaggi ad almeno 200 ft (60 m) dalla creatura devono superare una <strong>prova
+                        di Saggezza (CD 15)</strong> per resistere all'aura, altrimenti subiscono <strong>svantaggio alle prove 
+                        basate su Volontà</strong>, sentendo i propri ricordi svanire lentamente.</li>
+                        <li><i>Artigli di Ghiaccio</i>: La creatura frusta l'aria con le sue mani scheletriche, scagliando schegge di ghiaccio 
+                        tagliente come rasoi. Il bersaglio deve superare un <strong>tiro salvezza su Costituzione</strong> o subire una penalità di movimento 
+                        (i piedi si gelano al suolo).<br> 
+                        <span style="color: #203474">&bull; [Attacco in mischia] &bull; [Portata: 4,5 m] &bull; [Danno: 3d6 taglienti + 4 da ghiaccio] &bull;</span></li>
+                        <li><i>Risucchio di Anima</i>: La creatura punta una mano contro un bersaglio e convoglia il liquido grigio. Se il bersaglio
+                        <strong>fallisce una prova di Costituzione</strong> subisce ingenti danni da freddo e perde temporaneamente un'abilità, un incantesimo
+                        preparato o un talento, alimentando la rigenerazione del boss (la creatura si cura della metà del danno inflitto al bersaglio).<br>
+                        <span style="color: #203474">&bull; [Azione Ricaricabile] &bull; [Portata: 18 m] &bull; [Danno: 3d6 psichici] &bull;</span></li> 
+                    </ul>
+                </li>
+                <li><strong>Debolezza:</strong> Il fuoco intenso e le fonti di calore magico possono rallentare temporaneamente i suoi attacchi 
+                ad area, ma non scalfiscono la sua corazza protettiva senza la lamina.</li>
+            </ul>
+            <p>Una volta distrutto, Malkor si dissolve in un cumulo di fango, brina nera e scaglie metalliche, lasciando sul terreno la corona 
+            geometrica di ghiaccio e frammenti purificati del liquido grigio.</p>
+        </div>
+    </details>
+
+    <h3>Il Prezzo dell'Oblio</h3>
+    <p><i>Il silenzio che cala sulla vasta sala, quando il fumo e i frammenti di permafrost si diradano attorno al grande altare di ghiaccio, 
+        ha il peso di un giudizio sospeso. 
+        Che il trono di Malkor il Cavo sia ora vuoto, frantumato in una pioggia di schegge d'argento e cristallo, o che l'entità sia 
+        semplicemente svanita nelle profondità sotterranee in 
+        attesa di un nuovo inverno, il mondo fuori non è rimasto immune al passaggio dei superstiti. 
+        Le nebbie ardesia che soffocavano la valle iniziano lentamente a diradarsi, lasciando 
+        che la luce fredda dell'alba torni a baciare Pietra Storta e i tetti del feudo del Barone.</i></p>
+    <p><i>I sopravvissuti emergono dalle catacombe segnati nel corpo e nella mente, portando addosso i moniti indelebili del Cammino della Penitenza: memorie svanite, carni indurite dal 
+        gelo e armi logorate dal baratto. La valle riprende a respirare, ma il potere politico del Barone e i segreti sepolti tra le montagne rimangono un'ombra ingombrante. 
+        Nulla potrà restituire ciò che è stato ceduto agli altari della montagna, e mentre i personaggi fanno ritorno verso i confini civilizzati, resta il dubbio silenzioso su 
+        chi abbia davvero vinto questo scambio con l'oblio.</i></p>
+
+    <!-- APPENDICE: ASSET DI SUPPORTO PER IL MASTER (PREGENERATI E NOTE OPERATIVE) -->
+    <div class="scumm-box" style="border-left: 3px solid #c9b037;">
+        <span class="pixel-badge" style="background-color: #262002; color: #c9b037; border-color: #c9b037;">KIT MASTER &bull; PG PRONTI ALL'USO</span>
+        <p>Per azzerare i tempi morti iniziali, distribuisci queste schede ai giocatori. <br>
+            <em>(Sistema adottato: D&D 5e)</em></p>
+    
+        <!-- STATISTICHE ELTHAY -->
+        <h3>Elthay</h3>
+        <span style="color:#746120"><i>Mezzelfo</i> - <strong>Ranger, Liv. 3</strong></span>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> BACKGROUND <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <i>Cresciuto ai margini di due mondi differenti — rifiutato dai circoli urbani e guardato con diffidenza dai clan selvaggi — 
+            ha scelto di trovare la propria casa nella solitudine delle terre di confine. Abile tracciatore e cacciatore solitario, 
+            vive di ciò che la natura offre e si unisce occasionalmente a carovane o gruppi di viaggiatori unicamente per fare da 
+            guida attraverso i passi più pericolosi e inospitali.</i>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> CARATTERISTICHE <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <ul>
+            <li><strong>Stile di Combattimento:</strong> <span style="color:#746120">[ <i>TIRO</i> ]</span> Ottiene un bonus +2 ai tiri per colpire con armi a distanza</li>
+            <li><strong>Bonus di Competenza:</strong> +2</li>
+            <li><strong>Archetipo Ranger:</strong> <span style="color:#746120">[ <i>CACCIATORE</i> ] <i>&bull; Uccisore di Giganti &bull;</i></span> Quando una creatura di taglia grande o superiore entro 1,5 m dal ranger colpisce o manca il ranger con un attacco, quest'ultimo può usare la sua reazione per attaccare la creatura immediatamente dopo il suo attacco, purché sia in grado di vederla.</li>
+            <li><strong>Caratteristiche:</strong> <i>Forza</i> 12 (+1) - <i>Destrezza</i> 14 (+2) - <i>Costituzione</i> 13 (+1) - <i>Intelligenza</i> 10 (+0) - 
+                <i>Saggezza</i> 15 (+2) - <i>Carisma</i> 8 (-1)</li>
+            <li><strong>Classe Armatura:</strong> 15 (armatura completa cuoio borchiato)</li>
+            <li><strong>Equipaggiamento:</strong> due armi semplici da mischia, arco lungo + 20 frecce, dotazione da esploratore.</li>
+            <li><strong>Punti ferita:</strong> 24</li>
+            <li><strong>Dadi vita:</strong> 3d10</li>
+            <li><strong>Velocità:</strong> 9 metri</li>
+            <li><strong>Tiri Salvezza:</strong> <i>Forza</i> +3 - <i>Destrezza</i> +5</li>
+            <li><strong>Abilità:</strong> <i>Sopravvivenza</i> +4 - <i>Natura</i> +2 - <i>Percezione</i> +4 - <i>Furtività</i> +5</li> 
+            <li><strong>Incantesimi:</strong> 
+                <ul>
+                    <li><span style="color:#746120">1° Livello (3 slot):</span> <i>Bacche Benefiche, Marchio del Cacciatore, Colpo Intrappolante</i></li>
+                </ul>
+            </li>
+            <li><strong>Tratti speciali:</strong> 
+                <ul>
+                    <li><span style="color:#746120"><i>Scurovisone:</i></span> In condizioni di luce fioca può vedere fino a 18 metri come se si trovasse in condizioni di luce intensa e nell'oscurità come se si trovasse in luce fioca (solo tonalità di grigio).</li>
+                    <li><span style="color:#746120"><i>Retaggio Fatato:</i></span> Vantaggio ai <i>tiri salvezza</i> per non essere affascinato e immunità al sonno magico.</li>
+                    <li><span style="color:#746120"><i>Nemico Prescelto:</i></span> Sceglie un tipo di nemico prescelto, tra <i>aberrazioni, bestie, celestiali, costrutti,
+                        draghi, elementali, folletti, giganti, immondi, melme, mostruosità, non morti o vegetali</i>. Dispone di <strong>vantaggio alle prove Saggezza (Sopravvivenza)</strong>
+                        effettuate per seguire le tracce dei suoi nemici prescelti, nonché alle <strong>prove di Intelligenza</strong> per ricordare le info a essi relative. Acquisisce un 
+                        linguaggio a sua scelta tra quelli parlati dal suo nemico prescelto (ammesso che ne parli uno).</li>
+                    <li><span style="color:#746120"><i>Esploratore Nato:</i></span> Sceglie un tipo di terreno prescelto: <i>artico, costa, deserto, foresta,
+                        montagna, palude, prateria o Underdark</i>. Quando il ranger effettua una <strong>prova di Intelligenza o Saggezza</strong> relativa al suo terreno prescelto, 
+                        raddoppia il suo <strong>bonus di competenza</strong> se usa un'abilità in cui possiede competenza. Quando viaggia per un'ora o più in una regione del suo terreno prescelto, 
+                        il ranger ottiene i seguenti benefici:
+                        <ul>
+                            <li>Il terreno difficile non rallenta il viaggio del suo gruppo.</li>
+                            <li>Il suo gruppo non può smarrirsi, se non per cause magiche.</li>
+                            <li>Anche se impegnato in altre attività, il ranger rimane in allerta nei confronti di potenziali pericoli.</li>
+                            <li>Se viaggia da solo, può muoversi furtivamente a passo normale.</li>
+                            <li>Quando foraggia, trova il doppio del cibo che troverebbe normalmente.</li>
+                            <li>Quando segue le tracce di altre creature, apprende il loro numero esatto, le loro taglie e da quanto tempo sono passate nell'area.</li>
+                        </ul>
+                    </li>
+                    <li><span style="color:#746120"><i>Consapevolezza Primordiale:</i></span> Un ranger può usare la sua azione e spendere uno slot incantesimo da ranger per concentrare
+                    la sua percezione sull'area attorno a lui. Per 1 minuto per ogni livello di slot incantesimo speso, il ranger può percepire se le seguenti creature sono presenti entro 1,5 km 
+                    da lui (o entro 9 km se si trova nel suo terreno prescelto): aberrazioni, celestiali, draghi, elementali, folletti, immondi e non morti. Questo privilegio non rivela l'ubicazione esatta 
+                    o il numero di creature.</li>
+                </ul>
+            </li>
+        </ul>
+
+        <!-- STATISTICHE DADZAKK -->
+        <h3>Dadzakk</h3>
+        <span style="color:#746120"><i>Tiefling</i> - <strong>Stregone, Liv. 3</strong></span>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> BACKGROUND <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <i>Figlio di un mercenario umano e di una mercante mezzorca, ha scoperto la sua natura quando un pericolo mortale ha risvegliato 
+            il sangue draconico che scorreva nelle sue vene, incenerendo i suoi aggressori. Braccato per la sua magia incontrollabile, 
+            si è unito a compagni d'avventura per trovare protezione, mimetizzare la sua natura ed evitare che il fuoco dentro di 
+            lui finisca per divorare chiunque gli stia vicino.</i>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> CARATTERISTICHE <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <ul>
+            <li><strong>Origini Stregonesche:</strong> <span style="color:#746120">Discendenza Draconica</span></li>
+            <li><span style="color:#746120"><i>Antenato Draconico:</i></span> Ottone - Fuoco</li>          
+            <li><strong>Bonus di Competenza:</strong> +2</li>            
+            <li><strong>Caratteristiche:</strong> <i>Forza</i> 12 (+1) - <i>Destrezza</i> 14 (+2) - <i>Costituzione</i> 13 (+1) - <i>Intelligenza</i> 10 (+0) - 
+                <i>Saggezza</i> 10 (+0) - <i>Carisma</i> 16 (+3)</li>
+            <li><strong>Armatura:</strong> 15</li>
+            <li><strong>Equipaggiamento:</strong> pugnale, borsa per componenti, dotazione da esploratore, libro degli incantesimi.</li>
+            <li><strong>Punti ferita:</strong> 24</li>
+            <li><strong>Dadi vita:</strong> 3d6</li>
+            <li><strong>Velocità:</strong> 9 metri</li>
+            <li><strong>Tiri Salvezza:</strong> <i>Carisma</i> +5 - <i>Costituzione</i> +4</li>
+            <li><strong>Abilità:</strong> <i>Intimidire</i> +5 - <i>Arcana</i> +2 - <i>Persuadere</i> +5</li> 
+            <li><strong>Punti Stregoneria:</strong> 3</li>
+            <li><strong>Incantesimi:</strong> 
+                <ul>
+                    <li><i>Trucchetti:</i> Dardo di Fuoco, Mano Magica, Messaggio, Prestidigitazione</li>
+                    <li><span style="color:#746120">1° Livello (4 slot):</span> <i>Comprensione dei Linguaggi, Nube di Nebbia, Onda Tonante, Scudo</i></li>
+                    <li><span style="color:#746120">2° Livello (2 slot):</span> <i>Ingrandire/Ridurre, Raggio Rovente</i></li> 
+                </ul>
+            </li>
+            <li><strong>Tratti speciali:</strong> 
+                <ul>
+                    <li><span style="color:#746120"><i>Scurovisone:</i></span> In condizioni di luce fioca può vedere fino a 18 metri come se si trovasse in condizioni di luce intensa e nell'oscurità come se si trovasse in luce fioca (solo tonalità di grigio).</li>
+                    <li><span style="color:#746120"><i>Resistenza Infernale:</i></span> Resistenza ai danni da fuoco.</li>
+                    <li><span style="color:#746120"><i>Eredità Infernale:</i></span> Conosce il trucchetto <strong>Taumaturgia</strong> - può lanciare <strong>Intimorire Infernale</strong> come
+                    incantesimo di 2° livello una volta con questo tratto e recuperare la capacità di farlo quando completa <i>un Riposo Lungo</i>.</li>
+                    <li><span style="color:#746120"><i>Metamagia:</i></span>
+                        <ul>
+                            <li><i>Incantesimo Distante</i>: Quando lancia un incantesimo che ha una gittata pari o superiore a 1,5 metri, può spendere <strong>1 punto stregoneria</strong>
+                            per raddoppiare la gittata dell'incantesimo. Quando lancia un incantesimo che ha una gittata a contatto, può spendere <strong>1 punto stregoneria</strong> 
+                            per cambiare quella gittata in 9 metri.</li>
+                            <li><i>Incantesimo Rapido</i>: Quando lancia un incantesimo che ha un tempo di lancio pari a 1 azione, può spendere <strong>2 punti stregoneria</strong> 
+                            per cambiare il tempo di lancio a 1 azione bonus per quel lancio.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>     
+
+        <!-- STATISTICHE XAPHIRA -->
+        <h3>Xaphira</h3>
+        <span style="color:#746120"><i>Tiefling</i> - <strong>Barbaro, Liv. 3</strong></span>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> BACKGROUND <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <i>Nata con tratti infernali che hanno spinto la sua famiglia a emarginarla, ha incanalato il disprezzo e l'isolamento 
+            in una rabbia sorda e implacabile. Ha imparato a sopravvivere da sola nelle terre selvagge, usando il fuoco della sua stirpe 
+            e la forza bruta per difendersi da chiunque la vedesse come un mostro. Viaggia con il gruppo perché la disciplina della 
+            strada le offre una bizzarra parvenza di accettazione, oltre a una paga costante.</i>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> CARATTERISTICHE <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <ul>
+            <li><strong>Bonus di Competenza:</strong> +2</li>
+            <li><strong>Cammino Primordiale:</strong> <span style="color:#746120">[ <i>CAMMINO DEL BERSERKER</i> ] <i>&bull; Frenesia &bull;</i></span> Può entrare in Frenesia quando entra in Ira. Se lo fa, per la durata della sua Ira
+            può effettuare un singolo attacco con un'arma da mischia come azione bonus in ognuno dei suoi turni successivi dopo di questo. Quando la sua Ira termina, subisce
+            un livello di indebolimento.</li>
+            <li><strong>Caratteristiche:</strong> <i>Forza</i> 16 (+3) - <i>Destrezza</i> 14 (+2) - <i>Costituzione</i> 15 (+2) - <i>Intelligenza</i> 8 (-1) - 
+                <i>Saggezza</i> 10 (+0) - <i>Carisma</i> 12 (+1)</li>
+            <li><strong>Classe Armatura:</strong> 14</li>
+            <li><strong>Equipaggiamento:</strong> ascia bipenne, due asce, dotazione da esploratore, 4 giavellotti.</li>
+            <li><strong>Punti ferita:</strong> 31 (Massimi standard: 8 al 1° livello + 4 per i due livelli successivi + 4 di Costituzione totale)</li>
+            <li><strong>Dadi vita:</strong> 3d12</li>
+            <li><strong>Velocità:</strong> 9 metri</li>
+            <li><strong>Tiri Salvezza:</strong> <i>Forza</i> +5 - <i>Costituzione</i> +4</li>
+            <li><strong>Abilità:</strong> <i>Atletica</i> +5 - <i>Intimidire</i> +3 - <i>Sopravvivenza</i> +2</li> 
+            <li><strong>Tratti speciali:</strong> 
+                <ul>
+                    <li><span style="color:#746120"><i>Scurovisone:</i></span> In condizioni di luce fioca può vedere fino a 18 metri come se si trovasse in condizioni di luce intensa e nell'oscurità come se si trovasse in luce fioca (solo tonalità di grigio).</li>
+                    <li><span style="color:#746120"><i>Resistenza Infernale:</i></span> Resistenza ai danni da fuoco.</li> 
+                    <li><span style="color:#746120"><i>Ira (3):</i></span> Può entrare in <i>Ira</i> come <strong>azione bonus</strong> per 1 minuto, ottenendo i seguenti benefici:
+                        <ul>
+                            <li>Vantaggio alle <strong>prove e ai tiri salvezza su Forza</strong>.</li>
+                            <li>Bonus al tiro per danni con arma da mischia usando <i>Forza</i> - <strong>+2</strong></li>
+                            <li>Resistenza danni contundenti, perforanti e taglienti.</li>
+                        </ul>
+                    </li>
+                    <li><span style="color:#746120"><i>Attacco Irruento:</i></span> Quando effettua il suo primo attacco nel suo turno, può decidere di sferrare un attacco irruento. 
+                    Così facendo, dispone di <strong>vantaggio ai tiri per colpire in mischia che usano Forza durante questo turno</strong>, ma i tiri per colpire contro di lui dispongono di vantaggio
+                    fino al suo turno successivo.</li>
+                    <li><span style="color:#746120"><i>Percezione del Pericolo:</i></span> <strong>Vantaggio tiri salvezza su Destrezza</strong> contro gli effetti che può vedere, come le trappole e gli incantesimi.
+                    Per ottenere questo beneficio, non deve essere accecato, assordato o incapacitato.</li> 
+                </ul>
+            </li>
+        </ul>
+
+        <!-- STATISTICHE KAEL -->
+        <h3>Kael</h3>
+        <span style="color:#746120"><i>Umano</i> - <strong>Monaco, Liv. 3</strong></span>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> BACKGROUND <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <i>Cresciuto all'interno di un monastero isolato arroccato sulle alture, ha trascorso anni a forgiare il proprio corpo e la propria
+            mente attraverso la ripetizione estenuante di forme e meditazioni. Quando il monastero è stato abbandonato o isolato dalle 
+            circostanze, ha scelto di scendere a valle per mettere alla prova i suoi insegnamenti nel mondo reale, offrendo il proprio 
+            pugno in difesa dei deboli e cercando l'illuminazione attraverso l'esperienza diretta. Si unisce ai compagni 
+            per senso di cameratismo e per testare i propri limiti contro le vere avversità della strada.</i>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> CARATTERISTICHE <span style="color:#d4af37">&bigstar;</span></strong></p>
+        <ul>
+            <li><strong>Bonus di Competenza:</strong> +2</li>
+            <li><strong>Tradizione Monastica:</strong> <span style="color:#746120">[ <i>VIA DELLA MANO APERTA</i> ] <i>&bull; Tecnica della Mano Aperta &bull;</i></span> Ogni volta che colpisce una creatura con un attacco concessogli da <i>Raffica di Colpi</i>, 
+                può imporre uno dei seguenti effetti:
+                <ul>
+                    <li>Tiro Salvezza su Destrezza, altrimenti cade prono.</li>
+                    <li>Tiro Salvezza su Forza, oppure viene spinto di 4,5 metri allontanandolo da sé.</li>
+                    <li>Non può effettuare reazioni fino alla fine del turno successivo del monaco.</li>
+                </ul>
+            </li>
+            <li><strong>Caratteristiche:</strong> <i>Forza</i> 10 (+0) - <i>Destrezza</i> 16 (+3) - <i>Costituzione</i> 13 (+1) - <i>Intelligenza</i> 10 (+0) - 
+                <i>Saggezza</i> 16 (+3) - <i>Carisma</i> 8 (-1)</li>
+            <li><strong>Classe Armatura:</strong> 15</li>
+            <li><strong>Equipaggiamento:</strong> spada corta, dotazione avventurieri, 10 dardi.</li>
+            <li><strong>Punti ferita:</strong> 21</li>
+            <li><strong>Dadi vita:</strong> 3d8</li>
+            <li><strong>Velocità:</strong> 9 metri</li>
+            <li><strong>Tiri Salvezza:</strong> <i>Forza</i> +2 - <i>Destrezza</i> +5</li>
+            <li><strong>Abilità:</strong> <i>Acrobazia</i> +5 - <i>Intuizione</i> +5 - <i>Atletica</i> +2 - <i>Furtività</i> +5</li> 
+            <li><strong>Tratti speciali:</strong>
+                <ul>
+                    <li><span style="color:#746120"><i>Arti Marziali:</i></span> Ottiene i seguenti benefici finché è senz'armi o impugna soltanto armi da monaco e finché non indossa
+                    alcuna armatura e non impugna uno scudo:
+                        <ul>
+                            <li>Può usare <strong>Destrezza anziché Forza</strong> per i tiri per colpire e i tiri per danni dei suoi colpi senz'armi e delle sue armi da monaco.</li>
+                            <li>Può <strong>tirare 1d4</strong> al posto dei danni del suo colpo senz'armi o della sua arma da monaco.</li>
+                            <li>Può effettuare un <strong>colpo senz'armi</strong> come azione bonus dopo aver usato l'azione di attacco per attaccare a mani nude o con un'arma da monaco.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="conversion-box">
+        <h3>Entra nella Community di Cronache e Dadi</h3>
+        <p style="text-align: center; color: #d1d1d6; margin-bottom: 15px;">Hai completato la lettura di questa one-shot. Vuoi ricevere altre avventure pronte all'uso, risorse esclusive per Master e unirti a un tavolo attivo di creatori e giocatori?</p>
+        <div class="conversion-btn-container">
+            <a href="https://discord.com/channels/1452691549312913460" target="_blank" class="conversion-btn">Unisciti al Discord</a>
+        </div>
+
+    </div>
+            <a href="../index.html" target="_blank" class="conversion-btn-2">TORNA ALL'ARCHIVIO PRINCIPALE</a>
+    <div class="footer">
+        CRONACHE E DADI &bull; CREATO PER I MASTER DI GDR &bull; FORMATO PRONTO ALL'USO
+        <div class="disclaimer-text">
+            <i>"Il Santuario delle Ossa Bianche" è un'avventura autoprodotta per giochi di ruolo da tavolo. Testi, layout e concept visivo © 2026 Cronache e Dadi. Tutti i diritti riservati. Vietata la riproduzione commerciale senza consenso.</i>
+        </div>
+    </div>
+
+</body>
+</html>
