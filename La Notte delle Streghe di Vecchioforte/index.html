@@ -1,0 +1,1027 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XP0R9QMLMR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XP0R9QMLMR');
+</script>
+
+    <meta charset="UTF-8">
+    <title>La Notte delle Streghe di Vecchioforte - Cronache e Dadi</title>
+    
+    <meta property="og:title" content="La Notte delle Streghe di Vecchioforte - Cronache e Dadi">
+    <meta property="og:description" content="One-shot Folk Horror Rurale. 3 ore esatte, pronta all'uso.">
+    <meta property="og:image" content="Cronache e Dadi.png">
+    <meta property="og:type" content="website">
+
+    <style>
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Special+Elite&display=swap');
+
+body {
+    background-color: #060608;
+    color: #d1d1d6;
+    font-family: 'Special Elite', monospace;
+    font-size: 19px;
+    line-height: 1.6;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 30px;
+    border-top: 5px solid #2e8b57;
+    border-bottom: 5px solid #2e8b57;
+    box-shadow: inset 0 0 80px rgba(0,0,0,0.95), 0 0 30px rgba(46, 139, 87, 0.2);
+}
+
+/* Regola per giustificare tutto il testo all'infuori dei titoli */
+p, li, td, span, div:not(.brand-header):not(.top-social-bar):not(.conversion-box):not(.footer):not(.disclaimer-text) {
+    text-align: justify;
+}
+
+.top-social-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0f0f13;
+    border: 1px solid #2a2a35;
+    border-left: 4px solid #2e8b57;
+    padding: 10px 15px;
+    margin-bottom: 25px;
+    font-size: 15px;
+}
+
+.top-social-bar a {
+    color: #b3b3c2;
+    text-decoration: none;
+    transition: color 0.2s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.top-social-bar a:hover {
+    color: #3cb371;
+    text-decoration: underline;
+}
+
+.brand-logo-container {
+    display: flex;
+    align-items: center;
+    background-color: #0c0d12;
+    border: 1px solid #2a2a35;
+    border-left: 4px solid #3cb371;
+    padding: 15px;
+    margin-bottom: 25px;
+    gap: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s, border-color 0.2s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+}
+
+.brand-logo-container:hover {
+    background-color: #14141c;
+    border-color: #3cb371;
+}
+
+.brand-logo-container img {
+    height: 45px;
+    width: auto;
+    border: 1px solid #2a2a35;
+}
+
+.music-info-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+}
+
+.main-title {
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: 16px;
+    color: #e6e6e6;
+}
+
+.music-legal-credits {
+    font-size: 15px;
+    color: #c9b037;
+    text-align: center;
+}
+
+.music-legal-credits a {
+    color: #c9b037;
+    text-decoration: none;
+}
+
+.music-legal-credits a:hover {
+    text-decoration: underline;
+}
+
+.hidden-player {
+    display: none;
+}
+
+.brand-header {
+    text-align: center;
+    background-color: #0c0d12;
+    border: 2px solid #2a2a35;
+    border-top: 4px solid #2e8b57;
+    border-bottom: 4px solid #2e8b57;
+    padding: 25px 15px;
+    margin-bottom: 35px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+}
+
+.brand-header h1 {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 32px;
+    color: #e6e6e6;
+    margin: 0 0 10px 0;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 4px rgba(46, 139, 87, 0.4);
+    text-align: center;
+}
+
+.brand-header p {
+    font-size: 16px;
+    color: #3cb371;
+    margin: 0;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    font-size: 22px;
+    color: #ffffff;
+    background: linear-gradient(90deg, #0a2618 0%, #141c19 100%);
+    border-left: 8px solid #3cb371;
+    border-right: 8px solid #3cb371;
+    border-top: 1px solid #1a4d33;
+    border-bottom: 1px solid #1a4d33;
+    padding: 15px 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 15px rgba(46, 139, 87, 0.3);
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    text-align: left;
+}
+
+h3 {
+    font-family: 'Cinzel', serif;
+    font-size: 20px;
+    color: #c9b037;
+    margin-top: 30px;
+    margin-bottom: 12px;
+    border-bottom: 1px dashed #1a4d33;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.scumm-box {
+    background-color: #0e0f14;
+    border: 1px solid #242430;
+    border-left: 3px solid #3cb371;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8);
+}
+
+.gm-dropdown {
+    background-color: #08080a;
+    border: 1px dashed #0d291a;
+    margin: 15px 0;
+    font-size: 16px;
+    box-shadow: none;
+}
+
+.gm-dropdown summary {
+    font-family: 'Cinzel', serif;
+    color: #4f8d6c;
+    font-size: 13px;
+    padding: 8px 12px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background-color: #080d0b;
+    border-bottom: 1px dashed #0d291a;
+    transition: color 0.2s, background-color 0.2s;
+    text-align: left;
+}
+
+.gm-dropdown summary:hover {
+    color: #3cb371;
+    background-color: #0a1610;
+}
+
+.gm-dropdown-content {
+    padding: 15px;
+    color: #a8a8b3;
+    font-size: 16px;
+    background-color: #0a0c0b;
+}
+
+.read-aloud {
+    background-color: #0a0f0c;
+    border: 1px solid #1a241f;
+    padding: 20px 25px;
+    margin: 25px 0;
+    color: #ececf1;
+    font-style: italic;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
+}
+
+.read-aloud img, .media-box img {
+    max-width: 100%; 
+    height: auto;
+    display: block;
+    margin: 10px auto;
+    border: 2px solid #2a352f;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+}
+
+.table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    margin: 25px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #0c0d12;
+    min-width: 600px;
+}
+
+th, td {
+    border: 1px solid #22232e;
+    padding: 12px 15px;
+    text-align: justify;
+    font-size: 17px;
+}
+
+th {
+    background-color: #05140c;
+    color: #d4af37;
+    font-family: 'Cinzel', serif;
+    font-size: 13px;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #2e8b57;
+    text-align: left;
+}
+
+td {
+    color: #b8b8c4;
+}
+
+ul, ol {
+    margin: 12px 0;
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.pixel-badge {
+    display: inline-block;
+    background-color: #021a0e;
+    color: #3cb371;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    border: 1px solid #2e8b57;
+    text-transform: uppercase;
+}
+
+.media-box {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.media-box .testo-affiancato {
+    flex: 1;
+}
+
+.img-caption {
+    font-family: 'Special Elite', monospace;
+    font-size: 14px;
+    color: #8c8f96;
+    margin-top: 10px;
+    font-style: italic;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.footer {
+    text-align: center;
+    font-size: 13px;
+    color: #555566;
+    margin-top: 60px;
+    border-top: 1px dashed #262633;
+    padding-top: 25px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.disclaimer-text {
+    font-size: 12px;
+    color: #444452;
+    margin-top: 15px;
+    line-height: 1.4;
+    text-transform: none;
+    font-style: normal;
+    text-align: center;
+}
+
+.conversion-box {
+    background-color: #0e0f14;
+    border: 1px solid #2a2a35;
+    border-top: 3px solid #c9b037;
+    padding: 25px;
+    margin: 35px 0;
+    text-align: center;
+}
+
+.conversion-btn-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.conversion-btn {
+    background-color: #07160e;
+    color: #d4af37;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #2e8b57;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.conversion-btn:hover {
+    background-color: #2e8b57;
+    color: #ffffff;
+}
+
+.conversion-btn-2 {
+    display: inline-block;
+    background-color: #423812;
+    color: #d4af37;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: 1px solid #d4af37;
+    text-decoration: none;
+    transition: background-color 0.2s, color 0.2s;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.conversion-btn-2:hover {
+    background-color: #d4af37;
+    color: #ffffff;
+}
+
+@media print {
+    @page {
+        size: A4;
+        margin: 1.5cm;
+    }
+
+    .top-social-bar, .conversion-box, .brand-logo-container {
+        display: none !important;
+    }
+
+    body {
+        background-color: #ffffff !important;
+        color: #111111 !important;
+        box-shadow: none !important;
+        border: none !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+        font-size: 12px !important;
+        line-height: 1.35 !important;
+    }
+
+    .brand-header {
+        padding: 10px !important;
+        margin-bottom: 15px !important;
+        background-color: #f4f4f4 !important;
+        border: 2px solid #333 !important;
+    }
+
+    .brand-header h1 {
+        font-size: 22px !important;
+        color: #000 !important;
+        text-shadow: none !important;
+    }
+
+    .brand-header p {
+        font-size: 12px !important;
+        color: #2e8b57 !important;
+    }
+
+    h2 {
+        font-size: 15px !important;
+        padding: 8px 12px !important;
+        margin-top: 25px !important;
+        margin-bottom: 12px !important;
+        background: #f0f0f0 !important;
+        color: #000 !important;
+        border: 1px solid #ccc !important;
+        border-left: 6px solid #2e8b57 !important;
+        text-shadow: none !important;
+        box-shadow: none !important;
+        page-break-after: avoid;
+    }
+
+    h3 {
+        font-size: 13px !important;
+        margin-top: 15px !important;
+        margin-bottom: 6px !important;
+        color: #444 !important;
+        border-bottom: 1px solid #ccc !important;
+        page-break-after: avoid;
+    }
+
+    .scumm-box, .gm-dropdown, .read-aloud {
+        background-color: #fbfbfb !important;
+        border: 1px solid #bbb !important;
+        padding: 12px 15px !important;
+        margin: 12px 0 !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+    }
+    .gm-dropdown {
+        border: 1px solid #999 !important;
+    }
+
+    .gm-dropdown summary {
+        background: #eee !important;
+        color: #000 !important;
+    }
+    .gm-dropdown-content {
+        background: #fff !important;
+        color: #0d0e0d !important;
+    }
+
+    .read-aloud {
+        border-left: 6px solid #2e8b57 !important;
+        color: #222 !important;
+    }
+
+    img, .media-box img, .read-aloud img {
+        max-width: 35% !important;
+        height: auto !important;
+        display: block !important;
+        margin: 6px auto !important;
+        page-break-inside: avoid;
+    }
+
+    .media-box {
+        gap: 10px !important;
+        margin: 12px 0 !important;
+        page-break-inside: avoid;
+    }
+
+    .img-caption {
+        font-size: 10px !important;
+        margin-top: 4px !important;
+        color: #535353 !important;
+    }
+
+    table, th, td {
+        background-color: #ffffff !important;
+        color: #080808 !important;
+        border-color: #bbb !important;
+        font-size: 11px !important;
+        padding: 6px 8px !important;
+    }
+
+    th {
+        background-color: #e6e6e6 !important;
+        color: #000 !important;
+        border-bottom: 2px solid #333 !important;
+    }
+
+    .pixel-badge {
+        font-size: 10px !important;
+        padding: 3px 8px !important;
+        margin-bottom: 6px !important;
+        background-color: #eee !important;
+        color: #000 !important;
+        border: 1px solid #999 !important;
+    }
+
+    ul, ol {
+        margin: 6px 0 !important;
+        padding-left: 20px !important;
+    }
+
+    li {
+        margin-bottom: 4px !important;
+    }
+
+    .footer {
+        margin-top: 30px !important;
+        font-size: 9px !important;
+        border-top: 1px solid #ccc !important;
+        padding-top: 10px !important;
+    }
+
+    .disclaimer-text {
+        font-size: 8px !important;
+        margin-top: 5px !important;
+    }
+}
+    </style>
+</head>
+<body>
+
+    <div class="top-social-bar">
+        <div>
+            <img src="../Cronache e Dadi.png" alt="cronacheedadi" style="height: 45px; vertical-align: middle;"> 
+            <strong><i>CRONACHE & DADI</i></strong> 
+        </div>
+        <div>
+            <a href="https://discord.com/channels/1452691549312913460" target="_blank">
+                <img src="../discord_icona.png" alt="Discord" style="height: 28px; vertical-align: middle;"> Discord
+            </a>
+            <a href="https://ko-fi.com/cronacheedadi" target="_blank" style="margin-left: 15px;">
+                <img src="../Speech bubble.gif" alt="Ko-Fi" style="height: 26px; vertical-align: middle;"> Ko-Fi
+            </a> 
+            <a href="https://www.youtube.com/@CronacheeDadi" target="_blank" style="margin-left: 15px;">
+                <img src="../icona youtube.webp" alt="YouTube" style="height: 26px; vertical-align: middle;"> YouTube
+            </a>
+        </div>
+    </div>
+    
+    <div class="brand-header">
+        <h1>LA NOTTE DELLE STREGHE DI VECCHIOFORTE</h1>
+        <p>[ONE-SHOT FOLK HORROR RURALE]</p>
+    </div>
+    
+    <div class="brand-logo-container" id="music-toggle" title="Colonna sonora della sessione">
+        <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=3038519000/size=small/bgcol=333333/linkcol=2ebd35/transparent=true/" seamless>
+        <a href="https://cryocrypt.bandcamp.com/album/where-heathens-roam">♫ Where Heathens Roam by Swordlender♫</a></iframe>    
+       <p class="music-legal-credits">🎧 Accendi l'atmosfera...</p>
+    </div>
+    
+    <div class="scumm-box">
+        <span class="pixel-badge">SCHEDA TECNICA</span>
+        <h3>Informazioni Generali</h3>
+        <ul>
+            <li><strong>Genere:</strong> Folk Horror Rurale - Sopravvivenza - Mistero</li>
+            <li><strong>Compatibilità:</strong> Sistem-Agnostic </li>
+            <li><strong>Durata Stimata:</strong> Dalle 3 alle 5 ore</li>
+            <li><strong>Giocatori:</strong> 2 - 4 Avventurieri</li>
+        </ul>
+        
+        <h3>Atmosfera</h3>
+        <p>Non c'è allegria nel fuoco, solo un tepore malsano che odora di stoppie bruciate e pelo di cane bagnato. Gli abitanti indossano pesanti mantelli di lana grezza e maschere rituali intagliate nel legno, modellate con fattezze animalesche e vuoti grotteschi al posto degli occhi; le indossano non per festeggiare, ma per confondere gli spiriti della terra e celare l'uno lo sguardo dell'altro. Con un passo lento, i loro corpi si perdono nella nebbia, mentre litanie antiche continue guidano il loro cammino fin dove <i>Ella</i> brama il sacrificio, scelti con la brama di chi segue credenze senza senso, malvagie.</p>
+           
+        <h3>Ambientazione</h3>
+        <p><i>Vecchioforte</i> è un borgo fortificato, stretto attorno a una torre di pietra grezza risalente a secoli prima e ormai inglobata da stalle e abitazioni fatiscenti. Ciò che rende questo borgo un pericolo mortale non sono solo le sue leggi arcaiche, ma ciò che si cela sotto il suolo. Nelle profonde vene sotterranee che scorrono sotto le radici dei boschi, le energie arcane locali sono state corrotte. La terra stessa si sta cibando di "sangue malato", una putrefazione magica che avvelena i raccolti, fa impazzire il bestiame e alimenta un culto sotterraneo dedito a pratiche oscure e dimenticate.</p>
+    </div>
+
+    <div class="scumm-box">
+        <span class="pixel-badge">INTRODUZIONE ALLA SESSIONE</span>
+        <h2>IL CANTO DELLE MASCHERE</h2>
+
+        <h3>Cosa è successo?</h3>
+        <p>Molti anni fa, i fondatori di <i>Vecchioforte</i> non si insediarono lì per caso: scelsero quella conca perché vi sorgeva un antico sepolcro preistorico, un luogo in cui una faglia di energia magica primordiale intersecava il mondo sotterraneo. Con il passare dei secoli, la memoria del sito originale è svanita, trasformandosi in una vaga superstizione legata alla fertilità della terra.</p>
+        <p>Sei mesi fa, tuttavia, la situazione è precipitata in modo irreversibile. Una studiosa di nome <i>Beatrice</i>, bloccata da mesi a <i>Vecchioforte</i> a causa di una violenta bufera di neve, era arrivata a scoprire che in quel luogo si celava il mitico <i>Codex Sanguis Tace</i> (Il Libro del Sangue Silente), il grimorio di un antico culto di streghe capace di estrarre ricchezza e fertilità dalla terra attraverso sacrifici. Le sue ricerche non sono passate inosservate. <i>Vico Malavasi</i>, il capovillaggio, si è interessato fin troppo arrivando ad aiutarla nel recupero del tomo, per poi tradirla: l'ha depredata e rinchiusa nella cantina della taverna per sfruttare la sua conoscenza, essendo l'unica in grado di tradurre i passaggi più complessi del libro. Da allora, <i>Vico Malavasi</i> e una cerchia ristretta di complici hanno iniziato a praticare riti di sangue per garantire prosperità al villaggio. Il villaggio è ora diviso: la maggior parte degli abitanti è terrorizzata, ma complice per istinto di sopravvivenza, mentre i congiurati gestiscono i riti nel profondo.</p>
+        <p>I personaggi non si conoscono tra loro. Ognuno di essi, operando in regioni o contesti differenti, ha ricevuto separatamente una missiva sigillata con cera nera, recapitata in modi inspiegabili (lasciata sotto la porta di una taverna, trovata tra i libri di studio o consegnata da un corriere muto). La lettera proviene dal <i>Sigillo Nero</i>, la massima autorità operativa della <i>Sezione Speciale di Vigilanza Arcana - "Il Concilio dei Confini"</i> - un dipartimento ombra incaricato di studiare i flussi della magia e, in caso questi vengano alterati, sdradicare le forze oscure.</p>
+    </div>
+
+    <h2>ATTO I &bull; La Chiamata del Silenzio</h2>
+    <p><i>La chiamata non giunge mai alla luce del giorno. Arriva avvolta nel silenzio, recapitata da un messaggero muto che svanisce prima dell'alba, lasciata sotto una porta socchiusa, infilata tra le pagine di un vecchio registro o trovata sul tavolo al risveglio.<br>
+    La lettera è un foglio di pergamena grezza e ripiegata, sigillata da una pesante colata di ceralacca nera priva di alcuno stemma. Sulla superficie esterna, un'incisione runica avverte chi la riceve: il sigillo richiede un tributo di sangue per aprirsi.</i></p>
+    <p><i>Non appena ciascuno di voi sfiora la ceralacca nera con una goccia del proprio sangue, il sigillo si scioglie e si consuma all'istante, tingendo l'intera pergamena di un nero corvino profondo. Subito dopo, dal buio del foglio affiorano parole tracciate con un inchiostro luminoso che assomiglia a sottili fili d'oro, come se la scrittura si stesse cucendo da sola sulla carta:</i></p> 
+    
+    <div class="read-aloud">
+        <img src="lettera_sigillo_nero.png" alt="lettera">
+        <p class="img-caption">"La chiamata del silenzio"</p>
+        <p style="text-align: center;"><span style="color:#7a7878"><i>&ldquo;Valico di Drakwald, Sentiero dei Tre Pini (Coordinate: 44.8° N, 8.2° E)&ldquo;</i></span></p>
+    </div>
+    
+    <p><i>Appena la lettura viene completata e il messaggio viene assorbito dalla mente, la pergamena perde consistenza, sgretolandosi e riducendosi in un mucchietto di polvere nera impalpabile, simile alla grafite di una matita, che scivola via tra le dita senza lasciare alcuna traccia.</i></p>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione Lettera</summary>
+        <div class="gm-dropdown-content">
+            <p>Consegna segretamente a ciascun giocatore (o estrai a sorte) una delle seguenti frasi. Ognuna funge da controrisposta ufficiale da pronunciare quando giungeranno nel posto indicato e incontreranno il contatto (<i>Sigillo Nero</i>).</p> 
+            <ul>
+                <li><i>La terra ha sete, e noi siamo il ferro che la scava.</i></li>
+                <li><i>Dove il sangue si fa nero, il nome muore nella polvere.</i></li>
+                <li><i>Non c'è scampo per chi calpesta i confini spezzati.</i></li>
+                <li><i>Il fuoco copre le ceneri, il silenzio copre i vivi.</i></li>
+                <li><i>Nessun volto alla luce, nessun debito nel buio.</i></li>
+                <li><i>La vena pulsa, il culto ascolta, il ferro recide.</i></li>
+                <li><i>Sotto la neve marcisce ciò che non può essere salvato.</i></li>
+                <li><i>Un solo errore, un solo nome, e la terra si richiude.</i></li>
+                <li><i>Il Cancelliere osserva; noi siamo la sua mano cieca.</i></li>
+                <li><i>Custodire il marcio, recidere il ramo, svanire nel nulla.</i></li>
+            </ul>
+        </div>
+    </details>
+
+    <p><i>Mentre ci si mette in marcia sotto mentite spoglie, ciascuno affronta l'isolamento della strada a modo proprio: c'è chi avanza con cinico e disilluso pragmatismo, chi con algida e metodica attenzione, e chi custodisce una cupa determinazione dietro una facciata di assoluta normalità.</i></p>
+
+    <h3>"Valico di Drakwald"</h3>
+    <p><i>Il viaggio è aspro, segnato da sentieri fangosi e da una nebbia che gela il respiro. I giorni si susseguono in solitudine fino alla notte stabilita.<br>
+    Fuori, il buio è totale e il freddo morde la carne. Secondo le istruzioni cifrate, ognuno di voi converge in un luogo isolato e fuori dalle mappe: una profonda caverna naturale che funge da avamposto sotterraneo controllato dal Concilio dei Confini. L'aria all'interno è ferma, odorante di pietra bagnata e muschio. È qui, in questo antro buio e anonimo, che i vostri cammini si incrociano per la prima volta. Non conoscete i vostri veri nomi né i vostri volti nascosti dai cappucci.</i></p>
+    <p><i>Il buio nella caverna è assoluto, spezzato solo dal lento stillicidio dell'acqua e dal respiro teso degli agenti che si scrutano senza potersi vedere. Improvvisamente, un passo felpato ma pesante rompe il silenzio. Non c'è rumore di ferraglia, solo il fruscio di una pesante veste di cuoio scuro che stride contro la roccia. Dall'ombra più profonda della grotta, dove la luce non arriva, una figura si materializza in piedi davanti a loro.</i></p>
+    
+    <div style="margin: 20px 0;">
+        <img src="sigillo_nero.png" alt="Sigillo Nero" style="float: right; width: 40%; height: auto; margin-left: 20px; margin-bottom: 10px">
+        <p><i>Ha tratti aristocratici e taglienti, la pelle color cenere e occhi freddi come il ghiaccio che fissano ciascuno di loro con distaccata superiorità. Un lungo mantello scuro avvolge le sue spalle, fermato al petto da un sigillo di ceralacca nera. È "Sigillo Nero", il "Cancelliere dei Confini Spezzati". Non un semplice messaggero, ma la mente che muove i fili nell'ombra. Solleva una mano guantata per stroncare sul nascere qualsiasi sussurro o movimento, e con una voce bassa, tagliente e priva di qualsiasi emozione, rompe il ghiaccio:</i></p>
+        <p><span style="color:#7a7878"><i>&ldquo;Qual è il vostro patto col silenzio?&ldquo;</i></span></p>
+        <p><span style="color:#1a4d33">A turno, uscendo dall'oscurità o facendosi avanti nella penombra della caverna, i personaggi rispondono recitando la controrisposta esatta che ciascuno di loro ha ricevuto dal Narratore.</span></p>
+        <p><span style="color:#7a7878"><i>&ldquo;Bene. Siete nel posto giusto. Ora ascoltate con attenzione ciò che vi attende oltre questa grotta. Non brancolerete nel buio senza sapere cosa muove questa piaga...&ldquo;</i></span></p>
+        <p><span style="color:#7a7878"><i>&ldquo;Vecchioforte non è un villaggio nato per caso. Secoli fa, i suoi fondatori scelsero quella conca isolata perché vi sorgeva un antico sepolcro preistorico, un nodo in cui una vena di energia magica primordiale interseca il mondo sotterraneo. Con il passare del tempo, la memoria di quel sepolcro è svanita, dimenticata dai locali e ridotta a una vaga superstizione sulla fertilità della terra.&ldquo;</i></span></p>
+        <p><i>Il suo sguardo freddo scruta i volti in ascolto prima di proseguire:</i></p>
+        <p><span style="color:#7a7878"><i>&ldquo;Le nostre sonde geomantiche registrano anomalie in questa conca da quasi tre mesi, ma l'attività è accelerata solo di recente. Quelle specifiche vene magiche hanno iniziato a comportarsi in modo diverso da tutte le altre nella regione: vi abbiamo registrato piccole, impercettibili tracce di magia oscura. Qualcosa sta alterando la linfa sotterranea.&ldquo;</i></span></p>
+        <p><i>Sigillo Nero si stringe nel mantello, l'espressione immobile nella sua severità:</i></p>
+        <p><span style="color:#7a7878"><i>&ldquo;La conferma è arrivata pochi giorni fa, quando i nostri esploratori hanno recuperato la carcassa di un animale appena fuori dai confini di Vecchioforte. Una comune pecora, morta in modo anomalo: aveva una zampa in più e fauci piene di denti simili a quelli di una tigre. La corruzione è già iniziata.<br>
+        Non sappiamo ancora chi o cosa stia alimentando questo marciume. Il vostro compito è infiltrarvi nel villaggio e individuare la sorgente esatta della corruzione prima che possa intaccare il benessere e la stabilità delle nostre terre.<br>
+        Agite nell'ombra, osservate tutto e spegnete l'infezione alla radice.&ldquo;</i></span></p>
+        <p><i>Conclude con un cenno secco del capo:</i></p>
+        <p><span style="color:#7a7878"><i>&ldquo;Ricordate le regole: isolamento, discrezione, nessuna pietà e nessuna traccia. Adesso muovetevi.&ldquo;</i></span></p>
+    </div>
+    <p><i>La figura di Sigillo Nero si allontana, dirigendosi verso l'uscita della caverna e lentamente si dissolve davanti ai vostri occhi, lasciando nell'antro solo l'eco gelida delle sue parole. L'incontro è terminato. A uno a uno, lasciate la caverna. Il sentiero che sale si arrampica tra rocce aguzze e banchi di nebbia densa, sferzato da un vento tagliente che sa di neve e legna bruciata.</i></p> 
+    <p><i>Dopo ore di marcia estenuante, superata una curva stretta tra pareti di pietra grigia, la valle si apre improvvisamente davanti ai vostri occhi. Il profilo cupo e arroccato di Vecchioforte emerge dal bianco della neve e dal fumo grigio dei tetti, apparendo come una macchia ostile e isolata dal resto del mondo. Il tempo dell'attesa è finito.</i></p>
+
+    <div class="read-aloud">
+        <img src="vecchioforte.png" alt="vecchioforte">
+        <p class="img-caption">"Vecchioforte"</p>
+    </div>
+
+    <h2>ATTO II &bull; Benvenuti a Vecchioforte</h2>
+    <p><i>Il borgo si presenta come un insediamento fortificato di stampo alpino e rurale, stretto attorno a una torre di guardia centrale. Un muro di cinta in pietra grezza, consumato dal tempo e segnato da stendardi logori color porpora scuro, cinge l'abitato principale. Dalle case in legno e pietra si alza un fumo denso e acre, alimentato da legna umida e paglia bruciata, che si mescola a una nebbia bassa e gelida.</i></p>
+    <p><i>Subito fuori dalle mura, la strada principale è un solco di fango rappreso e neve sporca, costellato da baracche, cataste di legna e ruderi di stalle dove le poche luci delle lanterne a olio proiettano ombre lunghe e tremolanti. Più in basso, sulla sinistra, scorre un torrente scuro e semighiacciato, le cui sponde fangose emanano un vapore sottile e malsano. Intorno al villaggio, i boschi di conifere si stringono minacciosi, con sagome di alberi spogli che sembrano sorvegliare ogni movimento.</i></p>
+    <p><i>Attorno al perimetro si distinguono chiaramente tre possibili vie d'accesso. L'ingresso principale è sormontato da un massiccio portone in legno ferrato, 
+    incastonato in un arco di pietra e sorvegliato da una postazione rialzata. Più in basso, seminascosto dalla nebbia fluviale, lungo il letto del torrente non ricoperto completamente dalle acque, 
+    si intravede una piccola scala di pietra e legno – vecchia e in gran parte distrutta dalle intemperie – si inerpica lungo la parete rocciosa, offrendo una via di risalita che sbuca direttamente nei vicoli del borgo. 
+    Infine, lungo il fianco orientale, un sentiero secondario che passa accanto alle stalle, fino a convergere a una porta protetta da una robusta palizzata in legno ferrato.</i></p>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione ingresso Vecchioforte</summary>
+        <div class="gm-dropdown-content">
+            <p>Fermati qui. Lascia spazio ai giocatori: osserva come decidono di studiare il perimetro, quale rotta scelgono di intraprendere e quale piano mettono in atto per superare le barriere ed entrare a Vecchioforte.</p> 
+            <p><span style="color: #90ffc2;">Porta del Villaggio</span><br>
+            Se uno o più personaggi si presentano apertamente davanti al cancello, due guardie locali armate di picche e pesanti mantelli di pelliccia bloccano il passaggio. Ispezioneranno tutti e chiederanno:</p>
+            <p><span style="color:#7a7878">&ldquo;Chi siete? Cosa volete a Vecchioforte in piena stagione di gelo? Qui non c'è lavoro, non c'è cibo per gli estranei e nessuno passa dopo il tramonto. Qual è il vostro affare?&ldquo;</span></p>
+            <p>Richiede una <strong>prova di Persuasione o Inganno (Media - CD 13)</strong> o una copertura eccellente per non essere rispediti indietro.</p>
+            <p><span style="color: #90ffc2;">Scala di legno e pietra</span><br>
+            Uno o più personaggi scendono nel fango gelido e s'infiltrano attraverso il torrente fangoso per arrampicarsi lungo la scala, evitando del tutto i controlli delle guardie ai cancelli. La scala è pericolante e instabile; un passo falso o un rumore di troppo nel tentativo di aggrapparsi ai gradini di pietra rotti può far scivolare il personaggio nel torrente ghiacciato o produrre rumore. È richiesta una <strong>prova di Agilità (Media - CD 13)</strong>. Una volta arrivati in cima la scala sbuca direttamente in un vicolo cieco e disabitato all'interno del borgo.</p>
+            <p><span style="color: #90ffc2;">Accesso dalle stalle</span><br>
+            È pesantemente sbarrato da un grosso catenaccio e sorvegliato da una guardiola in legno in cui stazionano almeno una o due guardie. Per passare da qui bisogna o corrompere la sentinella con qualcosa di prezioso, o fingere di essere mercanti o carrettieri, superando una verifica severa. Se si tenta di forzarlo o di scavalcare la palizzata, il rumore del legno o l'eventuale attivazione di campanacci di allarme attira immediatamente i cani da guardia chiusi nelle stalle vicine e la guarnigione della guardiola, facendo scattare l'intero allarme del settore occidentale.</p>
+        </div>
+    </details>
+
+    <div class="read-aloud">
+        <img src="mappa_vecchioforte.png" alt="mappa vecchioforte">
+        <p class="img-caption">"Mappa <i>Vecchioforte</i>"</p>
+    </div>
+
+    <p><i>Qualunque sia la via scelta per superare le barriere — che si tratti di aver superato l'esame delle guardie al portone principale, di aver forzato la pusterla delle merci o di essere sgusciati su per la scala di pietra sbreccata lungo il torrente — vi ritrovate all'interno del borgo.<br>
+    L'aria è densa di un fumo acre e nerastro che si alza dai comignoli delle case in legno e pietra, alimentato da legna umida e paglia bruciata. Il freddo è pungente, ma ciò che colpisce di più è l'atmosfera: un silenzio pesante, rotto solo dal calpestio sordo degli stivali sul fango e dal mormorio dei residenti. Il villaggio si sviluppa come una conca stretta e fangosa, dominata dall'alto dalla torre. Nelle strade strette e tortuose si muovono figure avvolte in pesanti mantelli di lana grezza e pellicce logore. Intorno alle poche cataste di legna e ai ruderi, la vita scorre con un ritmo ossessivo e guardingo: alcuni contadini trainano carri carichi di sacchi logori e fascine, mentre altri tagliano tronchi, lanciando sguardi carichi di diffidenza a ogni ombra che si muove. Non ci sono sorrisi, non ci sono saluti; solo occhi che scrutano i forestieri da sotto i cappucci.</i></p>
+    <p><i>Tra le baracche e le strutture più solide del borgo, poco prima che la strada inizi a inerpicarsi verso la torre, un'insegna di legno marcio dondola cigolando nel vento gelido. È la taverna del paese, "La Lanterna di Ghiaccio". Dalle sue finestre sbarrate e dai vetri spessi e opachi filtra una luce giallognola e tremolante, accompagnata dal brusio ovattato di poche voci e dall'odore inconfondibile di birra di scarsa qualità.</i></p>
+
+    <p><span style="color:#1a4d33">Il tempo a Vecchioforte scorre inesorabile. Per mantenere alta la tensione e spingere i giocatori a fare scelte strategiche, puoi limitare le loro risorse di tempo: stabilisci un numero massimo di luoghi che il gruppo può visitare. Non appena i personaggi lasceranno l'ultimo luogo consentito, la pesante campana del borgo rintoccherà cupamente, segnando l'immediata chiusura di ogni attività e l'inizio del coprifuoco.</span></p>
+
+    <h3>La Taverna "La Lanterna di Ghiaccio"</h3>
+    <p><i>La pesante porta di legno della taverna si apre, lasciando entrare una folata di vento gelido e neve prima di richiudersi alle vostre spalle. Il contrasto con l'esterno è immediato: l'aria all'interno è densa, satura dell'odore acre di stufato di cavolo e pellicce bagnate che fumano vicino al grande focolare centrale.<br>
+    Appena varcate la soglia, il brusio di fondo si affievolisce di colpo. Dieci paia di occhi si volgono verso di voi. Nei ristretti spazi della sala, la distinzione è netta: ci sono pochi forestieri o mercanti di passaggio, seduti agli angoli più bui con gli sguardi bassi e i bagagli stretti tra le gambe, e poi ci sono i cittadini di Vecchioforte.<br>
+    Gli sguardi con cui i locali vi fissano sono un misto di gelida diffidenza e inquietante indifferenza.<br>
+    Dietro il bancone in legno tarlato si muove con passo lento <strong>Feola</strong>, un'anziana donna dalla corporatura robusta e lo sguardo segnato da decenni di inverni spietati, le mani rugose intente a pulire un boccale con uno straccio lercio. Al suo fianco, a fare la spola tra i tavoli con un vassoio di zuppa fumante, c'è <strong>Muriel</strong>, una giovane ragazza. Lei vi accoglie subito con un sorriso smagliante, un gesto di cortesia quasi innaturale in quel posto dimenticato dagli dei.</i></p>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione taverna</summary> 
+        <div class="gm-dropdown-content">
+            <img src="lanterna_ghiacciata.png" style="max-width: 100%; height: auto; display: block; margin: 10px auto;" alt="Lanterna di Ghiaccio">
+            <p class="img-caption">&laquo;Lanterna di Ghiaccio&laquo;</p>
+            <p>Lascia che i giocatori decidano come muoversi. Ecco i punti di interesse:</p> 
+            <p><span style="color: #90ffc2;">Il registro degli avventori</span><br>
+            Esaminando il bancone o il registro delle presenze quando Feola è distratta, con una <strong>prova di Investigazione (Difficile - CD 16)</strong>, i personaggi notano che negli ultimi mesi la rotazione dei mercanti forestieri è crollata del 70%, ma i pagamenti delle tasse locali registrano entrate anomale in beni di lusso o pellicce di pregio. Qualcuno sta depredando i viaggiatori di passaggio.</p>
+            <p><span style="color: #90ffc2;">Le scorte di cibo e l'acqua contaminata</span><br>
+            Se i personaggi esaminano la brocca di vino o il cibo servito, con una <strong>prova di Percezione (Difficile - CD 16)</strong>, notano che il vino sa marcatamente di rame, e che le verdure nella zuppa hanno una consistenza fibrosa.</p>
+            <p><span style="color: #90ffc2;">Un avventore abituale</span><br>
+            Sedendosi al suo tavolo con circospezione, senza fare domande dirette, ma dimostrando di conoscere la durezza delle rotte commerciali della zona, magari accompagnando il tutto con un sorso di alcol forte <strong>(Prova di Costituzione - Difficile CD 15).</strong></p>
+            <p><span style="color:#7a7878"><i>&ldquo;Io vengo a Vecchioforte due volte l'anno da oltre un decennio, ma vi giuro che negli ultimi tempi questo posto è diventato una tomba a cielo aperto. Anni fa si poteva commerciare liberamente, la gente parlava e le botteghe erano vive. Oggi no. C'è un silenzio malsano che fa gelare il sangue. E vi do un consiglio da amico: se vi mettete a fare troppe domande o a ficcare il naso dove non vi compete, gli sgherri del capovillaggio vi metteranno i bastoni tra le ruote in un battito di ciglia... e di forestiosi che chiedevano troppo prima di svanire nel nulla nel cuore della notte ne ho già visti troppi, credetemi&ldquo;</i></span></p>
+            <p><span style="color: #90ffc2;">Il racconto di <i>Muriel</i></span><br>
+            E una giovane ragazza, la cameriera della taverna, ma fa parte della cerchia ristretta di <i>Vico Malavisi</i> che ha iniziato a praticare i riti di sangue.
+            Il suo movente è disperato: crede ciecamente che i sacrifici servano a placare le entità oscure e ottenere la guarigione della sua sorellina malata. Non si mostrerà 
+            ostile verso i personaggi, al contrario, sarà disponibile e pronta a parlare. Il suo obietto è spingere i personaggi a indagare. Con la scusa di aprirsi per paura, racconterà la 
+            storiella fingendo di cercare aiuto ma, invece, li metterà sulla strada verso le grinfie del culto:</p>
+            <p><span style="color:#7a7878"><i>&ldquo;Voi non capite... qui nessuno è al sicuro. Qualche tempo fa, dopo il tramonto, sono dovuta uscire di 
+            nascosto dalla taverna per correre dall'erborista del villaggio a prendere alcune foglie particolari che mi servivano... per mia sorella, per darle 
+            un po' di sollievo dai suoi dolori. Sapevo perfettamente di aver violato il coprifuoco, e la paura era tanta. Poi ho sentito dei passi pesanti e delle 
+            voci alterate lungo la via, e mi sono rapidamente nascosta dietro a delle grandi casse di legno accatastate contro un muro. Poco più avanti, un anziano 
+            allevatore del posto, Geumenio, stava inveendo a voce alta contro le guardie del villaggio. Era disperato, si lamentava che tutti i suoi animali stavano morendo, 
+            colpiti da mali inspiegabili, e protestava rumorosamente rifiutandosi di sottostare alle imposizioni del capovillaggio.&ldquo;</i></span></p>
+            <p><i>Muriel abbassa la voce, stringendo i lembi del grembiule tra le dita tremanti, mentre i suoi occhi cercano quelli dei personaggi con urgenza:</i></p>
+            <p><span style="color:#7a7878"><i>&ldquo;Prima che l'uomo potesse continuare, da un vicolo buio sono sbucate due figure avvolte in pesanti mantelli, 
+            con indosso inquietanti maschere in legno. Non c'è stata una vera colluttazione: con un solo cenno silenzioso, le due figure mascherate hanno 
+            pronunciato poche parole incomprensibili, una cantilena gutturale che ha immediatamente paralizzato e calmato l'anziano, svuotandogli completamente 
+            lo sguardo. Senza quasi opporre resistenza, quell'uomo si è lasciato condurre via nel buio, ed è svanito nel silenzio della notte... e io sono rimasta 
+            lì, nascosta, senza fiatare, tremando al solo pensiero che potessero accorgersi di me.&ldquo;</i></span></p>
+            <p><span style="color: #90ffc2;">Parlare con <i>Feola</i></span><br>
+            Tacita collaboratrice del capo villaggio. Non fa domande, non vuole problemi. Fa ciò che gli dice Vico fino a quando gli permetterà di tenere la taverna senza pagare alcun tributo. 
+            Non spreca parole con i forestieri. Non offre confidenze, non risponde alle domande sulla politica del villaggio e si limita a imporre le regole fredde della taverna con sguardi di pietra:</p>
+            <ul>
+                <li><span style="color:#7a7878"><i>&ldquo;La stanza costa tre monete d'argento. Il cibo è sul fuoco. Per il resto, le orecchie chiuse e la bocca cucita finché state sotto il mio tetto.&ldquo;</i></span></li>
+                <li><span style="color:#7a7878"><i>&ldquo;Qui alla Lanterna di Ghiaccio non ci sono cariche, non ci sono sindaci e non ci sono lamentele. C'è solo chi paga per un giaciglio e chi cerca guai che non sa gestire.&ldquo;</i></span></li>
+                <li><span style="color:#7a7878"><i>&ldquo;Se vi serve legna o un lume, prendeteli. Ma quando la campana della torre suona, le porte si sbarrano e io non apro a nessuno, fosse pure il re in persona... volete sapere perché? Perché è la mia taverna e comando io!&ldquo;</i></span></li>
+            </ul>
+            <p><span style="color: #90ffc2;">La cantina</span><br>
+            Dietro una pesante porta di legno rinforzata, tra botti di vino acido e umidità, è incatenata una donna: indossa abiti logori, che un tempo dovevano essere preziosi, il suo viso è gonfio, pieno di lividi; i polsi sono consumati dalle catene che li stringono mentre le gambe giacciono inermi in una pozza di sangue secco. Quando scendete, vi fissa con un sorriso amaro, mostrando alcuni denti mancanti.<br>
+            <span style="color:#7a7878"><i>&ldquo;Non so più da quanto tempo sono qui, ricordo solo che una notte la bufera di neve mi bloccò in questo maledetto villaggio... e fu la mia rovina. Nel cercare frammenti di storia dimenticata, avevo capito che qui sotto giaceva il "Codex Sanguis Tace", l'antico grimorio perduto di un dimenticato culto di streghe capace di piegare la terra per estrarre ricchezza e fertilità attraverso il sangue. E lo trovai... dimenticato in una cappella fuori dal borgo, dall'altro lato del fiume...<br>
+            In un momento di cieca debolezza, forse per una dannata infatuazione, mi fidai di Vico Malavasi. Gli confessai cosa trovato. Lui mi ha derubata, mi ha sbattuta in queste catene e mi ha lasciata a marcire.<br>
+            Non mi ha uccisa solo per una ragione: il suo stupido ego e la sua ignoranza non bastano a decifrare le pagine del Codex. Ha avuto bisogno di me per tradurre i passaggi del rito, per capire come gestire la vena magica che sta avvelenando i pozzi anziché far fiorire i campi. E io... ho provato a resistere, ma le torture sono diventate troppo crudeli...&ldquo;</i></span></p>
+            <p>I personaggi notano che il corpo della donna è pieno di bruciature, lividi, tagli infetti... piccole deformità che quasi sembrano respirare sotto le vesti.<br>
+            <span style="color:#7a7878"><i>&ldquo;Io... io non ho più tempo, e nemmeno voglio averlo! Il mio corpo e la mia mente sono stati contaminati dal veleno, non mi resta molto come potete vedere... Ma voi avete ancora del tempo: stanotte era la scadenza ultima, la notte in cui il cerchio doveva chiudersi per restituire il libro al culto originario prima che la terra rigetti ogni cosa. Uscite di qui, andate alla Cappella e fermateli prima che l'intera valle venga risucchiata dal marciume e dalla tirannia del culto delle streghe. Dovete prendere quel libro e distruggerlo con la vostra fede!&ldquo;</i></span></p>
+            <p>Gli occhi della donna si socchiudono sempre di più, lasciando spazio a lacrime che sembrano quasi cullarla nel suo ultimo viaggio. Le sue ferite sono troppo gravi, ma la cosa peggiore è che alcune parti del suo corpo sono in uno stato avanzato di necrosi. Il suo respiro si fa sempre più debole e lento fino a spegnersi...</p>        
+        </div>
+    </details>
+
+    <h3>Merceria</h3>
+    <p><i>Spingendo la porta di legno della merceria, un campanellino arrugginito emette un rintocco secco che rimbomba nello spazio angusto. L'aria è densa di odore di lana grezza, candele e muffa. A passo lento, scandito dal colpo ritmico di un bastone sul pavimento di legno scricchiolante, si avvicina un'anziana donna. Un sorriso sdentato apre il suo volto solcato dalle rughe e il suo occhio sinistro completamente vitreo e immobile. Sulle scaffalature intorno a lei, i fili di cotone e gli abiti sono logori, rattoppati alla bell'e meglio, mentre pellicce di animale impolverate riposano in cesti di vimini accanto a scarpe sdrucite.</i></p>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione merceria</summary>
+        <div class="gm-dropdown-content">
+            <img src="merceria.png" style="max-width: 100%; height: auto; display: block; margin: 10px auto;" alt="merceria">
+            <p class="img-caption">&laquo;Il Filo di Adelaide&laquo;</p>
+            <img src="Adelaide.png" alt="adelaide" style="float: right; width: 35%; height: auto; margin-left: 20px; margin-bottom: 10px;">
+            <p>La venditrice, <i>Adelaide</i>, è del tutto estranea ai culti oscuri e ai rituali del villaggio. Non sa nulla dei sacrifici o della vera natura di ciò che accade a Vecchioforte. Il suo compito è semplice: riceve gli abiti, gli effetti personali e le mercanzie appartenuti ai viaggiatori sfortunati o ai mercanti scomparsi, li ripara, li rattoppa e si occupa di consegnarli alla casa del capovillaggio. Una parte di questi beni viene riadattata e distribuita agli abitanti del borgo.</p> 
+            <p><span style="color: #90ffc2;">Acquistare o frugare tra gli oggetti</span><br>
+            Possono cercare vestiti da viaggio resistenti, pezzi di ricambio o materiali di scarto utili per camuffarsi o rattoppare equipaggiamento.</p>
+            <p><span style="color: #90ffc2;">Investigare sulla merce</span><br>
+            Se i personaggi esaminano i prodotti, con una <strong>prova di Percezione o Investigazione (Difficile - CD 16)</strong>, noteranno che in un angolo nascosto, coperto da un panno nero, si trovano rotoli di stoffe finissime e abiti di fattura cittadina, recando ancora il marchio di sartoria di una grande città.</p>
+            <p><span style="color: #90ffc2;">Interrogare Adelaide</span><br>
+            Se i personaggi affrontano la donna riguardo a queste merci di dubbia provenienza, Adelaide negherà tutto terrorizzata, brandendo il suo bastone o minacciando di chiamare le guardie, mormorando spaventata:<br>
+            <span style="color:#7a7878"><i>&ldquo;Le cose dei viandanti che non lasciano il paese vengono redistribuite per ordine della torre... io eseguo solo gli ordini, non faccio domande!&ldquo;</i></span></p>
+        </div>
+    </details>
+
+    <h3>Negozio di Erbe e Pozioni</h3>
+    <p><i>L'insegna di legno fuori reca l'effige di una radice secca. All'interno, il locale è caldissimo, saturo di vapori densi e di un acre odore di erbe bruciate. Su un pesante tavolo di legno massello, un giovane uomo è totalmente assorto nel pestare vigorosamente delle erbe dentro un mortaio di pietra. Senza nemmeno alzare lo sguardo verso la porta, inveirà quasi contro di loro con un tono seccato:</i></p>
+    <p><span style="color:#7a7878">&ldquo;Sono quasi pronto! Datemi il tempo di ultimare le ultime cose!&ldquo;</span></p>
+    <p><i>Solo un istante dopo, voltandosi e accorgendosi che i forestieri non sono del paese, il suo atteggiamento muta di colpo: un sorriso largo e smagliante illumina il suo volto:</i></p>
+    <p><span style="color:#7a7878">&ldquo;Oh, che maleducato! Mi presento, Edigeo Malavasi, e questa è la mia bottega. Ditemi, come posso aiutarvi?&ldquo;</span></p>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione negozio</summary>
+        <div class="gm-dropdown-content">
+            <img src="erboristeria.png" style="max-width: 100%; height: auto; display: block; margin: 10px auto;" alt="erboristeria">
+            <p class="img-caption">&laquo;La Bottega dei Rimedi Amari&laquo;</p>
+            <img src="Edigeo.png" alt="egideo" style="float: left; width: 35%; height: auto; margin-right: 20px; margin-bottom: 10px;">
+            <p>Edigeo è un venditore nato: estremamente affabile, servizievole e con la battuta pronta. Tuttavia, sotto questa patina di cortesia cittadina cova un fondo di nervosismo e irritabilità che affiora non appena 
+            viene messo in discussione ciò che dice o fa. È un fedele esecutore delle direttive del capovillaggio — di cui è anche cugino —, sebbene si sforzi in tutti i modi di apparire come un rispettabile e innocuo bottegaio
+            che cerca di aiutare i cittadini come meglio può. Si occupa della preparazione degli intrurgli narcotici che vengono distribuiti nella taverna, nelle bevande che vengono portate ai viaggiatori e mercanti che arrivando
+            al borgo. </p>
+            <p><span style="color: #90ffc2;">Investigare sulla merce</span><br>
+            Con una <strong>prova di Intelligenza o Medicina (Media - CD 13)</strong>, i personaggi riconoscono che le erbe pestate non servono a curare, bensì a indurre uno stato di forte sedazione e torpore muscolare.</p>
+        </div>
+    </details>
+
+    <h3>Stalle</h3>
+    <p><i>Oltrepassando il grande portone di legno massiccio delle stalle di Vecchioforte, un'ondata densa di freddo umido, acre odore di letame e putrefazione vi accoglie, facendovi stringere gli occhi nell'oscurità. 
+    L'interno è appena graffiato dalla luce un'unica lanterna a olio appesa a una trave maestra, che proietta ombre lunghe e danzanti sulle pareti di pietra. I recinti per i cavalli e il bestiame 
+    si susseguono per la gran parte vuoti, silenziosi e coperti da uno strato sottile di brina notturna; pochissimi gli animali rimasti. Accasciato su una sedia di legno sbilenca, piazzata proprio fuori 
+    dall'ingresso principale, un uomo è crollato in un sonno così profondo e alcolico da far dondolare pesantemente la testa in avanti, con una bottiglia mezza vuota ancora 
+    stretta tra le dita intirizzite e un russare rauco che spezza il silenzio. Più in fondo, addentrandosi tra le corsie dei box, la situazione non cambia: rannicchiato su una branda di paglia maleodorante 
+    e umida, un palafreniere locale dorme avvolto in un mantello consunto, respirando affannosamente e bofonchiando frasi indecifrabili nel suo torpore febbrile.</i></p>
+
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione stalla</summary>
+        <div class="gm-dropdown-content">
+            <img src="stalle.png" style="max-width: 100%; height: auto; display: block; margin: 10px auto;" alt="stalle">
+            <p class="img-caption">&laquo;Le stalle di Vecchioforte&laquo;</p>
+            <p><span style="color: #90ffc2;">Il guardiano</span><br>
+            L'uomo accasciato sulla sedia fuori dalla porta principale è un vecchio guardiano locale ubriacato a fondo per chiudere un occhio. 
+            Se i personaggi tentano di perquisirlo, con una <strong>prova riuscita di Furtività o Rapidità di mano (Facile - CD 11)</strong> 
+            troveranno una chiave di ferro arrugginita (che apre il lucchetto del deposito sella o l'uscita secondaria) e un piccolo sacchetto 
+            con poche monete di rame sporche di fango.</p>
+            <p><span style="color: #90ffc2;">Il palafreniere</span><br>
+            Rannicchiato sui covoni di paglia più all'interno c'è un giovane palafreniere che vive nel terrore. È caduto in un torpore febbrile e parnoico, 
+            indotto da ciò che ha visto nei giorni scorsi. Se i personaggi riescono a svegliarlo con delicatezza o a interrogarlo dopo averlo calmato 
+            <strong>con una prova di Persuasione o Intimidazione (Facile - CD 10)</strong>, balbetterà che "quelli del culto" passano la notte, 
+            muovendosi con quelle strane maschere di legno e costringendolo a bere sidro pesante per farlo dormire. Sotto il suo mantello stringe 
+            disperatamente un amuleto di ferro freddo a forma di mezzaluna spezzata, un cimelio di famiglia.</p>
+            <p><span style="color: #90ffc2;">Le tracce</span><br>
+            In un angolo buio adibito a deposito sella, rovistando tra vecchi finimenti impolverati, con una <strong>prova di Percezione (Media - CD 13)</strong>, i personaggi Trovano un sacco di juta contenente residui di 
+            foraggio annerito e mescolato a erbe narcotiche pesanti, l'inconfondibile intruglio usato per stordire le bestie e renderle inoffensive prima di un trasporto furtivo; 
+            accanto ad esso, cinghie di cuoio rinforzate e una fiasca di canfora dal forte odore balsamico.</p> 
+            <p>    
+            <img src="maschera_cultista.png" style="width: 35%; height: auto; float: left; margin: 0 15px 10px 0;" alt="maschera cultista">
+            <p><span style="color: #90ffc2;">La maschera di legno</span><br>
+            Nascosta nel fondo di una mangiatoia vuota, sotto uno strato di fango e pula, i personaggi rinvengono la maschera di legno grezzo intagliata 
+            con le sembianze di una bestia cornuta, chiaro simbolo del culto locale che officia i riti nella vecchia cappella.</p>
+            </p> 
+            <p><span style="color: #90ffc2;">Il carretto</span><br>
+            Uscendo dall'ingresso secondario, i personaggi noteranno che la scia di sangue si interrompe improvvisamente in uno spiazzo di terra battuta. 
+            Tuttavia, esaminando il terreno circostante, emergono inequivocabili e fresche impronte di ruote larghe e pesanti di un carretto, 
+            affiancate da impronte di stivali fangosi. Seguendo i solchi profondi lasciati dal carretto pesante fuori dalla stalla, la pista fangosa 
+            non lascia scampo: si dirige inequivocabilmente fuori dal perimetro del villaggio, serpeggiando lungo il sentiero in salita che conduce 
+            dritto verso la vecchia cappella isolata, dove il rito sacrificale sta per compiersi.</p>
+        </div>
+    </details>
+
+    <h3>Casa del Capovillaggio</h3>
+    <p><i>La residenza di Vico Malavasi si erge pesante e minacciosa sulla roccia più alta del villaggio, una fortezza con mura di pietra e feritoie strette al posto delle finestre. La porta d'ingresso è un massiccio portone di rovere ferrato, sbarrato da pesanti catene e sorvegliato a vista da guardie immobili come statue. Tuttavia, osservando la facciata con attenzione, notate una finestra stretta e priva di vetri che si apre in alto, sulla parete laterale: da lì filtra una debole luce tremolante di candela.</i></p>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione casa</summary>
+        <div class="gm-dropdown-content">
+            <img src="casa_capo_villaggio.png" style="max-width: 100%; height: auto; display: block; margin: 10px auto;" alt="casa capo villaggio">
+            <p class="img-caption">&laquo;Casa del Capovillaggio&laquo;</p>
+            <p>Questa zona è blindata. La residenza è un ostacolo quasi insormontabile. Il capovillaggio è alla cappella, ma ha lasciato la sua residenza sotto la sorveglianza feroce di guardie d'onore implacabili. Se i personaggi riescono ad accedere all'edificio, saranno accolti da una ventina di servitori armati e guardie scelte rimaste di guardia.<br>
+            Se i personaggi decidono di tentare l'accesso arrampicandosi verso la finestra in alto, dovranno superare una <strong>prova di Atletica o Furtività (Difficile - CD 16)</strong>, per evitare di scivolare, di attirare l'attenzione delle guardie. Si ritroveranno in quello che sembra uno studio:</p>
+            <p><i>Varcata la stretta apertura, vi ritrovate in un ambiente angusto ma soffocante, saturo dell'odore acre di cera fusa, inchiostro e vecchia carta marcita. Al centro della stanza troneggia una pesante scrivania di legno massello, rischiarata solo dalla luce tremolante di una candela quasi consumata. Intorno, alte cataste di registri rilegati in cuoio e pergamene arrotolate occupano ogni superficie calpestabile, mentre alle pareti appese nell'ombra si notano mappe geografiche consunte e vecchi ritratti di famiglia.</i></p>
+            <p><span style="color: #90ffc2;">Il decreto di fondazione del culto</span><br>
+            Negli archivi privati di Vico, accessibili con una <strong>prova di Furtività e Investigazione (Difficile - CD 16)</strong>, un documento rivela che i sacrifici non servono a placare una vera divinità, ma a mantenere in vita un patto di sangue secolare per garantire la fertilità dei terreni.</p>
+            <p><span style="color: #90ffc2;">I registri dei tributi</span><br>
+            Un libro mastro rilegato in cuoio mostra l'elenco completo di tutti i mercanti e viaggiatori "schedati" fin dal loro arrivo a Vecchioforte, con annotate le date dei prossimi sacrifici programmati e i ruoli assegnati a ciascun cittadino complice, inclusi l'erborista Edigeo Malavasi, la cameriera della taverna Feola e la sarta Adelaide.</p>
+            <p><span style="color: #90ffc2;">La mappa delle catacombe</span><br>
+            Una pianta dettagliata dei sotterranei sotto la Cappella della Dea del Raccolto mostra la vera camera del rituale, accessibile tramite una particolare leva, un calice incastonato sull'altare, va ruotato seguendo l'ordine ciclico delle stagioni, ma invertendone il senso: dalla morte alla (ri)nascita.</p>
+        </div>
+    </details>
+    
+    <h2>ATTO III &bull; La Cappella della Dea del Raccolto</h2>
+    <p><i>Il suono pesante e solenne della campana del borgo rintocca dietro le vostre spalle, risuonando cupamente tra i vicoli ormai deserti e le botteghe che sbarrano le porte in fretta. Qualsiasi cosa abbiate scoperto o cercato in questo villaggio di ombre, il tempo è scaduto. Il coprifuoco è calato.<br>
+    Mentre vi guardate intorno, una piccola sagoma sbuca all'improvviso da un vicolo buio. È una bambina del villaggio, con il volto mezzo nascosto da un cappuccio di lana ruvida e un paio di occhi enormi e sgranati che vi fissano fissi. Senza dire una sola parola, vi fa cenno di fare silenzio portandosi un dito alle labbra, vi afferra appena per il lembo della veste e vi fa segno di seguirla con urgenza, mormorando un sussurro strozzato:</i></p>
+    <p><span style="color:#7a7878">&ldquo;Presto... venite, vi nascondo io prima che le guardie vi vedano...&ldquo;</span></p>
+    <p><i>Seguendola a rapidi passi tra i muri di pietra fredda, vi conducete fuori dal centro abitato, lasciandovi alle spalle le ultime case buie di Vecchioforte, mentre il vento ulula tra le pietre della collina.<br>
+    Di fronte a voi si erge infine la sagoma cupa della Cappella della Dea del Raccolto: una struttura isolata di pietra grezza, sormontata dalla torre campanaria che taglia il cielo plumbeo. La pesante porta d'ingresso in legno è socchiusa, e da una fessura filtra una luce verdastra e malata.<br>
+    La bambina sparisce nell'ombra, lasciandovi soli sulla soglia. Varcando l'ingresso, venite accolti da un silenzio spettrale, interrotto solo dallo scoppiettio sordo delle torce. L'interno è un ammasso opprimente di steli di grano marcio, banchi di legno anneriti e, in fondo alla navata, il grande altare di pietra e legno sovrastato dall'effigie consunta della divinità, coperta di muffe e teschi di animali.</i></p>
+    
+    <img src="cappella_dea_raccolto.png" style="max-width: 100%; height: auto; display: block; margin: 10px auto;" alt="cappella dea">
+    <p class="img-caption">&laquo;La Cappella della Dea del Raccolto&laquo;</p>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Il Segreto dell'Altare</summary>
+        <div class="gm-dropdown-content">
+            <p><span style="color: #90ffc2;">Le incisioni sull'altare</span><br>
+            L'altare principale non è un semplice tavolo liturgico, ma il simulacro del ciclo eterno della terra. Esaminando la base dell'altare o l'effigie con una <strong>prova di Investigazione o Percezione (Media - CD 13)</strong>, i personaggi noteranno che un pesante calice di pietra è incastonato nella roccia. Intorno alla sua base, la pietra è finemente incisa con cerchi concentrici e simboli che tracciano il decorso delle stagioni. Per sbloccare il passaggio, il calice va ruotato seguendo l'ordine ciclico delle stagioni, ma invertendone il senso: bisogna far scorrere il meccanismo prima verso il declino e la morte della terra (l'aridità e il freddo dell'inverno), per poi condurlo simbolicamente verso la rinascita e il risveglio della vita (la fioritura e il raccolto). Se la sequenza viene impressa correttamente, l'intero blocco dell'altare scivola, rivelando una ripida e buia scalinata che sprofonda sottoterra.</p>
+            <p><span style="color: #90ffc2;">I resti delle offerte umane</span><br>
+            Rovistando tra i mucchi di grano marcio ai piedi dell'altare, un personaggio che superi una <strong>prova di Percezione (Media - CD 13)</strong> troverà oggetti personali appartenuti a persone scomparse (anelli, ciondoli, pezzi di stoffa pregiata identici a quelli della merceria di Adelaide) intisi di sangue secco.</p>
+        </div>
+    </details>
+
+    <p><i>Scendete lungo la scalinata nascosta sotto l'altare, scavata direttamente nella viva roccia, che sprofonda nel buio più assoluto. L'aria diventa via via più pesante, satura di umidità e di un odore di incenso e carne bruciata. La scala termina in un corridoio basso che si apre improvvisamente in una vasta cripta sotterranea. Al centro di questa grande sala scavata nella terra c'è uno strano cerchio rituale tracciato con ceneri e sangue rappreso, che brilla di una luce opaca e malata.</i></p>
+    <p><i>Al centro del cerchio rituale, illuminato da bracieri di fuoco verdastro, vedete quattro figure incappucciate e con indosso inquietanti maschere di 
+    legno, recitando una cantilena gutturale e incomprensibile. Legata al centro del cerchio, con uno sguardo perso e la carnagione malaticcia, c'è la bambina, 
+    la stessa piccola misteriosa che vi aveva condotti fin lì all'ora esatta del rintocco delle campane (o che avete raggiunto seguendo la scia di indizi e il 
+    carretto, se siete arrivati prima del segnale d'allarme), che sembra riposare beatamente.</i></p>
+    <p><i>I quattro cultisti interrompono all'unisono il loro mormorio e, lentamente, si voltano verso di voi, puntando il legno vuoto delle maschere nella vostra 
+    direzione. Senza mai smettere di pronunciare quelle parole, le loro voci si fondono in un unico coro rauco e sovrapposto:</i></p>
+    <p><span style="color:#7a7878"><i>&ldquo;Ella ha fame... Ella deve essere nutrita. La terra trema, il cerchio si chiude: preparate il vostro sangue per la Dea.&ldquo;</i></span></p>
+    <p><i>Un fenomeno innaturale cattura i vostri sguardi: il corpo della bambina si stacca lentamente dalla pietra, sollevandosi da terra senza alcun supporto, e 
+    rimane sospeso a mezz'aria, immobile a circa dieci metri d'altezza, avvolto da un alone di gelido silenzio.<br>
+    Senza preavviso, le figure brandiscono lame e tizzoni ardenti e si lanciano all'attacco.</i></p>
+
+    <div class="read-aloud">
+        <img src="mappa_tattica_cappella.png" alt="mappa battle cappella">
+        <p class="img-caption">"La Stanza del Sacrificio"</p>
+    </div>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione ATTO III</summary>
+        <div class="gm-dropdown-content">
+            <p>I quattro individui mascherati attorno al cerchio sono i veri motori del culto di Vecchioforte:</p>
+            <p><span style="color: #90ffc2;">SCHEDA PNG: Cultisti (4)</span></p>
+            <ul>
+                <li><strong>Razza:</strong> Umano</li>
+                <li><strong>Archetipo:</strong> Fanatico</li>
+                <li><strong>Caratteristiche:</strong> Fisico comune, addestrato alla furtività e alla resistenza alla fatica; guidato da un cieco fanatismo.</li>
+                <li><strong>Classe Armatura:</strong> Bassa/Media (Vesti scure incappucciate, talvolta rinforzate da cuoio bollito nascosto)</li>
+                <li><strong>Armi:</strong> Daga rituale avvelenata o falcetto arrugginito, scorta di pietre focaie o polveri fumogene</li>
+                <li><strong>Punti Ferita:</strong> Medi</li>
+                <li><strong>Velocità:</strong> Normale movimento umano</li>
+                <li><strong>Abilità:</strong> Furtività, Percezione, Intimidazione, Mimetizzarsi tra la folla</li>
+                <li><strong>Tratti Speciali:</strong>
+                    <ul>
+                        <li><i>Morte Silenziosa:</i> Se coglie un bersaglio di sorpresa, infligge danni bonus prima di dileguarsi nell'ombra.</li>
+                        <li><i>Devozione Fanatica:</i> Immuni alla paura ordinaria e alle intimidazioni verbali finché il loro superiore o un capo congiurato è presente sul campo.</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </details>
+
+    <h3>EPILOGO</h3>
+    <p><i>Il fumo verdastro dei bracieri si dirada, lasciando spazio a un'aria densa e stagnante. Nel momento in cui il confronto nella cripta giunge al suo termine, le maschere cerimoniali dei quattro congiurati — Vico Malavisi, 
+    Muriel, Edigeo ed Eugemio — si incrinano all'unisono. Un sottile strato di polvere grigia scivola via dai loro volti scoperti, rivelando le fattezze di chi, fino a un attimo prima, si celava dietro l'ombra del villaggio. 
+    Le vesti rituali pesano a terra come spoglie vuote, mentre la figura immobile della bambina distesa sull'altare subisce un mutamento improvviso: non vi è alcun risveglio, né parole o lamenti. Appena il cerchio di ceneri 
+    perde la sua luce, il piccolo corpo della bambina si dissolve in una leggera nebbia scura, svanendo del tutto e lasciando sull'altare di pietra un grimorio dalle pagine ingiallite e dalla copertina consunta: "Il Codex Sanguis Tace". 
+    Si tratta del testo sacro di un antico culto di streghe dimenticato, un compendio di pratiche blasfeme capace di estrarre ricchezza, raccolti abbondanti e fertilità dalla terra unicamente attraverso la corruzione e il 
+    sacrificio di vite innocenti.<br>
+    Chiunque posi lo sguardo o le mani su quel volume viene immediatamente pervaso da una sensazione anomala: un legame viscerale e malsano che stringe la mente, rendendo incredibilmente difficile separarsene o gettarlo via. 
+    Un magnetismo oscuro che agisce soprattutto su chi possiede una debole tempra o una naturale inclinazione verso l'ombra, sussurrando promesse di potere a chiunque sia disposto ad ascoltare.</p> 
+    <p>Il villaggio di Vecchioforte rimane così sospeso in un silenzio tombale, custode di segreti che forse non saranno mai del tutto svelati... mentre il seme della tentazione attende solo il prossimo custode.</i></p>
+
+    <details class="gm-dropdown" style="background-color: #262002; color: #c9b037; border-color: #c9b037;">
+        <summary style="color:#d4af37"><STRONG>PG PRONTI ALL'USO</STRONG></summary>
+        <div class="gm-dropdown-content">
+        <p>Questi  profili sono concept narrativi agnostici pronti all'uso. Puoi adattarli in pochi minuti al tuo 
+        sistema di gioco preferito: servono a velocizzare la composizione della squadra, offrendo archetipi focalizzati 
+        sull'atmosfera cupa e investigativa.</p>
+    
+        <!-- GIDEON CORVUS -->
+        <h3>Gideo Corvus</h3>
+        <span style="color:#746120"><i>Cacciatore di Mostri / Giustiziere</i></span>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> ASPETTO <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Un uomo segnato dagli anni e dalle intemperie, con lo sguardo perennemente cupo e le mani callose di chi ha impugnato troppo 
+        spesso le armi. Indossa un pesante cappotto di cuoio consunto dalla pioggia e porta sul volto i segni di vecchi scontri. 
+        Non crede alle coincidenze e odia i culti nell'ombra.</p>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> ABILITA' <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Tracciare piste invisibili, fiutare le menzogne, intimidire i testimoni ostili e combattere corpo a corpo quando la situazione degenera.
+        <p><strong><span style="color:#d4af37">&bigstar;</span> EQUIPAGGIAMENTO <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Una pesante lanterna a vento protetta da griglie di ferro, un mazzuolo da guerra affaticato 
+        dall'uso e un taccuino di cuoio pieno di appunti su segni eretici.</p>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> CARATTERISTICHE <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Assegna valori alti in <i>Forza, Percezione</i> e <i>Intimidazione</i>. Dagli una <i>resistenza naturale ai tiri di volontà legati alla paura.</i></p>
+        
+        <!-- MIRAE -->
+        <h3>Mira Mare</h3>
+        <span style="color:#746120"><i>Ricognitrice / Spia</i></span>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> ASPETTO <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Piccola di statura, incredibilmente rapida nei movimenti e silenziosa come un'ombra. Veste di abiti scuri e che le 
+        permettono di mimetizzarsi tra i boschi e le vecchie tettoie. Ha sempre un orecchio teso ai rumori del mondo e un 
+        sorriso sghembo stampato sul volto.</p>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> ABILITA' <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Muoversi senza fare rumore, intrufolarsi ovunque, scassinare serrature rudimentali, scalare pareti e trovare indizi.</p>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> EQUIPAGGIAMENTO <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Un set di attrezzi da scasso ricavati da vecchie chiavi modificate, un pungale affilatissimo e una fiasca di liquore forte</p>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> CARATTERISTICHE <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Assegna alti valori in <i>Destrezza, Furtività, Rapidità di Mano</i> e <i>Percezione</i>.</p>
+    
+        <!-- PADRE KARNA -->
+        <h3>Padre Karna</h3>
+        <span style="color:#746120"><i>Uomo di fede / Guaritore</i></span>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> ASPETTO <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Indossa una tonaca grigio rovere, ora macchiata di fango e polvere di strada. Ha occhiaie profonde e un 
+        tremore perenne alle dita. Non porta grandi armi, ma la sua presenza ispira una calma fragile, interrotta da mormorii 
+        di preghiere contro i demoni.</p>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> ABILITA' <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Curare ferite e intossicazioni, ruiconosce erbe medicinali, identificare simboli sacri o profani e calmare le persone.</p>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> EQUIPAGGIAMENTO <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Un borsone in pelle pieno di unguenti, bende e polveri curative, un vecchio testo sacro.</p>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> CARATTERISTICHE <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Assegna alti valori in <i>Saggezza, Medicina, Persuasione</i> e <i>resistenza contro gli attacchi mentali</i>.</p>
+    
+        <!-- VESPERA VOLMONTH-->
+        <h3>Vespera Volmonth</h3>
+        <span style="color:#746120"><i>Alchimista / Studiosa</i></span>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> ASPETTO <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Una figura enigmatica, avvolta in un mantello con cappuccio colmo di tasche interne. Ha le dita perennemente macchiate di tinte 
+        vegetali e di erbe bruciate. Osserva il mondo con distacco clinico, molto cinica e fredda.</p>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> ABILITA' <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Riconoscere sostanze, decifrare simboli arcani, distillare preparati.</p>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> EQUIPAGGIAMENTO <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Un mortaio di pietra legato alla cintura, provette di vetro, erbe essiccate da fiutare per restare vigile.</p>
+        <p><strong><span style="color:#d4af37">&bigstar;</span> CARATTERISTICHE <span style="color:#d4af37">&bigstar;</span></strong><br>
+        Assegna alti valori in <i>Intelligenza, Investigazione, Conoscenza alchimia/natura</i> e <i>resistenza contro le malattie</i>.</p>
+    </div>
+    </details>
+
+    <div class="conversion-box">
+        <h3>Entra nella Community di Cronache e Dadi</h3>
+        <p style="text-align: center; color: #d1d1d6; margin-bottom: 15px;">Hai completato la lettura di questa one-shot. Vuoi ricevere altre avventure pronte all'uso, risorse esclusive per Master e unirti a un tavolo attivo di creatori e giocatori?</p>
+        <div class="conversion-btn-container">
+            <a href="https://discord.com/channels/1452691549312913460" target="_blank" class="conversion-btn">Unisciti al Discord</a>
+        </div>
+    </div>
+
+    </div>
+            <a href="../index.html" target="_blank" class="conversion-btn-2">TORNA ALL'ARCHIVIO PRINCIPALE</a>
+    <div class="footer">
+        CRONACHE E DADI &bull; CREATO PER I MASTER DI GDR &bull; FORMATO PRONTO ALL'USO
+        <div class="disclaimer-text">
+            <i>"La Notte delle Streghe di Vecchioforte" è un'avventura autoprodotta per giochi di ruolo da tavolo. Testi, layout e concept visivo © 2026 Cronache e Dadi. Tutti i diritti riservati. Vietata la riproduzione commerciale senza consenso.</i>
+        </div>
+    </div>
+
+</body>
+</html>
