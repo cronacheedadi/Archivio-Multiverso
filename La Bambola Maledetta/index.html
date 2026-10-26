@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+            <!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XP0R9QMLMR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XP0R9QMLMR');
+</script>
+
+    <meta charset="UTF-8">
+    <title>La Bambola Maledetta - Cronache e Dadi</title>
+    
+    <meta property="og:title" content="La Bambola Maledetta - Cronache e Dadi">
+    <meta property="og:description" content="One-shot Horror Mistero Investigativo. 3 ore esatte, pronta all'uso.">
+    <meta property="og:image" content="Cronache e Dadi.png">
+    <meta property="og:type" content="website">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&family=Special+Elite&display=swap');
+
+        body {
+            background-color: #060608;
+            color: #d1d1d6;
+            font-family: 'Special Elite', monospace;
+            font-size: 19px;
+            line-height: 1.6;
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 30px;
+            border-top: 5px solid #814de0;
+            border-bottom: 5px solid #814de0;
+            box-shadow: inset 0 0 80px rgba(0,0,0,0.95), 0 0 30px rgba(111, 0, 255, 0.2);
+        }
+        
+        p, li, td, span, div:not(.brand-header):not(.top-social-bar):not(.conversion-box):not(.footer):not(.disclaimer-text) {
+        text-align: justify;
+        }
+
+        .top-social-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #0f0f13;
+            border: 1px solid #2a2a35;
+            border-left: 4px solid #814de0;
+            padding: 10px 15px;
+            margin-bottom: 25px;
+            font-size: 15px;
+        }
+
+        .top-social-bar a {
+            color: #b3b3c2;
+            text-decoration: none;
+            transition: color 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .top-social-bar a:hover {
+            color: #814de0;
+            text-decoration: underline;
+        }
+
+        .brand-logo-container {
+        display: flex;
+        align-items: center;
+        background-color: #0c0d12;
+        border: 1px solid #2a2a35;
+        border-left: 4px solid #814de0;
+        padding: 15px;
+        margin-bottom: 25px;
+        gap: 20px;
+        cursor: pointer;
+        transition: background-color 0.2s, border-color 0.2s;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+        }
+
+        .brand-logo-container:hover {
+        background-color: #14141c;
+        border-color: #814de0;
+        }
+
+        .brand-logo-container img {
+        height: 45px;
+        width: auto;
+        border: 1px solid #2a2a35;
+        }
+
+        .music-info-text {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        flex: 1;
+        }
+
+        .main-title {
+        font-family: 'Cinzel', serif;
+        font-weight: bold;
+        font-size: 16px;
+        color: #e6e6e6;
+        }
+
+        .music-legal-credits {
+        font-size: 15px;
+        color: #c9b037;
+        text-align: center;
+        }
+
+        .music-legal-credits a {
+        color: #c9b037;
+        text-decoration: none;
+        }
+
+        .music-legal-credits a:hover {
+        text-decoration: underline;
+        }
+
+        .hidden-player {
+        display: none;
+        }
+
+        .brand-header {
+            text-align: center;
+            background-color: #0c0d12;
+            border: 2px solid #2a2a35;
+            border-top: 4px solid #814de0;
+            border-bottom: 4px solid #814de0;
+            padding: 25px 15px;
+            margin-bottom: 35px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+        }
+
+        .brand-header h1 {
+            font-family: 'Cinzel', serif;
+            font-weight: 900;
+            font-size: 32px;
+            color: #e6e6e6;
+            margin: 0 0 10px 0;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 4px rgba(132, 0, 255, 0.4);
+            text-align: center;
+
+        }
+
+        .brand-header p {
+            font-size: 16px;
+            color: #814de0;
+            margin: 0;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-weight: 900;
+            font-size: 22px;
+            color: #ffffff;
+            background: linear-gradient(90deg, #1a0033 0%, #14141c 100%);
+            border-left: 8px solid #814de0;
+            border-right: 8px solid #814de0;
+            border-top: 1px solid #220061;
+            border-bottom: 1px solid #220061;
+            padding: 15px 20px;
+            margin-top: 50px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 15px rgba(132, 0, 255, 0.4);
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+            text-align: left;
+        }
+
+        h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            color: #814de0;
+            margin-top: 30px;
+            margin-bottom: 12px;
+            border-bottom: 1px dashed #220061;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .scumm-box {
+            background-color: #0e0f14;
+            border: 1px solid #25154a;
+            border-left: 3px solid #814de0;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+        }
+
+        .gm-dropdown {
+            background-color: #0a1414;
+            border: 1px dashed #29154a;
+            margin: 15px 0;
+            font-size: 16px;
+            box-shadow: none;
+        }
+
+        .gm-dropdown summary {
+            font-family: 'Cinzel', serif;
+            color: #814de0;
+            font-size: 13px;
+            padding: 8px 12px;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            background-color: #0c080d;
+            border-bottom: 1px dashed #210d2a;
+            transition: color 0.2s, background-color 0.2s;
+            text-align: left;
+        }
+
+        .gm-dropdown summary:hover {
+        color: #814de0;
+        background-color: #160a0a;
+        }
+        
+        .gm-dropdown-content {
+            padding: 15px;
+            color: #a8a8b3;
+            font-size: 16px;
+            background-color: #0a0c0c;
+        }
+
+
+        .read-aloud {
+            background-color: #0a0b0f;
+            border: 1px solid #1a1b24;
+            padding: 20px 25px;
+            margin: 25px 0;
+            color: #ececf1;
+            font-style: italic;
+            box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.8);
+        }
+
+        .read-aloud img, .media-box img {
+            max-width: 100%; 
+            height: auto;
+            display: block;
+            margin: 10px auto;
+            border: 2px solid #2a2a35;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.6);
+        }
+
+        .table-responsive {
+            width: 100%;
+            overflow-x: auto;
+            margin: 25px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #0c0d12;
+            min-width: 600px;
+        }
+
+        th, td {
+            border: 1px solid #22232e;
+            padding: 12px 15px;
+            text-align: left;
+            font-size: 17px;
+        }
+
+        th {
+            background-color: #051414;
+            color: #814de0;
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #220061;
+            text-align: left;
+
+        }
+
+        td {
+            color: #b8b8c4;
+        }
+
+        ul, ol {
+            margin: 12px 0;
+            padding-left: 30px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .pixel-badge {
+            display: inline-block;
+            background-color: #021a1a;
+            color: #814de0;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            font-size: 14px;
+            padding: 6px 12px;
+            margin-bottom: 12px;
+            border: 1px solid #220061;
+            text-transform: uppercase;
+        }
+
+        .media-box {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .media-box .testo-affiancato {
+            flex: 1;
+        }
+
+        .img-caption {
+            font-family: 'Special Elite', monospace;
+            font-size: 14px;
+            color: #8c8f96;
+            margin-top: 10px;
+            font-style: italic;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 13px;
+            color: #555566;
+            margin-top: 60px;
+            border-top: 1px dashed #262633;
+            padding-top: 25px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .disclaimer-text {
+            font-size: 12px;
+            color: #444452;
+            margin-top: 15px;
+            line-height: 1.4;
+            text-transform: none;
+            font-style: normal;
+            text-align: center;
+        }
+
+        .conversion-box {
+            background-color: #0e0f14;
+            border: 1px solid #2a2a35;
+            border-top: 3px solid #c9b037;
+            padding: 25px;
+            margin: 35px 0;
+            text-align: center;
+        }
+
+        .conversion-btn-container {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .conversion-btn {
+            background-color: #120716;
+            color: #d4af37;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 1px solid #814de0;
+            text-decoration: none;
+            transition: background-color 0.2s, color 0.2s;
+        }
+
+        .conversion-btn:hover {
+            background-color: #220061;
+            color: #ffffff;
+        }
+
+        .conversion-btn-2 {
+            display: inline-block;
+            background-color: #423812;
+            color: #d4af37;
+            font-family: 'Cinzel', serif;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: 1px solid #d4af37;
+            text-decoration: none;
+            transition: background-color 0.2s, color 0.2s;
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        .conversion-btn-2:hover {
+            background-color: #d4af37;
+            color: #ffffff;
+        }
+
+
+        @media print {
+            @page {
+                size: A4;
+                margin: 1.5cm;
+            }
+
+            .top-social-bar {
+                display: none !important;
+            }
+
+            body {
+                background-color: #ffffff !important;
+                color: #111111 !important;
+                box-shadow: none !important;
+                border: none !important;
+                max-width: 100% !important;
+                padding: 0 !important;
+                font-size: 12px !important;
+                line-height: 1.35 !important;
+            }
+
+            .brand-header {
+                padding: 10px !important;
+                margin-bottom: 15px !important;
+                background-color: #f4f4f4 !important;
+                border: 2px solid #333 !important;
+            }
+
+            .brand-header h1 {
+                font-size: 22px !important;
+                color: #000 !important;
+                text-shadow: none !important;
+            }
+
+            .brand-header p {
+                font-size: 12px !important;
+                color: #008888 !important;
+            }
+
+            h2 {
+                font-size: 15px !important;
+                padding: 8px 12px !important;
+                margin-top: 25px !important;
+                margin-bottom: 12px !important;
+                background: #f0f0f0 !important;
+                color: #000 !important;
+                border: 1px solid #ccc !important;
+                border-left: 6px solid #008888 !important;
+                text-shadow: none !important;
+                box-shadow: none !important;
+                page-break-after: avoid;
+            }
+
+            h3 {
+                font-size: 13px !important;
+                margin-top: 15px !important;
+                margin-bottom: 6px !important;
+                color: #444 !important;
+                border-bottom: 1px solid #ccc !important;
+                page-break-after: avoid;
+            }
+
+            .scumm-box, .gm-box, .read-aloud {
+                background-color: #fbfbfb !important;
+                border: 1px solid #bbb !important;
+                padding: 12px 15px !important;
+                margin: 12px 0 !important;
+                box-shadow: none !important;
+                page-break-inside: avoid;
+            }
+
+            .gm-dropdown {
+                border: 1px solid #999 !important;
+            }
+
+            .gm-dropdown summary {
+                background: #eee !important;
+                color: #000 !important;
+            }
+            .gm-dropdown-content {
+                background: #fff !important;
+                color: #0d0e0d !important;
+            }
+
+            .read-aloud {
+                border-left: 6px solid #2e788b !important;
+                color: #222 !important;
+            }
+
+            img, .media-box img, .read-aloud img {
+                max-width: 35% !important;
+                height: auto !important;
+                display: block !important;
+                margin: 6px auto !important;
+                page-break-inside: avoid;
+            }
+
+            .media-box {
+                gap: 10px !important;
+                margin: 12px 0 !important;
+                page-break-inside: avoid;
+            }
+
+            .img-caption {
+                font-size: 10px !important;
+                margin-top: 4px !important;
+                color: #555 !important;
+            }
+
+            table, th, td {
+                background-color: #ffffff !important;
+                color: #111111 !important;
+                border-color: #bbb !important;
+                font-size: 11px !important;
+                padding: 6px 8px !important;
+            }
+
+            th {
+                background-color: #e6e6e6 !important;
+                color: #000 !important;
+                border-bottom: 2px solid #333 !important;
+            }
+
+            .pixel-badge {
+                font-size: 10px !important;
+                padding: 3px 8px !important;
+                margin-bottom: 6px !important;
+                background-color: #eee !important;
+                color: #000 !important;
+                border: 1px solid #999 !important;
+            }
+
+            ul, ol {
+                margin: 6px 0 !important;
+                padding-left: 20px !important;
+            }
+
+            li {
+                margin-bottom: 4px !important;
+            }
+
+            .footer {
+                margin-top: 30px !important;
+                font-size: 9px !important;
+                border-top: 1px solid #ccc !important;
+                padding-top: 10px !important;
+            }
+
+            .disclaimer-text {
+                font-size: 8px !important;
+                margin-top: 5px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-social-bar">
+        <div>
+            <strong><i>CRONACHE & DADI</i></strong> 
+        </div>
+        <div>
+            <a href="https://discord.gg/K9M83kb8eh" target="_blank">
+                <img src="../Cronache e Dadi.png" alt="Discord" style="height: 28px; vertical-align: middle;"> Discord
+            </a>
+            <a href="https://ko-fi.com/cronacheedadi" target="_blank" style="margin-left: 15px;">
+                <img src="../Speech bubble.gif" alt="Ko-Fi" style="height: 26px; vertical-align: middle;"> Ko-Fi
+            </a> 
+            <a href="https://www.youtube.com/@CronacheeDadi" target="_blank" style="margin-left: 15px;">
+                <img src="../icona youtube.webp" alt="YouTube" style="height: 26px; vertical-align: middle;"> YouTube
+            </a>
+        </div>
+    </div>
+
+    <div class="brand-header">
+        <h1>La Bambola Maledetta</h1>
+        <p>[ONE-SHOT HORROR SCOLASTICO & PULP]</p>
+    </div>
+
+    <div class="brand-logo-container" id="music-toggle" title="Colonna sonora della sessione">
+    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=2727900340/size=small/bgcol=333333/linkcol=9a64ff/transparent=true/" seamless>
+    <a href="https://cryochamber.bandcamp.com/album/elusive-power">Elusive Power by Brooddark</a></iframe>       
+    <p class="music-legal-credits">🎧 Accendi l'atmosfera...</p>
+    </div>
+    <div class="scumm-box">
+        <span class="pixel-badge">SCHEDA TECNICA</span>
+        <h3>Informazioni Generali</h3>
+        <ul>
+            <li><strong>Genere:</strong> Horror scolastico - Mistero - Investigazione</li>
+            <li><strong>Compatibilità:</strong> GDR horror investigativo (Call of Cthulhu, Vaesen, Sine Requie, KULT, MÖRK BORG, ecc.)</li>
+            <li><strong>Durata Stimata:</strong> Dalle 3 alle 5 ore</li>
+            <li><strong>Giocatori:</strong> 2 - 4 Giocatori</li>
+        </ul>
+        
+        <h3>Atmosfera</h3>
+        <p>Lione, autunno 1980. Sotto la presidenza di Mitterrand, la città vive una fase di transizione sospesa tra la decadenza industriale dei sobborghi e il fermento culturale delle sue università. I palazzi storici e i grandi complessi modernisti sono avvolti da una patina di smog e fuliggine, mentre le nebbie fitte e umide che risalgono costantemente dai fiumi <i>Rodano</i> e <i>Saona</i> soffocano i vicoli e i colli. Sulla sommità del colle di <i>Saint-Irénée</i>, isolata dal resto della città e circondata da mura e vegetazione scura, si erge la <strong>Cité Universitaire André Allix</strong>: un complesso di edifici in cemento e mattoni le cui stanze spoglie e i lunghi corridoi ospitano centinaia di studenti fuori sede.</p>
+        <h3>Ambientazione</h3>
+        <p>Il freddo della notte preme contro i vetri delle finestre, mentre il basso continuo della musica rock gracchiante da un vecchio mangiadischi e il chiacchiericcio della festa riempiono le pareti della sala comune. L'aria è densa di fumo di sigarette, odore di birra e sudore. Eppure, dietro la spensieratezza di quella sera autunnale, si avverte una sottile tensione: come se la normale allegria del campus stesse scivolando via, strozzata da un'attesa sorda. Nascosto tra le travi di legno scuro e le pareti polverose della soffitta chiusa al piano di sopra, un segreto ha ricominciato a respirare.</p>
+    </div>
+
+    <div class="scumm-box">
+        <span class="pixel-badge">INTRODUZIONE ALLA SESSIONE</span>
+        <h2>La Genesi del Male</h2>
+        <h3>Cosa è successo?</h3>
+        <img src="lione_1980.png" alt="chicago" style="float: left; width: 100%; height: auto; margin-right: 25px; margin-bottom: 10px;">
+        <p>Nel maggio del 1968, mentre le strade di Lione bruciavano di rivolte studentesche e contestazioni, tra le mura della <i>Cité Universitaire André Allix</i> si muoveva un'ambizione ben più pericolosa della semplice rivolta politica. Grazie alle sue meticolose ricerche esoteriche, il Professor <i>Jean-Luc Moreau</i> — docente della facoltà Storia — si era imbattuto nella sezione e segreta della biblioteca universitaria. Lì non aveva trovato un semplice libro, ma un'antica pergamena in cui venivano decantate le odi e i premi promessi ai seguaci di Malphas, contenente anche un antico rituale per conservare le anime e farle reincarnare in nuovi corpi. Ossessionato dal desiderio di lasciare un segno indelebile nella storia, <i>Moreau</i> decise di mettere in pratica quelle conoscenze. Sfruttando la propria posizione accademica, selezionò un ristretto gruppo di matricole ambiziose e organizzò un laboratorio intitolato <i>"Gli scritti perduti: tra finzione e realtà."</i>, utilizzandolo come copertura per dare vita a un circolo occulto. I giovani, sedotti dalla promessa di fama e immortalità, iniziarono a celebrare rituali in onore dell'entità. In cambio della loro devozione e della loro energia vitale, Malphas li ricompensava con doni innaturali: un fascino magnetico capace di influenzare gli altri, un'intelligenza manipolatoria fuori dal comune e una resistenza fisica superiore a quella umana. Ma ogni dono esigeva un prezzo. Quando le prime morti e sparizioni cominciarono a susseguirsi, il circolo si disgregò sotto il peso della paura, dei segreti e dei rimorsi. L'amministrazione universitaria, temendo che la vicenda compromettesse la reputazione dell'istituto, insabbiò gli incidenti e limitò l'accesso ad alcune sezioni della biblioteca. I membri del gruppo si dispersero, andando incontro a destini differenti: alcuni morirono durante gli scontri del 1968, altri furono vittime di incidenti, malattie o overdose. Eppure, la fine del circolo non coincise con la scomparsa del male che aveva evocato.</p>
+        <p>Prima che tutto crollasse, <i>Moreau</i> aveva tentato di preservare il potere del rituale legandolo a un oggetto materiale: una bambola di porcellana. Il tentativo, tuttavia, non andò secondo i suoi piani. La bambola divenne il ricettacolo di <i>Malphas</i>, mentre una gemma nera, utilizzata come fulcro del rituale, mantenne aperto il legame tra l'entità e il mondo dei vivi. La coscienza del professore rimase intrappolata in quel legame, sospesa tra la vita e la morte, incapace di liberarsi del tutto dalla creatura che aveva cercato di dominare.</p>
+        <p>Dodici anni dopo, nell'autunno del 1980, la <i>Cité Universitaire</i> sembra aver dimenticato gli orrori del passato. Sotto la presidenza di <i>Valéry Giscard d'Estaing</i>, Lione continua a vivere tra le tensioni sociali, la decadenza dei vecchi quartieri industriali e il fermento della vita universitaria. Le nebbie che risalgono dal <i>Rodano</i> e dalla <i>Saona</i> avvolgono gli edifici del campus, mentre le nuove generazioni di studenti riempiono i corridoi di musica, discussioni e sogni di un futuro migliore. Durante una festa studentesca, due ragazzi in cerca di un luogo appartato si spingono oltre i divieti e raggiungono la vecchia soffitta, chiusa da anni. Tra bauli dimenticati e travi ricoperte di polvere, trovano la bambola di porcellana. I suoi occhi di vetro sembrano riconoscerli, come se li avessero attesi per tutto quel tempo. Non c'è lotta, né un grido a spezzare il silenzio. Solo un incontro innaturale, un richiamo a cui i due studenti rispondono senza comprenderne la natura. Le loro coscienze vengono lentamente separate dai corpi, che rimangono immobili, pallidi e gelidi, trasformandosi in tramite per una presenza che attende di tornare a manifestarsi. Non sono semplici vittime di un'aggressione, ma i primi elementi di un rituale rimasto incompiuto per dodici anni. Attraverso di loro, <i>Malphas</i> comincia a ricostruire il legame spezzato con il mondo materiale. La soffitta diventa una soglia tra la realtà e una sua copia distorta, mentre il richiamo dell'entità si propaga silenziosamente tra gli studenti.</p>
+        <p>La festa continua, ignara di ciò che sta accadendo al piano superiore. Ma il rituale ha ripreso il suo corso. E, questa volta, altri sono già stati scelti per prendervi parte.</p>
+</div>
+    <h2>ATTO I &bull; La Festa di inizio semestre</h2>
+    <img src="festa_universitaria.png" alt="festa" style="float: right; width: 50%; height: auto; margin-left: 25px; margin-bottom: 5px;">
+    <p><i>È una fredda serata autunnale del 1980. I corsi del primo semestre alla Cité Universitaire André Allix sono appena iniziati, ma le preoccupazioni per gli esami, le spese e un futuro ancora incerto cominciano già a farsi sentire. Per una sera, però, c'è un modo per dimenticare tutto: una festa al campus. La squadra sportiva ha organizzato un party di benvenuto per celebrare l'inizio dell'anno accademico e accogliere le nuove matricole. I ragazzi più popolari e le ragazze dei circoli studenteschi più influenti si sono dati appuntamento per bere, ballare e conoscere nuove persone. Tra sorrisi di circostanza, sguardi curiosi e conversazioni apparentemente innocue, qualcuno ha già iniziato a tessere le prime alleanze.</i></p>
+    <p><i>Anche voi siete lì, invitati dal vostro amico Gérard Dupuis, uno studente di Geologia con cui avete legato durante alcune serate trascorse sui libri. O, almeno, questo era il piano: ogni tentativo di studiare finisce immancabilmente per trasformarsi in una partita a "Dungeons & Dragons".</i></p>
+    <p><i>La festa è gremita. L'aria è pesante, impregnata di fumo di sigaretta, sudore e birra rovesciata. Le ragazze indossano maglioni di lana oversize, gonne lunghe a pieghe e pantaloni di velluto a coste; i ragazzi sfoggiano giacche di jeans, camicie sbottonate e capelli lunghi. Qualcuno si sfida a freccette, altri partecipano a giochi di bevute con birra economica, mentre nei corridoi più appartati circolano spinelli e pasticche di anfetamine.</i></p>
+    <p><i>La musica è assordante e le conversazioni si sovrappongono in un brusio continuo. Con il passare del tempo, però, qualcosa comincia a sembrarvi fuori posto. I volti si deformano per un istante ai margini del vostro campo visivo; le risate si allungano in echi innaturali, le voci sembrano arrivare da molto lontano. Il tempo rallenta, poi riprende a scatti. Forse è soltanto l'effetto dell'alcol e delle sostanze che circolano alla festa. Forse siete semplicemente stanchi.</i></p>
+    <p><i>Poi accade qualcosa di ancora più strano.</i></p>
+    <p><i>Non ricordate esattamente quando le avete incontrate, ma vi ritrovate a seguire tre ragazze lungo un corridoio sempre più silenzioso. Non sapete perché abbiate deciso di accompagnarle. Vi sembra una scelta del tutto naturale, quasi che l'idea sia stata vostra fin dall'inizio. Le ragazze non parlano molto; ogni tanto si scambiano un sorriso complice e continuano a salire le scale di servizio.</i></p>
+    <p><i>Quando finalmente vi fermate, vi rendete conto di non ricordare più i loro nomi. Provate a richiamare alla mente i loro volti, ma i lineamenti vi sfuggono come un sogno appena svanito.</i></p>
+    <p><i>Davanti a voi si apre la porta di una vecchia soffitta.</i></p>
+    <p><i>La varcate. E, per un istante, avete la sensazione che qualcosa dall'altra parte vi stesse aspettando da molto tempo.</i></p>
+    <p><i>Al centro della stanza, Gérard Dupuis e Josiane, una studentessa di Storia che avete già incrociato al campus, sono immobili come statue di cera. Hanno gli occhi spalancati, fissi su un punto indefinito, e non reagiscono alla vostra presenza. I loro volti sono pallidi, le braccia abbandonate lungo i fianchi, le dita rigide.</i></p>
+    <p><i><img src="bambola.png" alt="bambola" style="float: left; width: 50%; height: auto; margin-right: 25px; margin-bottom: 5px;">
+    Poco distante, sopra un vecchio baule, è seduta una bambola di porcellana. Indossa vestiti consunti e ha il volto pallido, incorniciato da riccioli ingialliti dal tempo. I suoi occhi di vetro sembrano riflettere una luce che nella stanza non esiste. Un cigolio sottile spezza il silenzio.<br>
+    La bocca della bambola si apre lentamente.</i></p>
+    <p><span style="color:#7a7878"><i>&ldquo;Siete venuti anche voi a farmi compagnia?&rdquo;</i></span></p>
+    <p><i>La voce è flebile, fredda, quasi infantile. Eppure le parole sono nitide. Non avete dubbi: provengono dalla bambola.</i></p>
+    <p><i>Un vento gelido attraversa la soffitta, benché nessuna finestra sia aperta. Vi sfiora la pelle e vi spinge istintivamente a fare un passo indietro. Poi, alle vostre spalle, risuona un tonfo secco. Vi voltate di scatto.</i></p>
+    <p><i>La porta è scomparsa. Al suo posto c'è soltanto una parete di legno, continua e priva di maniglie. Vi precipitate verso l'unica finestra, sperando di riconoscere i tetti del campus o le luci della città. Ma fuori non c'è Lione.</i></p>
+    <p><i>Oltre il vetro si estende un vuoto assoluto, un abisso nero senza stelle, edifici o orizzonte. Non è notte, non è nebbia: è come se il mondo, al di là della finestra, avesse semplicemente smesso di esistere. La musica della festa arriva ancora dal piano inferiore, ma è distante e deformata, come ascoltata attraverso una parete d'acqua. Qualunque cosa stia accadendo, non siete più nella soffitta che ricordavate.</i></p>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione Soffitta</summary>
+        <div class="gm-dropdown-content">
+        <p>I personaggi non sono stati rinchiusi in una stanza. Sono scivolati in un <b>piano dimensionale sovrapposto alla realtà</b>, una copia distorta della soffitta che esiste tra il mondo dei vivi e il dominio di <i>Malphas</i>.<br>
+        Il mondo reale continua a esistere, ma è separato da loro da un velo impenetrabile. I rumori della festa arrivano ovattati e deformati; nessuno, dall'altra parte, può vedere o sentire i personaggi. Non importa quanto gridino o quanto forte bussino alle pareti: 
+        per il mondo reale, è come se non fossero mai entrati nella soffitta.<br>
+        I fumi e le sostanze assunti durante la festa possono rendere più difficile distinguere le percezioni reali dalle illusioni, ma non spiegano ciò che sta accadendo. Lascia che i giocatori dubitino di ciò che vedono senza suggerire loro che tutto sia soltanto un'allucinazione.</p>
+        <p>La visione iniziale di Gérard e Josiane può richiedere una <b>prova di Mente - (Media)</b> per resistere allo shock psichico. In caso di fallimento, descrivi un momentaneo senso di vertigine, un ricordo che sembra non appartenere al personaggio o la sensazione di essere osservato da qualcuno alle sue spalle. Adatta le conseguenze al sistema di gioco utilizzato.</p>
+            <ul>
+            <li><span style="color: #d199ff;">I Corpi di Gérard e Josiane :</span> I due studenti sono ancora vivi, ma le loro coscienze sono state separate dai corpi. La loro energia vitale alimenta la soffitta specchio e permette a <i>Malphas</i> di mantenere aperto il passaggio. Se un personaggio si avvicina ad esaminarli, concedi una <b>prova di Medicina - (Facile)</b>: la pelle è gelida, insolitamente liscia e dura, quasi fosse ceramica smaltata, il battito sembra inizialmente assente, per poi farsi avvertire come un rintocco debolissimo. Entrambi respirano ancora, ma in modo impercettibile. Non sono morti, ma le loro condizioni sembrano suggerire che i loro corpi siano involucri privati di qualcosa di essenziale.</li>
+            <li><span style="color: #d199ff;">La Bambola:</span> a bambola torna immobile. Non parla più e, a un primo esame, sembra un normale giocattolo antico. Eppure i suoi occhi seguono silenziosamente ogni movimento dei personaggi, anche quando nessuno la sta guardando direttamente. Qualunque tentativo di romperla, smembrarla o distruggerla fallisce. La porcellana non si scheggia e non si incrina, come se una barriera invisibile respingesse ogni colpo. Non serve chiedere una prova dopo ogni tentativo: descrivi chiaramente che la forza fisica non è sufficiente.<br>
+            Tramite una <strong>prova di Investigazione - (Media)</strong>: saminando la bambola e sollevando con cautela i vestiti logori, i personaggi scoprono una piccola cavità al centro del torace. Ha la forma di un alloggiamento destinato a contenere una pietra preziosa, ma è vuota.<br>
+            Tramite una <strong>prova di Arcano - (Difficile)</strong>: chi riesce nella prova percepisce che la bambola non è semplicemente un oggetto maledetto. È un ricettacolo rituale, un involucro predisposto per trattenere e vincolare le coscienze delle vittime. La sua presenza è legata alla soffitta specchio, ma manca qualcosa che dovrebbe completare il rituale.<br>
+            La gemma nera, assente dalla cavità, è il fulcro che mantiene il legame magico. La bambola è il ricettacolo; la gemma è l'ancora. Senza ulteriori indizi, i personaggi non devono necessariamente conoscere già il ruolo preciso di ciascun elemento.</li>
+            <li><span style="color: #d199ff;">Il baule e i documenti:</span> Il vecchio baule su cui era seduta la bambola contiene documenti universitari ingialliti, ritagli di giornale, annuari studenteschi, alcuni abiti e costumi appartenuti a vecchie feste o manifestazioni. Il materiale sembra essere stato raccolto e dimenticato lì nel corso di molti anni.</li>
+                <ul style="list-style-type: none;">
+                    <li><span style="color: #694a8c;text-decoration: underline dashed #694a8c; text-decoration-thickness: 1px;">RITAGLI DI GIORNALE</span> &bull; Dei ritagli di quotidiani locali, datati 1967-68:</li>
+                    <div style="text-align: center;color:#7a7878;"><strong><i>LITI E TENSIONI NEI PADIGLIONI DELLA CITÉ UNIVERSITAIRE: l'amministrazione corre ai ripari</i></strong><br>
+                    LIONE, 14 Novembre 1967 — <i>Nonostante l'avvio regolare dei corsi, si registrano crescenti lamentele da parte degli studenti residenti nei blocchi occidentali della Cité Universitaire André Allix. Al centro delle polemiche vi sono rumori notturni anomali durante la notte. La direzione del campus ha smentito qualsiasi anomalia, parlando di "rumori dovuti agli impianti di riscaldamento obsoleti.</i></div><br>
+                    <div style="text-align: center;color:#7a7878;"><strong><i>CHIUDONO TEMPORANEAMENTE LE SALE DELLA BIBLIOTECA DELL'ATENEO</i></strong><br>
+                    LIONE, 22 Marzo 1968 — <i>Un provvedimento della presidenza della Cité Universitaire André Allix ha limitato l'accesso alle sezioni storiche e della biblioteca universitaria. Dietro la motivazione ufficiale di "lavori di manutenzione straordinaria", trapelano indiscrezioni su un ristretto gruppo di studenti e docenti della facoltà che avrebbero occupato abusivamente i locali nottetempo per alimentare la ribellione di alcuni gruppi anarchici.</i></div><br>                    
+                    <div style="text-align: center;color:#7a7878;"><strong><i>DOPO LE PROTESTE, SCATTA IL COPRIFUOCO INTERNO ALLA CITÉ UNIVERSITAIRE.<br>IL RETTORE: "Massima fermezza"</i></strong><br>
+                    LIONE, 4 Aprile 1968 — <i>All'indomani delle agitazioni che hanno visto contrapposti i movimenti studenteschi e le forze dell'ordine, la direzione della Cité Universitaire ha varato un pacchetto di misure restrittive senza precedenti. I cancelli principali chiuderanno alle 22:00 e i padiglioni periferici verranno sottoposti a vigilanza costante. Interpellato in merito alle voci circolanti su presunti incidenti gravi avvenuti all'interno dei plessi scolastici durante le proteste, il rettore ha liquidato la questione come "strumentalizzazioni politiche volte a screditare l'istituzione accademica"</i></div><br>               
+                    </li>
+                    <li><span style="color: #694a8c;text-decoration: underline dashed #694a8c; text-decoration-thickness: 1px;">TRATTATO ESOTERICO - <i>Prof. Jean-Luc Moreau</i></span> &bull; Un quaderno con copertina rigida nera, dalle pagine ingiallite, consumate dal tempo e dalle intemperie. La grafia è febbrile, alterna appunti incomprensibili, scritti in modo caotico. Due brani, tuttavia, sono ancora leggibili:</li>
+                    <div style="text-align: left;color:#7a7878;"><i>&ldquo;Non sanno cosa significhi servire il Malphas. Non è terrore, è promessa di immortalità! Chi si affida a Lui otterrà una fama che supererà i confini di questa misera vita; la nostra volontà si fonderà con la Sua, le nostre menti saliranno a vette che nessuno storico ha mai osato sognare. I ragazzi che scelgono di seguirci non fanno un sacrificio vano: donano il loro respiro terreno per diventare parte di un tempio di gloria eterna, uniti in un coro immortale che porterà il nostro nome nei secoli dei secoli.&rdquo;</i></div>                 
+                    <br>
+                    <div style="text-align: left;color:#7a7878;"><i>&ldquo;La voce non ha smesso di ronzarmi nella testa, un sussurro continuo che mi spingeva a lasciare la mia stanza per scendere nelle sale più buie della biblioteca. Mi ha guidato passo dopo passo tra gli scaffali impolverati, come se sapesse esattamente dove dovessi posare le dita. I miei occhi sono caduti su quel volume rilegato in pelle consunta, nascosto tra i vecchi testi di leggende parigine, "Chroniques souterraines de Paris". Quando l'ho tirato via con forza dallo scaffale, il legno pesante della libreria ha ceduto con un tonfo sordo, scivolando sui cardini per svelare la scala a chiocciola che sprofonda nel buio. C'è un mondo intero là sotto, e la mia ricerca è appena cominciata...&rdquo;</i></div>
+                    <br>                   
+                    <li><img src="annuario_68.png" alt="annuario_68" style="float: left; width: 60%; height: auto; margin-right: 25px; margin-bottom: 5px;">
+                    <span style="color: #694a8c;text-decoration: underline dashed #694a8c; text-decoration-thickness: 1px;">ANNUARIO 1968</span> &bull; Un vecchio annuario scolastico 
+                    della <i>Cité Universitaire</i>. Sette volti di studenti del primo anno sono cerchiati con inchiostro rosso cupo:<br>
+                    <span style="color:#7a7878"><i>Hélène Petit, Geneviève Morel, Antoine Roy, Marc Bonnet, Madeleine Lefebvre, Jérôme Riviere, Philippe Laurent</i></span><br>
+                    Tre dei volti appartengono alle ragazze che hanno condotto i personaggi alla soffitta: <i>Hélène Petit, Geneviève Morel</i> e <i>Madeleine Lefebvre</i>. I loro abiti e le loro acconciature potrebbero essere cambiati nel corso degli anni, ma i lineamenti sono inconfondibili.<br> 
+                    I nomi cerchiati sono il primo indizio concreto che collega la soffitta agli avvenimenti del 1968. L'annuario, da solo, non rivela che cosa sia accaduto ai sette studenti né perché siano stati segnati.
+                    </li>
+                </ul>
+            </ul>
+            <p>Lascia ai personaggi il tempo di esplorare la stanza, esaminare i corpi e sfogliare i documenti. Quando la tensione comincia a calare, o quando senti che la scena ha raggiunto il suo punto di svolta, riprendi la narrazione.</p>
+        </div>
+    </details>
+    <p><i>Gérard e Josiane sono lì davanti a voi, immobili, con lo sguardo fisso nel vuoto e la pelle di quel candore innaturale, fredda e liscia come ceramica. Poi, dal piano inferiore, la musica della festa ha un sussulto stridulo. Un colpo sordo e metallico rimbomba dalle viscere dell'edificio.</i></p>
+    <p><i>La luce muore all'istante.</i></p>
+    <p><i>Per un attimo non vedete più nulla. Sentite soltanto il rumore del vostro respiro e, forse, un lieve scricchiolio provenire dal punto in cui si trovava la bambola.</i></p>
+    <p><i>La luce torna a sfarfallare, debole e giallastra. La soffitta riappare davanti ai vostri occhi.</i></p>
+    <p><i>Ma Gérard e Josiane sono scomparsi. Nessun grido. Nessun segno di lotta. Soltanto lo spazio vuoto in cui, fino a un momento prima, si trovavano i loro corpi.</i></p>
+    <p><i>La bambola giace a terra, riversa sul volto, immobile e apparentemente inanimata. Sembra un giocattolo qualunque, abbandonato in una soffitta dimenticata.</i></p>
+    <p><i>Prima che riusciate a comprendere ciò che è appena accaduto, dalla scalinata di legno sale il rumore di passi pesanti e cadenzati. Un fascio di luce bianca taglia il buio e illumina la tromba delle scale. Una voce ruvida, stanca e irritata risuona nel corridoio.</i></p>
+    <p><span style="color:#7a7878"><i>&ldquo;C'est fini! Fuori tutti!&rdquo;</i></span></p>
+    <p><i>È il vecchio guardiano del padiglione. Sta salendo le scale, facendo sbattere un pesante mazzo di chiavi contro il corrimano di ferro. Dal piano inferiore arrivano le proteste degli studenti, il fruscio di giacche indossate in fretta e il rumore di decine di scarpe che si dirigono verso l'uscita.</i></p>
+    <p><i>La festa è finita.</i></p>
+
+    <h2>ATTO II &bull; Le voci del passato</h2>
+    <p><i>Vi precipitate verso la porta, decisi a uscire da quella stanza maledetta. Questa volta, però, la maniglia è al suo posto e la porta sembra del tutto normale. La afferrate e tirate con forza, ma non si apre: è chiusa a chiave dall'esterno. Dal corridoio arriva un rumore familiare. Il tintinnio metallico di un mazzo di chiavi si avvicina lentamente, accompagnato da passi pesanti e regolari. Una chiave gira nella serratura e la porta si spalanca di colpo. Sulla soglia compare un uomo sulla sessantina, con una torcia d'ordinanza in una mano e un pesante mazzo di chiavi nell'altra. Ha il volto contratto in un'espressione di irritazione e stanchezza. Alle sue spalle, il corridoio è illuminato dai neon e l'aria porta con sé il solito odore di tabacco, birra rovesciata e fumo di marijuana.</i></p>
+    <p><span style="color:#7a7878"><i>&ldquo;Ma che diavolo state facendo qui dentro?&rdquo;</i></span></p>
+    <p><i>Vi punta la torcia dritta negli occhi, accecandovi per un secondo, mentre scuote la testa disgustato.</i></p>
+    <p><span style="color:#7a7878"><i>&ldquo;Ascoltatemi bene. Sono stanco, ho passato la serata a tenere a bada una banda di studenti ubriachi e non ho nessuna voglia di chiamare il rettorato per quattro ragazzi che giocano a nascondino tra le tubature. Per questa volta chiudo un occhio e non dico niente a nessuno. Ma adesso fuori. Subito!&rdquo;</i></span></p>
+    <p><i>Non sembra avere la minima intenzione di ascoltare spiegazioni. Per lui siete soltanto studenti che hanno trovato un posto appartato dove bere, fumare o combinare qualche sciocchezza. Eppure, mentre vi fa cenno di uscire, vi rendete conto di una cosa inquietante: non vi chiede perché siete spaventati. Non domanda nulla dei due ragazzi che avete visto nella soffitta. E non sembra essersi accorto di niente.</i></p>
+        <details class="gm-dropdown">
+        <summary>▶ [Nota Master] <i>Jean-Pierre Blain</i>, il guardiano</summary>
+        <div class="gm-dropdown-content">
+        <p><img src="guardiano_Jean.png" alt="Jean-Pierre Blain" style="float: left; width: 50%; height: auto; margin-right: 25px; margin-bottom: 5px;">
+        <i>Jean-Pierre Blain</i> ha poco più di sessant'anni, è stanco, infastidito dalla pioggia e dal baccano della festa. È convinto che i personaggi siano semplicemente ubriachi o sotto l'effetto di sostanze. Non è malvagio, ma non ha alcuna intenzione di lasciarsi coinvolgere nei problemi degli studenti.</p>
+        <p>Il guardiano vuole liberare la soffitta e chiudere il padiglione. Non crede a teorie su complotti, apparizioni o sparizioni soprannaturali. Se i personaggi insistono, li interrompe, li rimprovera e minaccia di avvertire il rettorato. Se mostrano gli oggetti nella stanza, il guardiano è incapace di riconoscere la natura di ciò che gli viene mostrato, ad esempio, la bambola è solamente un vecchio giocattolo impolverato; il quaderno sembra una raccolta di scarabocchi, deliri o annotazioni incomprensibili. I ritagli di giornale li considera vecchie notizie sulle agitazioni studentesche. L'annuario è un vecchio registro di studenti.<br>
+        Se i personaggi gli parlano di Gérard e Josiane, il guardiano può rispondere di non aver visto nessuno dei due. Non conosce il loro destino e non sa che siano scomparsi.</p>
+        <p>La soffitta specchio si è dissolta, ma il passaggio ha lasciato tracce negli oggetti e nella memoria dei personaggi. Il guardiano non può percepire la vera natura della bambola o dei documenti, perché la distorsione che li protegge rende le loro anomalie apparentemente innocue agli occhi di chi non è coinvolto. Questo non significa che i personaggi abbiano immaginato tutto. La loro esperienza è reale, ma non è ancora verificabile agli occhi degli altri. Se un personaggio insiste nel cercare prove, non negargli ogni possibilità d'indagine: lascia che raccolga gli oggetti, conservi i documenti o ricordi dettagli utili. Il problema non è che non esistano indizi, ma che il loro significato rimane oscuro.</p>
+        </div>
+    </details> 
+    <p><i>In pochi secondi, la musica, le grida e il caos della festa diventano soltanto un ricordo lontano. Il padiglione sprofonda in un silenzio innaturale, interrotto soltanto dal ticchettio della pioggia sui vetri in fondo al corridoio e dal ronzio stanco dei neon del pianerottolo. L'aria puzza ancora di birra e fumo, ma la festa è finita.</i></p>
+    <p><i>Siete soli. La realtà attorno a voi sembra tornata del tutto normale, ma sapete benissimo che ciò che avete visto nella soffitta non era un'allucinazione: Gérard e Josiane, la bambola parlante, i ritagli di giornale, quel diario... Cosa farete?</i></p>
+
+<div class="read-aloud" style="text-align: center; position: relative;">
+        <!-- Contenitore della mappa con i pin interattivi sovrapposti -->
+        <div style="position: relative; display: inline-block; max-width: 100%;">
+            <img src="mappa_città_universitaria.png" alt="mappa città universitaria" id="mappa-campus" style="width: 100%; height: auto; display: block;">
+            <button onclick="mostraInfo('Edificio della Presidenza e del Rettorato', 'Cuore amministrativo e direzionale della Cité Universitaria. Ospita le segreterie per le immatricolazioni, gli uffici burocratici del personale, le sale riunioni dei consigli di facoltà, la presidenza e gli uffici direzionali del campus.',  '<span style=&quot;color: #d4af37; &quot;<b>INFO UTILI</b></span><BR>I personaggi possono accedere a delle risorse: <b>Mazzo di chiavi universali</b> nascosto nel cassetto della scrivania del direttore, utile per aprire porte sbarrate o uffici lungo il percorso.')" style="position: absolute; top: 17%; left: 35%; background: none; color: #551111; border: none;  border-radius: 50%; width: 25px; height: 25px; cursor: pointer; font-weight: bold;" title="Edificio della Presidenza e del Rettorato">1</button>
+            <button onclick="mostraInfo('Unità di Didattica e Ricerca di Storia, Storia dell Arte e Archeologia', 'Dipartimento accademico specializzato nello studio del patrimonio storico, artistico e archeologico. La struttura accoglie aule per seminari specialistici, laboratori di analisi dei reperti, studi dei docenti e una sezione di consultazione dedicata alle fonti documentarie e iconografiche.', '<span style=&quot;color: #d4af37; &quot;><b>INFO UTILI</b></span><BR> Esaminando i vecchi rilievi topografici del colle di Saint-Irénée, emerge una scoperta agghiacciante: prima della costruzione della Cité Universitaria, su quel promontorio sorgeva un avamposto e un sito sacrificale legato al culto di Malphas risalente a secoli prima.')" style="position: absolute; top: 50%; left: 34%; background: none; color: #551111; border: none;  border-radius: 50%; width: 25px; height: 25px; cursor: pointer; font-weight: bold;" title="Unità di Didattica e Ricerca di Storia, Storia dell'Arte e Archeologia">2</button>
+            <button onclick="mostraInfo('Biblioteca Storica', 'Uno spazio monumentale e silenzioso, concepito come punto di riferimento per la ricerca e lo studio approfondito. Il grande edificio accoglie gli studenti tra sale di lettura luminose, tavoli in legno massello e cataloghi storici, custodendo un ricco patrimonio bibliografico a supporto dei corsi universitari.', '<span style=&quot;color: #d4af37; &quot;<b>INFO UTILI</b></span><BR>Vai a capitolo dedicato - <b>La Biblioteca Storica</b>')" style="position: absolute; top: 59%; left: 27.5%; background: none; color: #551111; border: none;  border-radius: 50%; width: 25px; height: 25px; cursor: pointer; font-weight: bold;" title="Biblioteca Storica">3</button>
+            <button onclick="mostraInfo('Facoltà di Giurispridenza e Scienze Politiche', 'Edificio moderno e rigoroso, dedicato alla formazione giuridica e istituzionale. Al suo interno ospita aule didattiche disposte su più livelli, aule magna per conferenze e seminari, studi dei docenti e uffici di segreteria accademica focalizzati sull ordinamento giuridico e le scienze sociali.', '<span style=&quot;color: #d4af37; &quot;<b>INFO UTILI</b></span><BR>Niente di rilevante')" style="position: absolute; top: 51%; left: 11%; background: none; color: #551111; border: none;  border-radius: 50%; width: 25px; height: 25px; cursor: pointer; font-weight: bold;" title="Facoltà di Giurispridenza e Scienze Politiche">4</button>
+            <button onclick="mostraInfo('Facoltà di Lettere, Arti e Scienze Umane', 'Polo didattico e culturale del campus, dedicato agli studi umanistici e alla riflessione critica. Ospita ampie aule, laboratori linguistici, spazi per i seminari dipartimentali e gli uffici di coordinamento accademico per gli studenti della facoltà.', '<span style=&quot;color: #d4af37; &quot;><b>INFO UTILI</b></span><BR>Alcuni studenti stanno provando uno spettacolo. Arriveranno subito a capire che gli studenti si stanno lamentando dello strano ritardo di Josiane, che solitamente è puntuale.')" style="position: absolute; top: 37%; left: 18.5%; background: none; color: #551111; border: none;  border-radius: 50%; width: 25px; height: 25px; cursor: pointer; font-weight: bold;" title="Facoltà di Lettere, Arti e Scienze Umane">5</button>
+            <button onclick="mostraInfo('Facoltà di Scienze della Materia e della Terra', 'Centro accademico e di ricerca dedicato alle discipline scientifiche, fisiche e geologiche. La struttura comprende aule di lezione, laboratori scientifici attrezzati per esperimenti e analisi chimico-fisiche, aule studio e gli uffici dei dipartimenti scientifici del campus.',  '<span style=&quot;color: #d4af37; &quot;<b>INFO UTILI</b></span><BR>I personaggi possono accedere a delle risorse: <b>Flaconi di sedativi o reagenti chimici, strumentazioni tecniche, ecc. </b>')" style="position: absolute; top: 24%; left: 25%; background: none; color: #551111; border: none;  border-radius: 50%; width: 25px; height: 25px; cursor: pointer; font-weight: bold;" title="Facoltà di Scienze della Materia e della Terra">6</button>
+            <button onclick="mostraInfo('Padiglione dei Servizi e Mensa Universitaria', 'Punto di ritrovo e ristoro, dotato di ampie sale da pranzo, cucine centralizzate e sportelli di assistenza per gli studenti.', '<span style=&quot;color: #d4af37; &quot;><b>INFO UTILI</b></span><BR>I personaggi possono accedere a delle risorse: <b>Scorte di cibo, strumenti da cuoco, divise, ingredienti, ecc.')" style="position: absolute; top: 25%; left: 62%; background: none; color: #551111; border: none;  border-radius: 50%; width: 25px; height: 25px; cursor: pointer; font-weight: bold;" title="Padiglione dei Servizi e Mensa Universitaria">7</button>
+            <button onclick="mostraInfo('Residenza Universitaria - Padiglione A-B', 'Edifici residenziali a torre destinati a alloggio degli studenti fuori sede, provvisti di camere singole e doppie, sale lettura comuni e spazi di socializzazione.', '<span style=&quot;color: #d4af37; &quot;><b>INFO UTILI</b></span><BR>Vai a capitolo dedicato - <b>Le Stanze del Dormitorio</b>')" style="position: absolute; top: 9%; left: 76%; background: none; color: #551111; border: none;  border-radius: 50%; width: 25px; height: 25px; cursor: pointer; font-weight: bold;" title="Residenza Universitaria - Padiglione A-B">8</button>
+            <button onclick="mostraInfo('Portineria', 'Presidio e punto di controllo del campus, incaricato della sorveglianza degli accessi, della gestione della posta e delle informazioni generali per i visitatori.', '<span style=&quot;color: #d4af37; &quot;><b>INFO UTILI</b></span><BR> Qui troveranno il guardiano che ha interrotto la festa. Potrebbe reagire male avvertendo la direzione che i personaggi vagano in orario non consentito, per il campus.')" style="position: absolute; top: 37%; left: 84%; background: none; color: #551111; border: none;  border-radius: 37%; width: 88px; height: 25px; cursor: pointer; font-weight: bold;" title="Portineria">9</button>
+            <button onclick="mostraInfo('Infermeria', 'Struttura sanitaria di primo soccorso del campus, attrezzata per visite ambulatoriali di base, assistenza medica di urgenza e gestione dei servizi di prevenzione per gli studenti.', '<span style=&quot;color: #d4af37; &quot;><b>INFO UTILI</b></span><BR>I personaggi possono accedere a delle risorse: <b>kit di pronto soccorso, calmanti, antidolorifici, bende, disinfettanti, siringhe, ecc.')" style="position: absolute; top: 35%; left: 78%; background: none; color: #551111; border: none;  border-radius: 37%; width: 78px; height: 25px; cursor: pointer; font-weight: bold;" title="Infermeria">10</button>
+            <button onclick="mostraInfo('Centro Sportivo', 'Area polivalente dedicata alle attività fisiche e ricreative, dotata di palestre interne e campi da tennis esterni.', '<span style=&quot;color: #d4af37; &quot;><b>INFO UTILI</b></span><BR>I personaggi possono accedere a delle risorse: <b>Attrezzi improvvisabili come armi o leve, racchette robuste, aste di metallo, cordami resistenti, ecc.')" style="position: absolute; top: 40%; left: 70%; background: none; color: #551111; border: none;  border-radius: 50%; width: 25px; height: 25px; cursor: pointer; font-weight: bold;" title="Centro Sportivo">11</button>
+            <button onclick="mostraInfo('Giardino Botanico', 'Vasta area verde curata e recintata, arricchita da specie vegetali censite, sentieri pedonali alberati e da una piazza centrale concepita per assemblee studentesche, eventi e incontri collettivi. La piazza è dominata da una imponente scultura in bronzo raffigurante: una figura stilizzata, seduta su un blocco di granito, che regge un libro aperto in una mano.', '<span style=&quot;color: #d4af37; &quot;><b>INFO UTILI</b></span><BR>I personaggi possono accedere a delle risorse: <b>Attrezzi da giardinaggio come cesoie, vanghe, fertilizzante, accesso a vari tipi di erbe, ecc.')" style="position: absolute; top: 68.5%; left: 64%; background: none; color: #551111; border: none;  border-radius: 50%; width: 25px; height: 25px; cursor: pointer; font-weight: bold;" title="Giardino Botanico">12</button>
+        </div>
+        <p class="img-caption" style="margin-top: 15px;">Planimetria Generale della "Cité Universitaire André Allix" <br><span style="color: #694a8c">Utilizza la mappa del campus per consentire ai giocatori di scegliere liberamente dove andare e quali luoghi esplorare. I pin numerati indicano le aree visitabili e possono essere usati per presentare le descrizioni dei luoghi, gli incontri e gli indizi disponibili.</span></p>
+        <div id="box-info-luogo" style="display: none; margin-top: 15px; background: #0c0d12; border: 3px solid #814de0; padding: 15px; text-align: left; color: #d1d1d6;">
+            <h4 id="info-titolo" style="font-family: 'Cinzel', serif; color: #814de0; margin-top: 0; margin-bottom: 8px;"></h4>
+            <p id="info-testo" style="margin: 0 0 10px 0; font-size: 14px;"></p>
+            <button onclick="chiudiInfo()" style="margin-top: 10px; background: #220061; color: #fff; border: 1px solid #814de0; padding: 5px 10px; cursor: pointer; font-family: 'Special Elite', monospace;">Chiudi</button>
+        </div>
+    </div>
+    <h3>Le Stanze del Dormitorio</h3>
+    <p><i>Il corridoio del blocco residenziale è deserto, illuminato soltanto dai neon fiacchi che sfarfallano a intermittenza. Il silenzio è quasi assoluto, interrotto ogni tanto dal ronzio elettrico delle lampade e dalla pioggia che batte contro le finestre. La porta della stanza di Gérard è rimasta socchiusa. Quella di Josiane si apre con una leggera spinta. Le stanze sembrano essere rimaste esattamente come le avevano lasciate prima della festa: letti sfatti, libri aperti sulle scrivanie, giacche abbandonate sulle sedie e tazze dimenticate accanto ai quaderni. Eppure, qualcosa non va.<br>
+    Nella stanza di Gérard, una patina sottile e lucida ricopre parte della scrivania e i vetri della finestra. Ricorda la brina, ma quando la sfiorate non è fredda né umida. È completamente asciutta. La luce del neon si riflette sulla superficie in modo innaturale, come se il vetro fosse ricoperto da una pellicola trasparente. <br>
+    La stanza di Josiane, invece, presenta un ordine insolito. Il letto è rifatto con una precisione quasi maniacale, gli abiti sono piegati e sistemati nell'armadio e i libri sono allineati con cura. Sulla scrivania restano alcuni appunti universitari, disposti in pile ordinate. Tutto sembra al proprio posto, ma la sensazione è quella di una stanza preparata per qualcuno che non tornerà.</i></p>
+
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione Dormitorio</summary>
+        <div class="gm-dropdown-content">
+        <ul>
+            <li><span style="color: #d199ff;">La Stanza di <i>Gerard</i></span><br> 
+            I personaggi possono esaminare liberamente la stanza. La patina lucida è una traccia residua del contatto con il piano specchio, ma non è sufficiente, 
+            da sola, a spiegare ciò che è accaduto. Una <b>prova di Investigazione – (Media)</b> permette di notare che la patina è concentrata soprattutto 
+            vicino alla finestra e sulla superficie della scrivania. Non sembra polvere, muffa o condensa. Se i personaggi la fotografano o provano a 
+            raccoglierne un campione, non ottengono prove decisive: la sostanza è troppo sottile e si dissolve gradualmente, lasciando la superficie 
+            apparentemente normale. 
+            La stanza non contiene una spiegazione diretta della scomparsa di <i>Gérard</i>. Il suo scopo è confermare che gli eventi della soffitta hanno 
+            lasciato una traccia anche nel dormitorio.</li>
+            <li><span style="color: #d199ff;">La Stanza di <i>Josiane</i></span><br> 
+            Se i personaggi esaminano la scrivania e superano una <b>prova di Investigazione – (Media)</b>, notano che l'ordine dei libri è leggermente 
+            ambiguo. Alcuni volumi universitari sono stati disposti per nascondere una cartelletta di cartone sottile, infilata tra due manuali. All'interno 
+            si trovano appunti personali di Josiane, annotazioni raccolte nel corso delle sue ricerche e riferimenti a documenti storici relativi alla <i>Cité 
+            Universitaire</i>. Gli appunti possono indirizzare i personaggi verso la biblioteca storica e il professor Jean-Luc Moreau, senza svelare 
+            immediatamente il funzionamento del rituale. 
+            Se i personaggi non superano la prova, non bloccare l'indagine: possono trovare la cartelletta continuando a cercare, impiegando più tempo o 
+            mettendo in disordine la scrivania.</li>
+        </ul>
+            <img src="appunti_josiane.png" alt="appunti Josiane" style="overflow: auto; width: 100%; height: auto;">
+            <p class="img-caption" style="margin-top: 15px;">Appunti di Josiane</p>
+
+        </div>
+    </details> 
+    <h3>La Biblioteca Storica</h3>
+    <p><img src="biblioteca_storica.png" alt="biblioteca" style="float: left; width: 100%; height: auto; margin-right: 25px; margin-bottom: 5px;">
+    <i>Di notte, la biblioteca dell'ateneo sembra una cattedrale sconsacrata. Il profumo della carta antica, della pelle consumata e della cera per pavimenti aleggia tra gli scaffali. Le luci sono poche e distribuite a intervalli regolari; tra una zona illuminata e l'altra si aprono ampie distese d'ombra. I vostri passi risuonano lungo la navata centrale, affiancata da alte librerie di legno scuro. Le loro sagome si allungano sul pavimento, deformandosi quando attraversate i coni di luce.</i></p>
+    <i>Raggiungete la sezione dedicata al folklore e alle leggende popolari francesi.<br>
+    <p><img src="quadro_ingresso_chiuso.png" alt="quadro chiuso" style="float: right; width: 50%; height: auto; margin-left: 25px; margin-bottom: 15px;">
+
+    Il corridoio che si srotola davanti a voi termina con una parete dominata da un grande dipinto d'epoca, racchiuso in una pesante cornice di legno scuro 
+    finemente intagliato. La tela raffigura una veduta cupa e nebbiosa del vecchio cimitero monumentale di Lione, sommerso da una vegetazione selvatica 
+    di edera e tassi secolari. Tra le tombe, spicca al centro della composizione una solitaria cappella gentilizia in stile neoclassico, 
+    sostenuta da imponenti colonne di marmo grigio.</i></p>
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione Biblioteca</summary>
+        <div class="gm-dropdown-content">
+        <p><span style="color: #d199ff;">Accesso alla biblioteca</span><br> 
+        Se i personaggi non hanno recuperato il <strong>mazzo di chiavi</strong> nell'<i>Edificio della Presidenza e del Rettorato</i>, per accedere alla biblioteca devono superare una <strong>prova di Furtività, Destrezza o Scassinare - (Difficile)</strong>. In alternativa, possono cercare una chiave, convincere qualcuno ad aiutarli o individuare un altro accesso. Non è necessario che tutte le soluzioni siano disponibili: valuta le proposte dei giocatori e le conseguenze plausibili.</p>
+        <p><span style="color: #d199ff;">Il passaggio segreto</span><br> 
+        Il volume <i>Chroniques souterraines de Paris</i> è il meccanismo che apre il passaggio. Se i personaggi lo hanno già incontrato negli appunti di Moreau, possono riconoscerlo e capire che potrebbe avere un significato particolare. Se non riescono a individuarlo subito, una <b>prova di Investigazione – (Media)</b> consente di notare che un libro ha il dorso più consumato degli altri e che la polvere intorno alla mensola è stata disturbata.</p>
+    </div>
+    </details>
+    <p><i>Passate in rassegna i dorsi dei libri, illuminandoli con torce o fiammiferi. Il pulviscolo si solleva nell'aria, brillando per un istante nella luce. Poi individuate un tomo dalla copertina in pelle consunta, più massiccio degli altri. Il titolo, impresso in lettere ormai sbiadite, recita: "Chroniques souterraines de Paris". Afferrate il volume e lo tirate verso di voi. Uno scatto metallico rompe il silenzio. Per qualche secondo non accade nulla. Poi, dietro la parete del quadro, qualcosa si mette in movimento: un rumore profondo di ingranaggi arrugginiti, seguito da uno stridio di legno e pietra. Il grande dipinto si sposta lentamente sui cardini, sollevandosi quanto basta per rivelare un'apertura nascosta nella muratura. Da essa fuoriesce un soffio d'aria fredda e stantia, carico di odore di muffa, polvere e calce. Dietro il quadro si apre una stretta scala a chiocciola in pietra grezza. I gradini scompaiono nel buio dei sotterranei.</i></p>
+    <p><i>La scala scende più in profondità di quanto vi aspettaste. Il rumore dei vostri passi si perde tra le pareti umide, mentre l'aria diventa progressivamente più fredda. In fondo, la scala sbocca in una cripta con il soffitto ad arco e le pareti di mattoni a vista. Scaffalature metalliche arrugginite occupano buona parte dello spazio. Vi sono ammassati libri abbandonati, scatoloni pieni di registri, documenti amministrativi, vecchie fotografie di studenti, costumi, maschere e oggetti di cui nessuno sembra essersi preoccupato per decenni. Al centro della stanza si trova un lungo tavolo di legno. Sopra di esso è distesa una mappa del cimitero di Loyasse, tenuta aperta da alcuni volumi.</i></p> 
+    <p><i>Qualcuno è già passato di qui.</i></p>
+        <img src="planimetria_cimitero.png" alt="planimetria cimitero loyasse"; style="width:100%">
+    <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione Cripta</summary>
+        <div class="gm-dropdown-content">
+        <p><span style="color: #d199ff;">Indizi nella cripta</span><br> 
+        Una <b>prova di Mente o Investigazione – (Media)</b> permette ai personaggi di interpretare le annotazioni sul tavolo e ricostruire alcuni punti:<br>
+        <ul>
+        <li><span style="color: #694a8c">DIARIO</span> &bull;  gli appunti indicano che un diario o quaderno legato a Moreau è già stato individuato o recuperato da qualcuno. I personaggi possono collegare questo riferimento al quaderno eventualmente trovato in precedenza.</li>
+        <li><span style="color: #694a8c">L'ANCORA</span> &bull; una nota segnala che l'Ancora non è presente nella cripta. Non è ancora chiaro che cosa sia, ma il termine sembra riferirsi a un oggetto indispensabile per completare qualcosa.</li>
+        <li><span style="color: #694a8c">MALPHAS</span> &bull; il nome compare accanto a riferimenti rituali e a persone coinvolte negli avvenimenti del 1968. I personaggi possono dedurre che si tratti di qualcosa di più di un semplice nome, ma non devono necessariamente comprendere già la natura dell'entità.</li>  
+        <li><span style="color: #694a8c">IL CIMITERO DI LOYASE</span> &bull; sulla mappa è indicato il Settore 4, Lotto 12, con un cerchio tracciato intorno alla tomba di Jean-Luc Moreau.</li>
+        </ul>
+        <p>La mappa e le annotazioni costituiscono il collegamento diretto con il luogo successivo dell'indagine.</p>
+        <p><span style="color: #d199ff;">La mappa del cimitero</span><br> 
+        La planimetria indica il percorso verso la tomba del professore. Sul margine sono riportate alcune parole isolate, scritte con la stessa grafia degli appunti di Josiane. Le note suggeriscono che chi ha condotto l'indagine prima dei personaggi conoscesse già una parte della storia, ma non fosse riuscito a completarla. La mancanza dell'Ancora è il dettaglio che spinge a cercare altrove.</p>
+        </div>
+    </details>
+
+
+    <h2>ATTO III &bull; È ora di ri-tornare a casa?</h2>
+    <p><i>La pioggia battente scende fitta sul colle di Fourvière, trasformando i viali alberati in rivoli di fango scuro. 
+    Davanti a voi si erge la cancellata monumentale del Cimitero di Loyasse, le cui punte di ferro battuto si perdono nella nebbia notturna. L'odore della terra bagnata, del marmo antico e della vegetazione in decomposizione vi accompagna non appena varcate la soglia.</i></p>
+    <details class="gm-dropdown">
+    <summary>▶ [Nota Master] Gestione Ingresso cimitero</summary>
+    <div class="gm-dropdown-content">
+        <p>Il Cimitero di Loyasse rappresenta il culmine dell'indagine. I personaggi sono arrivati fin qui seguendo gli indizi trovati nella biblioteca sotterranea e ora devono raggiungere la tomba del professor Jean-Luc Moreau. L'atmosfera deve trasmettere isolamento, freddo e la sensazione di essere osservati. Non è necessario introdurre creature soprannaturali durante l'esplorazione: il luogo, la pioggia e la possibilità di essere scoperti sono sufficienti a creare tensione.</p> 
+        I personaggi possono decidere di fare ingresso da uno dei tre punti principali segnati sulla planimetria. Ciascun accesso presenta un'insidia o un ostacolo:</p>
+        <p><span style="color: #d199ff;">Ingresso Principale (Sud)</span></p>
+        <p style="text-align: center;"><i><b>"Il cancello monumentale si erge davanti a voi, nero e lucido sotto la pioggia. Una pesante catena arrugginita ne tiene unite le ante. Oltre le sbarre, i viali del cimitero scompaiono tra gli alberi e la nebbia."</b></i></p>
+        <p>Per entrare, i personaggi possono tentare una <b>prova di Forza o Scassinare - (Facile)</b>, oppure utilizzare le cesoie o altri attrezzi recuperati in precedenza, se adatti a rimuovere la catena. Un fallimento non deve necessariamente impedire l'accesso: il tentativo può richiedere più tempo oppure produrre un forte rumore metallico, udibile in buona parte del cimitero. Il rumore attira i cani da guardia del custode notturno, che iniziano ad abbaiare in lontananza. I personaggi dovranno nascondersi, allontanarsi o trovare un percorso alternativo tra i viali. Se vengono individuati, il custode potrebbe iniziare a cercarli, aumentando la pressione durante l'esplorazione.</p>
+        <p><span style="color: #d199ff;">Ingresso occidentale (Ovest)</span></p>
+        <p style="text-align: center;"><i><b>"Una vecchia porta di servizio è quasi completamente nascosta dai rovi. Il legno è imputridito e deformato dall'umidità; le radici si sono intrecciate tra le assi, mentre il terreno davanti all'ingresso è stato eroso dalla pioggia."</b></i></p>
+        <p>I personaggi devono liberare il passaggio usando attrezzi da taglio o procedendo con cautela tra la vegetazione. Chi tenta di aprirsi un varco senza gli strumenti adatti rischia di ferirsi con le spine o di impiegare molto tempo. Oltre la porta, il terreno forma un terrapieno instabile che scende verso un fosso. Una <b>prova di Equilibrio o Destrezza - (Facile)</b> permette di attraversarlo senza incidenti. In caso di fallimento, un personaggio può scivolare lungo il pendio, subendo danni lievi secondo il sistema utilizzato o perdendo temporaneamente un oggetto che trasportava. Gli altri possono aiutarlo a rialzarsi o recuperare l'equipaggiamento. La difficoltà di questo accesso è soprattutto ambientale: non ci sono guardie da evitare, ma il gruppo deve prestare attenzione a ogni passo.</p>
+        <p><span style="color: #d199ff;">Ingresso settentrionale (Nord)</span></p>
+        <p style="text-align: center;"><i><b>"Un varco secondario si trova vicino agli uffici amministrativi del cimitero. Da una finestra filtra una luce giallastra. Dietro il vetro si distingue la sagoma di un uomo seduto a una scrivania, intento a consultare alcuni registri alla luce di una torcia."</b></i></p>
+        <p>Questo ingresso è il più discreto, ma richiede cautela. I personaggi devono superare una prova di Furtività per attraversare il varco senza essere notati dal custode. Se vengono scoperti, il custode si avvicina per chiedere spiegazioni. Non è necessario che reagisca con violenza: può intimare loro di andarsene, minacciare di chiamare le autorità o tentare di accompagnarli fuori dal cimitero. I personaggi possono cercare di distrarlo, mentire sul motivo della loro presenza o fuggire prima che riesca a raggiungerli. Un fallimento complica la scena, ma non deve costringere il gruppo ad abbandonare l'indagine.</p>
+        </div>
+    </details>
+    <h3>La tomba del professore</h3>
+    <p><i>Vi addentrate in un labirinto di mausolei, croci consumate e cappelle gentilizie. La pioggia tamburella sulle lapidi e le ombre degli alberi si allungano sui sentieri, deformandosi a ogni lampo lontano. Infine, raggiungete il luogo segnato sulla mappa. Tra le edicole funerarie spunta una lapide di granito grigio, quasi del tutto inghiottita dall'edera. L'incisione al centro riporta il nome del professor Jean-Luc Moreau.</i></p> 
+    <p><img src="bara_vuota.png" alt="Bara Jean-Luc Moreau"; style="width:100%"><i>Cominciate a scavare. Dopo un lavoro faticoso, urtate contro una superficie di legno. Liberate il coperchio della bara e forzate i cardini arrugginiti. Quando finalmente riuscite ad aprirla, scoprite che all'interno non ci sono resti umani. Non c'è uno scheletro, né una veste consunta. Soltanto un cuscino di raso scolorito, sul quale riposa una piccola gemma scura, dalle sfaccettature irregolari e nerastre. La sua superficie riflette la luce delle torce senza restituirla davvero, come se la luce venisse assorbita dalla pietra. La forma della gemma corrisponde esattamente alla cavità vuota che avete trovato sul torace della bambola di porcellana.</i></p>
+    <details class="gm-dropdown">
+    <summary>▶ [Nota Master] Gestione Gemma</summary>
+    <div class="gm-dropdown-content">
+            <p>La gemma è l'<b>Ancora</b> citata negli appunti della cripta. È l'elemento che mantiene il legame tra il ricettacolo, il rituale e il piano specchio.<br>
+            Quando un personaggio tocca la gemma a mani nude, avverte un dolore improvviso alla testa. La sua mente viene invasa da immagini che non gli appartengono:</p>
+            <p style="text-align: center;"><i><b>"Vede una stanza illuminata da candele. Sette figure sono disposte attorno a un tavolo, mentre un uomo annota qualcosa su un quaderno dalla copertina nera. Sul tavolo è posata la bambola di porcellana. Una voce maschile, lontana e soffocata, sussurra:"</b></i></p>
+            <p style="text-align: center;"><span style="color:#7a7878"><i><b>&ldquo;Il contenitore è pronto. Ma il legame non è completo.&rdquo;</i></b></span></p>
+            <p>Il personaggio che ha toccato la gemma deve effettuare un <b>tiro di Volontà</b> o una prova equivalente.</p>
+                <ul>
+                    <li><b>Successo:</b> il personaggio resiste all'intrusione mentale. Subisce un momentaneo stordimento, ma riesce a mantenere il controllo di sé. La visione lascia un ricordo vivido, sebbene incompleto.</li>
+                    <li><b>Fallimento:</b> la coscienza del personaggio viene momentaneamente sopraffatta da un ricordo estraneo. Per alcuni istanti sente pensieri che non gli appartengono e percepisce il mondo attraverso gli occhi di Moreau. Può pronunciare una frase sconnessa o restare immobile, incapace di reagire, ma non diventa un nemico dei compagni e non perde permanentemente il controllo del proprio personaggio.</li>
+                </ul>
+            <p>In entrambi i casi, la gemma torna silenziosa. La funzione di questa prova è rivelare un frammento del passato e anticipare che <i>Moreau</i> aveva predisposto il ricettacolo senza riuscire a completare il legame. Non fornire ancora tutta la spiegazione: sarà la comparsa di Josiane a trasformare questo indizio in una nuova domanda.</p>
+        </div>
+    </details>
+    <h3>L'arrivo di Josiane</h3>
+    <p><i>Il silenzio del cimitero viene interrotto da un rumore di passi sul sentiero. Qualcuno si sta avvicinando, avanzando a fatica tra il fango e le lapidi. Dalla nebbia emerge una figura femminile, con i vestiti sporchi di terra, i capelli scompigliati e il volto pallido, segnato dalla stanchezza. È Josiane.</i></p>
+    <p><i>Per un istante sembra sul punto di crollare. Si appoggia a una lapide per riprendere fiato, poi solleva lo sguardo verso di voi. Quando nota la bara aperta, il suo volto si irrigidisce.</i></p>
+    <p><span style="color:#7a7878"><i>&ldquo;No...&rdquo;</span> sussurra, facendo un passo indietro. <span style="color:#7a7878">&ldquo;Ditemi che non l'avete toccata.&rdquo;</i></span></p>
+    <p><i>I suoi occhi si spostano sulla gemma nera. La osserva in silenzio, quasi ipnotizzata. Per una frazione di secondo, sul suo volto compare un'espressione che non le avete mai visto: non paura, non disgusto, ma sollievo. Come se avesse finalmente ritrovato qualcosa che cercava da molto tempo. L'espressione scompare rapidamente, sostituita da una maschera di angoscia.</i></p>
+    <p><span style="color:#7a7878"><i>&ldquo;Non capite cosa avete fatto. Dobbiamo andarcene da qui. Subito!&rdquo;</i></span></p>
+    <p><span style="color:#7a7878"><i>&ldquo;Quella cosa non deve tornare alla bambola. Non sapete cosa potrebbe succedere se il rituale venisse completato. Vi prego. Datemi la gemma. Posso aiutarvi a sistemare tutto.&rdquo;</i></span></p>
+    <details class="gm-dropdown">
+    <summary>▶ [Nota Master] Gestione Josiane</summary>
+    <div class="gm-dropdown-content">
+        <p>Josiane deve apparire provata e spaventata. Ha gli abiti sporchi di fango, è esausta e sembra aver attraversato il cimitero in fretta. Non deve comportarsi subito come una villain: il suo obiettivo è ottenere la gemma senza ricorrere alla violenza, convincendo i personaggi che sia troppo pericolosa per essere tenuta da loro.</p>
+        <p>Durante la conversazione e le eventuali domande dei personaggi, <i>Josiane</i>: 
+        <ul>
+            <li>Insisterà sulla necessità di lasciare il cimitero e allontanare la gemma dalla bambola.</li>
+            <li>Se chiedono come sia arrivata al cimitero o che cosa le sia successo dopo la soffitta, fornirà risposte vaghe e incomplete, dicendo che non sa cosa sia accaduto a Gérard.</li>
+            <li>Conosce la funzione della gemma e il suo legame con la bambola, cercando di far passare quelle conoscenze come sue ricerche.</li>
+            <li>Ogni discorso finisce per riportare l'attenzione sulla necessità di consegnarle la gemma.</li>
+        </ul>
+        <p>Il sollievo che mostra alla vista della gemma e la sua insistenza nel volerla ottenere sono i primi indizi che qualcosa non torna. Non confermare subito i sospetti dei giocatori: lascia che siano loro a decidere se fidarsi di Josiane.</p>
+        <p>In base alle scelte dei personaggi e a come si pongono nei confronti di Josiane:
+        <ul>
+            <li>Decidono di non consegnare la gemma, si mostrano ostili verso Josiane. &#10142; <i><span style="color: #814de0;">Il prezzo del rifiuto</span></i></li>          
+            <li>Accettano di collaborare o consegnano la gemma a Josiane. &#10142; <i><span style="color: #814de0;">Il rituale compiuto</span></i></li>
+        </ul>
+        </p>
+    </div>
+    </details>
+<div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: flex-start;">
+    <details style="flex: 1 1 300px; border: 1px solid #694a8c; padding: 5px; border-radius: 4px;">        
+    <summary style="cursor: pointer; list-style: none; text-decoration: none; outline: none;"><h3 style="display: block; margin: 0; text-decoration: none; border: none;">▶ Il prezzo del rifiuto</h3></summary>
+        <div style="margin-top: 12px; padding-top: 10px;">
+            <p><i>Josiane vi osserva in silenzio. La mano che aveva teso verso la gemma ricade lentamente lungo il fianco. Per qualche secondo sembra voler dire qualcosa, forse tentare un'ultima volta di convincervi. Poi il suo volto si irrigidisce.</i></p>
+            <p><span style="color:#7a7878"><i>&ldquo;Dopo tutto quello che ho fatto… pensate davvero di potermi fermare?&rdquo;</i></span></p>
+            <p><i>La sua voce non trema più. Non c'è traccia della paura che aveva mostrato al suo arrivo, né della stanchezza che sembrava sul punto di sopraffarla. Davanti a voi non c'è più la studentessa che cercava aiuto, ma una donna disposta a tutto pur di ottenere ciò che desidera.</i></p>
+            <p><span style="color:#7a7878"><i>&ldquo;Non avete idea di quanto mi sia costato arrivare fin qui. Non permetterò che roviniate tutto.&rdquo;</i></span></p>
+            <p><i>Un vento gelido attraversa il cimitero. Le foglie secche si sollevano dal terreno e la nebbia si addensa tra le lapidi. Josiane solleva una mano e pronuncia alcune parole incomprensibili. Le ombre degli alberi si allungano verso di voi, contorcendosi come dita nere.</i></p>
+            <p><span style="color:#7a7878"><i>&ldquo;Avreste potuto semplicemente consegnarmela.&rdquo;</i></span></p>
+            <p><i>La gemma reagisce alla sua voce. Un bagliore scuro attraversa le sue sfaccettature e, per un istante, le vostre ombre si muovono indipendentemente dai loro corpi. Josiane avanza, cercando di raggiungere chi possiede la gemma nera.</i></p>
+        <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Inizio dello scontro</summary>
+            <div class="gm-dropdown-content">
+            <p>Questo è il momento in cui Josiane abbandona definitivamente la sua messinscena. Non è più interessata a convincere i personaggi: vuole recuperare la gemma e portare a termine il rituale.</p>
+            <p>Prima di iniziare il combattimento, lascia ai giocatori la possibilità di reagire alle sue parole. Possono tentare di dissuaderla, minacciarla, fuggire o prepararsi allo scontro. Se decidono di attaccarla immediatamente, non costringerli ad ascoltare tutto il suo discorso. Josiane non è una combattente esperta. Durante lo scontro sfrutta soprattutto la propria conoscenza dell'occulto e gli effetti provocati dal legame con l'Ancora (la gemma).</p>
+            <p><span style="color: #d199ff;">Effetti soprannaturali</span><br>
+            Le manifestazioni che accompagnano Josiane non devono essere considerate necessariamente poteri che controlla alla perfezione. Le ombre si muovono in modo innaturale, la gemma reagisce alla sua presenza e i personaggi possono avere brevi visioni del piano speculare.<br>
+            Usa questi fenomeni per aumentare la tensione e disorientare i personaggi, senza impedire loro di agire. Se il sistema adottato prevede prove di Volontà o Sanità Mentale, puoi richiederne una quando un personaggio viene esposto direttamente a una manifestazione particolarmente intensa.</p>
+                <ul>
+                    <li><span style="color: #694a8c">Attacco fisico:</span> colpo improvvisato o spinta. Danni modesti, da stabilire secondo il sistema.</li>
+                    <li><span style="color: #694a8c">Strappo d'ombra:</span> un'ombra si avvinghia a un personaggio e lo rallenta o lo trattiene brevemente. Una prova di Forza, Destrezza o Volontà può permettere di liberarsi. <span style="color:#7a7878">2 volte per scontro</span></li>
+                    <li><span style="color: #694a8c">Risonanza dell'Ancora:</span> la gemma produce immagini distorte e ombre animate. Chi le osserva rischia di perdere momentaneamente la concentrazione; usa una <b>prova di Volontà o Sanità Mentale</b>, se prevista. <span style="color:#7a7878">1 volta per scontro</span></li>
+                </ul>
+            <p><span style="color: #d199ff;">La bambola e l'Ancora</span><br>
+             Prima e durante lo scontro, verifica chi possiede la bambola e chi possiede la gemma. Josiane ha bisogno di entrambi gli oggetti per tentare di completare il rituale, ma non deve necessariamente riuscire a recuperarli. Se i personaggi hanno portato con sé la bambola, Josiane potrebbe tentare di impossessarsi anche di quella. Se non riesce a recuperare uno dei due oggetti, il rituale rimane incompleto.</p>
+            <p><span style="color: #d199ff;">Esito dello scontro</span><br>
+            Ogni ferita inferta a Josiane non versa sangue, ma rivela la fragile porcellana sottostante il suo guscio di carne. Al colpo di grazia, la ragazza si blocca a metà di un gesto: sottili crepe luminose si aprono sul suo volto e sul collo, espandendosi a ragnatela finché il suo corpo non crolla a terra spezzandosi in mille frammenti inermi, liberando l'essenza di Malphas che si dissolve nell'aria con un lamento stridente.</p>
+            <p>Il destino di Josiane si compie inesorabilmente con il sorgere del sole. Non appena il primo raggio dell'alba fende la nebbia del cimitero. In quell'istante, Josiane spalanca gli occhi verso il cielo impallidito. Un brivido violento la scuote, mentre il colore abbandona completamente la sua pelle, trasformandola in bianca porcellana opaca. Prima ancora di potersi accasciare, la sua figura si frantuma su se stessa, rovinando al suolo in una pioggia di cocci e polvere grigia.</p>
+            <p>In entrambi i casi, della gemma nera non resta alcuna traccia: svanita nell'ombra, pronta forse a riemergere altrove. La pioggia comincia a diminuire di intensità e il cimitero piomba in un silenzio innaturale. Siete vivi, l'alba illuminerà presto la città di Lione.</p>
+            </div>
+        </details>
+        </div>
+    </details>
+</div>
+<br>
+<div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: flex-start;">
+    <details style="flex: 1 1 300px; border: 1px solid #694a8c; padding: 5px; border-radius: 4px;">        
+        <summary style="cursor: pointer; list-style: none; text-decoration: none; outline: none;"><h3 style="display: block; margin: 0; text-decoration: none; border: none;">▶ Il rituale compiuto</h3></summary>
+        <div style="margin-top: 12px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 10px;">
+            <p><i>Con le dita intorpidite dal gelo, porgete il frammento scuro. Un sorriso glaciale ed estasiato si dipinge sul volto di Josiane mentre accoglie la gemma nella palma della mano.</i></p>
+            <p><span style="color:#7a7878"><i>&ldquo;Avete fatto la scelta più saggia. Per quale motivo lottare contro ciò che è già stato scritto?&rdquo;</i></span></p>
+            <p><i>Josiane porta la gemma verso la cavità sul petto della bambola. Si ferma per un ultimo istante, trattenendo il respiro. La pietra si incastra nella cavità con un piccolo scatto. Il vento cessa di colpo. Le foglie rimangono sospese a mezz'aria per una frazione di secondo, prima di ricadere sul terreno. Persino i rumori lontani della città sembrano scomparire, come se il cimitero fosse stato separato dal resto del mondo.</i></p>
+            <p><i>Un'onda invisibile si propaga dalla bambola e attraversa il cimitero. Vi colpisce al petto, vi stringe i muscoli e vi mozza il respiro. Le gambe diventano pesanti, le dita si irrigidiscono. Non è come essere spinti o colpiti: è come se qualcosa stesse cercando di convincere i vostri corpi a dimenticare come si fa a muoversi. La nebbia comincia a ritirarsi dalle lapidi. Non si dissolve: scivola sul terreno in sottili correnti, tutte dirette verso la bambola. Le volute si avvolgono attorno alle sue braccia e al suo volto, penetrando nelle fessure della porcellana. La gemma pulsa, una volta, poi una seconda.</i></p>
+            <p><i>La testa della bambola si inclina lentamente di lato. Un rumore secco risuona tra le lapidi: un piccolo scricchiolio di porcellana, simile a quello di una porta che si apre dopo essere rimasta chiusa per anni. Gli occhi dipinti della bambola sembrano rivolti verso di voi. Non potete esserne certi, eppure tutti avete la sensazione di essere diventati improvvisamente il centro della sua attenzione. Per un istante, le vostre ombre si allungano nella direzione sbagliata. Una di esse sembra restare indietro, come se non riuscisse a seguire i movimenti del proprio proprietario.</i></p>
+            <p><i>La figura di Josiane inizia a farsi sfocata fino a scomparire. Al suo posto, sull'erba intrisa di pioggia e fango, risuona il rumore secco di una caduta. A terra giacciono i resti della bambola di porcellana, completamente frantumata in mille pezzi. Della gemma scura, invece, non c'è più alcuna traccia.</i></p>
+            <p><i>Intorno a voi, la natura riprende il suo corso. Il vento torna a muovere i rami degli alberi con un fruscio leggero, la pioggia battente sfuma in una pioviggina sottile e, oltre la cancellata monumentale di Loyasse, il traffico lontano della città ricomincia a farsi sentire. Ma dentro di voi qualcosa è cambiato per sempre. Provate un senso di vuoto incolmabile, come se vi fosse stato sottratto un pezzo di anima senza che ve ne rendeste conto. Vi guardate l'un l'altro, eppure i dettagli delle ultime ore cominciano a sfuggirvi tra le dita come sabbia bagnata. Perché siete al cimitero? Cosa stavate cercando tra quelle tombe? Il ricordo della soffitta, dei fogli decifrati, della corsa sotto la pioggia... tutto si appiattisce, diventando indistinto, come un sogno confuso da cui ci si sveglia a fatica.</i></p>
+            <p><i>Sopra i tetti di Lione e oltre il colle di Fourvière, una striscia di luce pallida e aranciata comincia a fendere il cielo notturno.</i></p>
+        <details class="gm-dropdown">
+        <summary>▶ [Nota Master] Gestione rituale</summary>
+            <div class="gm-dropdown-content">
+            <p>Questa sequenza deve dare ai personaggi la sensazione di aver consegnato volontariamente qualcosa di pericoloso nelle mani sbagliate. Non anticipare subito la natura esatta di ciò che sta accadendo: l'obiettivo è creare inquietudine e lasciare aperta la domanda se Josiane abbia davvero il controllo del rituale.</p>
+            <p>La consegna della gemma non deve obbligare i personaggi a rimanere passivi per tutta la scena.</p>
+            <p>L'onda d'urto, la nebbia risucchiata e le ombre che si comportano in modo innaturale sono manifestazioni del rituale. Se vuoi utilizzare <b>prove di Volontà o Sanità</b>, riservale ai momenti in cui i personaggi sono esposti a una manifestazione davvero sconvolgente.</p>
+            <p>L'onda d'urto può provocare un breve impedimento, ma evita di privare i personaggi della possibilità di agire per un tempo arbitrario. Se qualcuno cerca di intervenire, stabilisci in base al regolamento e alla situazione se riesce a muoversi, interrompere il rituale o sottrarre uno degli oggetti.</p>
+            </div>
+        </details>
+        </div>
+    </details>
+</div>
+<style>
+    div:has(details[open]) details[open] {
+        flex: 1 1 100% !important;
+    }
+</style>
+<h3>EPILOGO</h3>
+<p><i>L'alba arriva lentamente su Lione. Una luce pallida filtra tra le nuvole, illuminando le strade ancora deserte e le facciate degli edifici universitari. La notte sembra essersi dissolta senza lasciare traccia, come se gli eventi delle ultime ore fossero stati soltanto il frutto di un incubo condiviso. Eppure, qualcosa è cambiato.<br> 
+La Cité Universitaire André Allix riprende lentamente la propria routine. Gli studenti attraversano i corridoi con il caffè in mano, le porte delle camere si aprono e si chiudono, le conversazioni della sera precedente si mescolano alle preoccupazioni di una nuova giornata. Nessuno sembra accorgersi di nulla. Nessuno, almeno, sembra disposto a parlarne. Eppure, quando provate a raccontare ciò che avete visto, vi rendete conto di quanto sia difficile trovare le parole giuste. I ricordi si accavallano: il volto di Josiane, la gemma nera, la bambola di porcellana, le ombre che si muovevano contro ogni logica. Alcuni dettagli vi sembrano ancora nitidi, mentre altri sfuggono alla memoria ogni volta che cercate di ricostruirli.</i></p>
+<p><i>La storia di Jean-Luc Moreau, degli studenti scomparsi nel 1968 e degli scritti dedicati a Malphas continua a nascondere zone d'ombra. Non sapete se il pericolo sia stato scongiurato, se il rituale abbia lasciato conseguenze invisibili o se abbiate soltanto sfiorato qualcosa di molto più antico e complesso di quanto poteste immaginare. Nei giorni successivi, la vita riprende il suo corso. Ma, ogni tanto, vi capita di fermarvi davanti a uno specchio e di avere la sensazione che il vostro riflesso abbia impiegato una frazione di secondo di troppo per imitarvi.</i></p>
+<p><i>Forse è soltanto la stanchezza. Forse è il ricordo di una notte che vorreste dimenticare. O forse, da qualche parte, qualcosa sta ancora aspettando.</i></p>
+<img src="alba.png" alt="Alba"; style="width:100%">
+<div class="conversion-box">
+        <h3>Entra nella Community di Cronache e Dadi</h3>
+        <p style="text-align: center; color: #d1d1d6; margin-bottom: 15px;">Hai completato la lettura di questa one-shot. Vuoi ricevere altre avventure pronte all'uso, risorse esclusive per Master e unirti a un tavolo attivo di creatori e giocatori?</p>
+        <div class="conversion-btn-container">
+            <a href="https://discord.gg/K9M83kb8eh" target="_blank" class="conversion-btn">Unisciti al Discord</a>
+        </div>
+    </div>
+
+    <a href="../index.html" target="_blank" class="conversion-btn-2">TORNA ALL'ARCHIVIO PRINCIPALE</a>
+    <div class="footer">
+        CRONACHE E DADI &bull; CREATO PER I MASTER DI GDR &bull; FORMATO PRONTO ALL'USO
+        <div class="disclaimer-text">
+            <i>"La Bambola Maledetta" è un'avventura autoprodotta per giochi di ruolo da tavolo. Testi, layout e concept visivo © 2026 Cronache e Dadi. Tutti i diritti riservati. Vietata la riproduzione commerciale senza consenso.</i>
+        </div>
+    </div>
+
+<script>
+    function mostraInfo(titolo, descrizione, noteMaster) {
+        document.getElementById("info-titolo").innerText = titolo;
+        document.getElementById("info-testo").innerText = descrizione;
+        
+        let masterBox = document.getElementById("info-master");
+        if (!masterBox) {
+            masterBox = document.createElement("div");
+            masterBox.id = "info-master";
+            masterBox.style.marginTop = "12px";
+            masterBox.style.padding = "10px";
+            masterBox.style.background = "#14141c";
+            masterBox.style.fontSize = "14px";
+            // Inserisci il box master subito prima del pulsante di chiusura
+            let boxLuogo = document.getElementById("box-info-luogo");
+            boxLuogo.insertBefore(masterBox, boxLuogo.lastElementChild);
+        }
+        masterBox.innerHTML = noteMaster;
+        
+        document.getElementById("box-info-luogo").style.display = "block";
+    }
+    
+    function chiudiInfo() {
+        document.getElementById('box-info-luogo').style.display = 'none';
+    }
+</script>
+</body>
+</html>
