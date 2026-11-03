@@ -529,16 +529,12 @@
             
         </div>
     </div>
-
-
 <details class="crt-monitor neon-animated" style="border: 3px solid #ffcc00;">
     <summary style="color: #66fcf1; cursor: pointer; text-shadow: 0 0 8px #66fcf1, 0 0 20px #0066ff; text-align: center;"><strong>INVIACI LA TUA AVVENTURA!</strong></summary>
     <div class="gm-dropdown-content">
         <p style="text-align: justify;">Hai scritto una one-shot o uno scenario breve pronto all'uso e vuoi condividerlo con la community di <strong>Cronache e Dadi</strong>?</p>
         <p style="text-align: justify;">Puoi mandarci il materiale in un solo clic compilando il modulo interattivo sottostante, oppure inviandocelo direttamente via email all'indirizzo <span style="color: #c0b3d6;"><i>cronacheedadi@gmail.com</i></span>. La tua avventura potrebbe entrare a far parte dell'Archivio Multiverso, raggiungendo nuovi giocatori e portando con sé il tuo nome, i tuoi crediti e i tuoi link ufficiali!</p>
-      
 
-<!-- MODULO COLLEGATO A FORMSPREE -->
         <form action="https://formspree.io/f/xyeebbeb" method="POST" onsubmit="return validaForm(event)" style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
             
             <div>
@@ -580,9 +576,6 @@
                 <label style="display: block; font-family: 'Press Start 2P', monospace; font-size: 9px; color: #ffcc00; margin-bottom: 5px;">NOTE AGGIUNTIVE / ALTRO:</label>
                 <textarea name="Note" id="q-altro" rows="2" placeholder="Particolarità, mappe incluse, o note per il Master..." style="width: 98%; background: #0b0c10; border: 2px solid #4a3b5c; padding: 10px; color: #e2e8f0; font-family: 'Courier New', Courier, monospace; font-size: 16px; resize: vertical;"></textarea>
             </div>
-
-
-            <!-- Dichiarazione e Caselle Sì / No -->
             <div style="background: rgba(74, 59, 92, 0.15); border: 2px solid #4a3b5c; padding: 15px; margin-top: 10px;">
                 <p style="text-align: justify; color: #c0b3d6; font-size: 14px; margin-bottom: 12px;">Dichiaro di essere l'autore del materiale inviato o di avere il diritto di condividerlo. Autorizzo <i>Cronache e Dadi</i> a prenderne visione esclusivamente per valutarne un'eventuale collaborazione o pubblicazione. L'eventuale modifica, adattamento, pubblicazione e distribuzione del materiale saranno concordati separatamente con l'autore.</p>
                 
@@ -601,10 +594,6 @@
         </form>
     </div>
 </details>
-
-
-
-
     <div class="scumm-box" style="text-align: center;">
         <h3 style="color: #66fcf1; border-bottom: none;">SOSTIENI IL PROGETTO</h3>
         <p style="font-size: 19px; margin-bottom: 20px;">Ti piacciono questi moduli? Sostienici su Ko-Fi per aiutarci a produrre nuove mappe e avventure gratuite per la community dei Master.</p>
@@ -644,7 +633,6 @@
                 });
             }
         });
-
 function validaForm(event) {
         const autore = document.getElementById('q-autore').value.trim();
         const sistema = document.getElementById('q-sistema').value.trim();
@@ -654,17 +642,17 @@ function validaForm(event) {
 
         if(!autore || !sistema || !ambientazione || !trama) {
             alert("Compila tutti i campi obbligatori prima di inviare l'avventura!");
-            event.preventDefault(); // Blocca l'invio
+            event.preventDefault(); 
             return false;
         }
 
         if(!accettoSi) {
             alert("Devi selezionare 'Sì' per accettare le condizioni prima di poter inviare la proposta!");
-            event.preventDefault(); // Blocca l'invio
+            event.preventDefault(); 
             return false;
         }
 
-        return true; // Fa procedere l'invio diretto a Formspree (e quindi a te via email)
+        return true;
     }
     </script>
 
